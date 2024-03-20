@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 book:
-  title: "wk1"
-  author: "Norah Jones"
-  date: "2024/2/1"
+  title: "Ariel's RS learning diary"
+  author: "Qianyu Ren"
+  date: "2024/01/18"
   chapters:
     - index.qmd
     - intro.qmd

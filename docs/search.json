@@ -2,9 +2,9 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "1  Week 1 - Introduction to Remote Sensing",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "2 Week 1 - Introduction to Remote Sensing"
   },
   {
     "objectID": "summary.html",
@@ -23,8 +23,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "wk1",
+    "title": "Ariel’s rs learning diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Personal Introduction😊\nMy name is Ariel (Qianyu Ren), come from Shanghai, China. I am a very curious, enthusiastic and outgoing red-haired girl, so I named myself the same as a mermaid hhhh🧜‍♀️🤗. I used to be an architect, and I’ve been involved in nearly 20 actual projects, mainly mega public buildings, such as super high-rise office buildings, cultural and sports complexes, data center parks, etc., and 8 of them have already been completed and put into use.🥰🥰\n\n\n\nA few of the designs I have worked on (I have done special effects on the renderings).\n\n\nFrankly speaking, I am not the person who can always think out of the box, when I see my colleagues and classmates deeply love and enjoy designing buildings, I am very envious, because I need to rack my brains to design and create every day, so I feel drained after years of studying and working in architectural design (of course, this doesn’t affect my colleagues and teachers who recognise my achievements haha). I have come to realise that I am more of a science thinker, good at maths and passionate about analysing problems through a scientific and rational lens. In addition, throughout my career, I have recognised the limitations that come with being detached from technology and have developed a keen interest in cutting-edge technology and the use of data analysis to solve problems. This drove me to CASA to learn the most advanced technologies and methods and develop practical skills to find my true passion.\nI chose the Remote Sensing course because of my interest, and it will enable me to manipulate remotely sensed earth observation data in order to make informed decisions about environmental challenges around the world. It seems pretty cool doesn’t it, especially when a cute girl operates it. I also hope to use remote sensing in my dissertation to explore new ways of urban resilience and sustainability. I am grateful for the opportunity to be able to explore new areas. I hope to find a balance between my ideals and experiences to become an integrated, interdisciplinary person who can use my background and new skills to address the challenges facing cities today. This website is my learning diary on Remotely Sensing Cities and Environments, documenting my learning outcomes and reflections, and I hope you enjoy it too!"
+  },
+  {
+    "objectID": "intro.html#summary",
+    "href": "intro.html#summary",
+    "title": "1  Week 1 - Introduction to Remote Sensing",
+    "section": "2.1 Summary",
+    "text": "2.1 Summary\nIn my first remote sensing course, I stepped into a world where satellites and sensors act like high-tech scouts, constantly transmitting data about our planet. Seeing how these eyes in the sky capture the world as it is helps us understand everything from urban sprawl to retreating glaciers.\nThis week’s highlights are as follows: Remote sensing - gathering information about the Earth’s surface through sensors mounted on satellites or aircraft.\n\n\n\nPassive sensors rely on reflectance from the sun, whereas active sensors send their own signals and are able to see through clouds and gather data at night (barba-sevilla2023?)."
+  },
+  {
+    "objectID": "index.html#personal-introduction",
+    "href": "index.html#personal-introduction",
+    "title": "Ariel’s RS learning diary",
+    "section": "Personal Introduction😊 ",
+    "text": "Personal Introduction😊 \nMy name is Ariel (Qianyu Ren), come from Shanghai, China. I am a very curious, enthusiastic and outgoing red-haired girl, so I named myself the same as a mermaid hhhh🧜‍♀️🥰. I used to be an architect, and I’ve been involved in nearly 20 actual projects, mainly mega public buildings, such as super high-rise office buildings, cultural and sports complexes, data center parks, etc., and 8 of them have already been completed and put into use.\n\n\n\nA few of the designs I have worked on (I have done special effects on the renderings).\n\n\nFrankly speaking, I am not the person who can always think out of the box, so when I see my colleagues deeply love and enjoy designing buildings, I am very envious, because I need to rack my brains to create every day, so I feel drained after years of studying and working in architectural design (of course, this doesn’t affect my colleagues and leaders who recognise my achievements hhhh). I have come to realise that I, who was good at maths, passionate about analysing problems through a scientific and rational lens. In addition, throughout my career, I have recognised the limitations that come with being detached from cutting-edge technology and developed a keen interest in it. This drove me to CASA to learn the most advanced technologies and develop practical skills to find my true passion.\nAs for why I chose the Remote Sensing Cities and Environments course, first because of my interest, it will enable me to manipulate remotely sensed earth observation data, it seems pretty cool doesn’t it, especially when a cute girl operates it. And I also hope to use remote sensing in my dissertation to explore new ways of urban resilience and sustainability. I am grateful for the opportunity to be able to explore new areas. I hope to find a balance between my ideals and experiences to become an integrated, interdisciplinary person. This website is my learning diary on RS, documenting my learning outcomes and reflections, I hope you enjoy it too!"
   }
 ]

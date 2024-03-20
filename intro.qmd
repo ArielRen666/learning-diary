@@ -1,9 +1,19 @@
-# Introduction
+---
+title: "Week 1 - Introduction to Remote Sensing"
+bibliography: references.bib
+---
+# Week 1 - Introduction to Remote Sensing
 
-This is a book created from markdown and executable code.
+## Summary
 
-See @knuth84 for additional discussion of literate programming.
+In my first remote sensing course, I stepped into a world where satellites and sensors act like high-tech scouts, constantly transmitting data about our planet. Seeing how these eyes in the sky capture the world as it is helps us understand everything from urban sprawl to retreating glaciers.
 
-```{r}
-1 + 1
+This week's highlights are as follows: Remote sensing - gathering information about the Earth's surface through sensors mounted on satellites or aircraft.
+
+![Passive sensors rely on reflectance from the sun, whereas active sensors send their own signals and are able to see through clouds and gather data at night [@barba-sevilla2023].](images/1.1Air-Quality-Transparent-Blue.gif)
+
+```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
+
 ```
+

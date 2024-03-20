@@ -1,9 +1,9 @@
-# Preface {.unnumbered}
+## **Personal Introduction😊 ** {.unnumbered}
 
-This is a Quarto book.
+My name is Ariel (Qianyu Ren), come from Shanghai, China. I am a very curious, enthusiastic and outgoing red-haired girl, so I named myself the same as a mermaid hhhh🧜‍♀️🥰. I used to be an architect, and I've been involved in nearly 20 actual projects, mainly mega public buildings, such as super high-rise office buildings, cultural and sports complexes, data center parks, etc., and 8 of them have already been completed and put into use.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+![A few of the designs I have worked on (I have done special effects on the renderings).](images/1.1Air-Quality-Transparent-Blue.gif)
 
-```{r}
-1 + 1
-```
+Frankly speaking, I am not the person who can always think out of the box, so when I see my colleagues deeply love and enjoy designing buildings, I am very envious, because I need to rack my brains to create every day, so I feel drained after years of studying and working in architectural design (of course, this doesn't affect my colleagues and leaders who recognise my achievements hhhh). I have come to realise that I, who was good at maths, passionate about analysing problems through a scientific and rational lens. In addition, throughout my career, I have recognised the limitations that come with being detached from cutting-edge technology and developed a keen interest in it. This drove me to CASA to learn the most advanced technologies and develop practical skills to find my true passion.
+
+As for why I chose the Remote Sensing Cities and Environments course, first because of my interest, it will enable me to manipulate remotely sensed earth observation data, it seems pretty cool doesn't it, especially when a cute girl operates it. And I also hope to use remote sensing in my dissertation to explore new ways of urban resilience and sustainability. I am grateful for the opportunity to be able to explore new areas. I hope to find a balance between my ideals and experiences to become an integrated, interdisciplinary person. This website is my learning diary on RS, documenting my learning outcomes and reflections, I hope you enjoy it too!
