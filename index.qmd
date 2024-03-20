@@ -1,19 +1,26 @@
----
-title: "Week 1 - Introduction to Remote Sensing"
-bibliography: references.bib
----
-# Week 1 - Introduction to Remote Sensing
+## **Personal Introduction😊** {.unnumbered}
 
-## Summary
+My name is Ariel (Qianyu Ren), come from Shanghai, China. I am a very curious, enthusiastic and outgoing red-haired girl, so I named myself the same as a mermaid hhhh🧜‍♀️🥰. I used to be an architect, and I've been involved in nearly 20 actual projects, mainly mega public buildings, such as super high-rise office buildings, cultural and sports complexes, data center parks, etc., and 8 of them have already been completed and put into use.
 
-In my first remote sensing course, I stepped into a world where satellites and sensors act like high-tech scouts, constantly transmitting data about our planet. Seeing how these eyes in the sky capture the world as it is helps us understand everything from urban sprawl to retreating glaciers.
-
-This week's highlights are as follows: Remote sensing - gathering information about the Earth's surface through sensors mounted on satellites or aircraft.
-
-![Passive sensors rely on reflectance from the sun, whereas active sensors send their own signals and are able to see through clouds and gather data at night [@barba-sevilla2023].](images/1.1Air-Quality-Transparent-Blue.gif)
-
-```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE}
-knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
+```{r echo=FALSE, out.width = "73%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/1-my-photo.jpg')
 
 ```
 
+Frankly speaking, I am not the person who can always think out of the box, so when I see my colleagues deeply love and enjoy designing buildings, I am very envious, because I need to rack my brains to create every day, so I feel drained after years of studying and working in architectural design (of course, this doesn't affect my colleagues and leaders who recognise my achievements hhhh).
+
+I have come to realise that I, who was good at maths, passionate about analysing problems through a scientific and rational lens. In addition, throughout my career, I have also recognised the limitations that come with being detached from cutting-edge technology. This drove me to CASA to learn the most advanced technologies and develop practical skills to find my true passion.
+
+Here are some of the designs I have worked on (I have done special effects on the renderings).
+
+```{r echo=FALSE, out.width = "73%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/1-my-work1.jpg')
+
+```
+
+```{r echo=FALSE, out.width = "73%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/1-my-work2.jpg')
+
+```
+
+As for why I chose the Remote Sensing Cities and Environments course, first because of my interest, it will enable me to manipulate remotely sensed earth observation data, it seems pretty cool doesn't it? And I also hope to use remote sensing in my dissertation to explore new ways of urban resilience and sustainability. I am grateful for the opportunity to be able to explore new areas. I hope to find a balance between my ideals and experiences to become an integrated, interdisciplinary person. This website is my learning diary on RS, documenting my learning outcomes and reflections, I hope you enjoy it too!
