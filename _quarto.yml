@@ -7,10 +7,10 @@ book:
   author: "Qianyu Ren"
   date: "2024/01/18"
   chapters:
-    - index.qmd
+    - personal-introduction.qmd
     - intro.qmd
     - summary.qmd
-    - references.qmd
+    - index.qmd
 
 bibliography: references.bib
 
