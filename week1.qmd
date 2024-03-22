@@ -1,0 +1,83 @@
+# Week 1 - Introduction to Remote Sensing
+
+## Summary
+
+In my first remote sensing class, I stepped into a world where satellites and sensors act like high-tech scouts, constantly transmitting data about our planet. Seeing how these eyes in the sky capture the world as it is helps us understand everything from urban sprawl to retreating glaciers.
+
+```{r echo=FALSE, out.width = "35%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
+
+```
+
+Here's what I learnt this week:
+
+### Remote sensing
+
+Gather information about the Earth's surface through sensors mounted on satellites or aircraft, which provides information where there are no ground-based measurements.
+
+### **Types of sensors**
+
+-   **Active sensors**
+
+    Emit electro-entropic magnetic (EM) waves and receive reflected signals, can pass through clouds and work in the dark, such as X-rays, radar (e.g., synthetic aperture radar (SAR), laser radar (LIDAR)), which are commonly used for topographic mapping and forest altitude measurements.
+
+-   **Passive sensors**
+
+    Rely on the energy radiated by the sun or the earth itself and do not emit any signals, but only receive the energy reflected back from the light emitted by the sun, (e.g., the human eye, cameras, and multispectral sensors such as those from the LANDSAT series of satellites), which are commonly used in water resource management, climate change monitoring and disaster response.
+
+![Diagram of a passive sensor versus an active sensor. Source: [NASA Applied Sciences Fundamentals of Remote Sensing](https://appliedsciences.nasa.gov/sites/default/files/2024-03/McCartney_SXSW_edited_SC.pdf).](images/1.1.2activePassive.png)
+
+### Electromagnetic waves
+
+Electromagnetic waves are the core of remote sensing technology, which obtains information about the characteristics of the Earth's surface by capturing and analysing electromagnetic waves reflected or radiated back from the Earth's surface. Specifically, different substances and surfaces absorb and reflect various bands of electromagnetic waves in different ways, and remote sensing equipment takes advantage of this property to identify and classify surface materials and phenomena by receiving electromagnetic waves in specific bands. The figure below shows the different types of electromagnetic waves, which are arranged from longest to shortest wavelength. The longer the wavelength, the lower the frequency; and vice versa.
+
+![Diagram of the Electromagnetic Spectrum. Source: [NASA Science](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits).](images/1.1.3EMS-Introduction_0.jpg)
+
+In addition, different wavelengths lead to different colour spectra, which is why we can see coloured images. For example, the blue colour of the sky is mainly due to the phenomenon of Rayleigh scattering in the atmosphere, which makes shorter wavelengths of blue light scatter more easily than longer wavelengths of light (e.g., red, orange, yellow).
+
+At sunrise or sunset there is much more atmosphere to pass through so more scattering occurs When the sun's angle changes the blue light scatter doesn't reach our eyes as the distance is increased = so longer wavelengths reach us= reds and oranges.
+
+![Why the sky is blue. Source: [Explaining Science](https://explainingscience.org/2015/09/30/why-is-the-sky-blue/).](images/1.1.3redsunsetdiagram1.png)
+
+### Resolution
+
+Resolution plays an important role in the use of sensor data and will vary depending on the orbit of the satellite and the design of the sensor. For any data set, there are four types of resolution that need to be considered:
+
+-   **Radiometric Resolution:** the amount of information in each pixel; the higher the radiometric resolution, the more values of information are stored
+-   **Spatial Resolution:** the size of the smallest recognisable object in the image
+-   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths - the narrower the range of wavelengths are, the finer the spectral resolution
+-   **Temporal Resolution:** the time it takes for the satellite to time it takes to complete an orbit and revisit the same observation area
+
+![The same image at different spatial resolutions: (from left to right) 1 m, 10 m, and 30 m. Source: [Coast Noaa](https://coast.noaa.gov/digitalcoast/data/ccaphighres.html).](images/1.1.4McCartney_SXSW_edited_SC.jpg)
+
+Why not build a sensor that combines high spatial, spectral and temporal resolution? Because it is difficult to combine all of the required functions into a single remote sensor, researchers must make trade-offs, understand the types of data that are more important for the specific field. For example, high temporal resolution is critical when studying weather over time, while higher spectral or spatial resolution is more important when studying seasonal vegetation changes.
+
+## Application
+
+After understanding the basic concepts of remote sensing and related terminology, I began to delve into its application areas, which help us solve many real-world problems.
+
+![Remote sensing application diagram made by myself.](images/1.2application.jpg)
+
+For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
+
+```{r echo=FALSE, out.width = "78%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/2.1.1bezymianny_oli_2022149_lrg.jpg')
+```
+
+![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8.  Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.1block.jpg)
+
+Another impressive application is disaster management. After an earthquake, it is crucial to assess the damage quickly. The use of remote sensing, particularly object-based image classification and change detection, can speed up this process by providing an accurate damage assessment from above. This helps rescuers know where they are most needed, saving precious time and lives.
+
+![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8.  Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.3earthquake.png)
+
+In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields. This only scratches the surface. Remote sensing helps monitor the environment and biodiversity, plan urban and rural infrastructure, manage natural resources, and much more. It is truly an indispensable tool in our toolkit for effective management of the planet and its resources.
+
+![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant.jpg)
+
+I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
+
+## Reflection
+
+My first remote sensing class took me on an exciting journey as we began to learn how to use technology to view our planet from above, opening a window to a new world perspective, allowing me to see the changes happening around the world without leaving home. The possibilities are endless, from how to track environmental changes, such as the shrinking of glaciers or the growth of cities, and how it can aid in disaster response, giving me a foundational understanding of remote sensing technology.
+
+Although the technology of remote sensing is interesting, it is indeed complex. The course was filled with mind-boggling new terms and concepts that piqued my curiosity. I had a lot to learn about what types of data could be captured, how to analyze it, and the different ways to apply it. In an era of increasing climate change, being able to decipher and use this data for urban planning or disaster response is critical. Although the complexity of remote sensing can feel like a mountain to climb, I believe that with time and practical experience, I will no longer be afraid of it and it will prepare me to make a tangible difference in the world.

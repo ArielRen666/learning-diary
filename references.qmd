@@ -1,4 +1,3 @@
 # References {.unnumbered}
 
-::: {#refs}
-:::
+Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., & Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. *Bulletin of Earthquake Engineering.* (https://doi.org/10.1007/s10518-023-01716-9)
