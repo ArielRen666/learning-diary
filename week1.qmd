@@ -64,11 +64,11 @@ For example, using remote sensing, we can keep a close eye on active volcanoes, 
 knitr::include_graphics('images/2.1.1bezymianny_oli_2022149_lrg.jpg')
 ```
 
-![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8.  Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.1block.jpg)
+![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8. Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.1block.jpg)
 
 Another impressive application is disaster management. After an earthquake, it is crucial to assess the damage quickly. The use of remote sensing, particularly object-based image classification and change detection, can speed up this process by providing an accurate damage assessment from above. This helps rescuers know where they are most needed, saving precious time and lives.
 
-![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8.  Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.3earthquake.png)
+![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8. Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.3earthquake.png)
 
 In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields. This only scratches the surface. Remote sensing helps monitor the environment and biodiversity, plan urban and rural infrastructure, manage natural resources, and much more. It is truly an indispensable tool in our toolkit for effective management of the planet and its resources.
 
