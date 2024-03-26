@@ -2,7 +2,7 @@
 
 ## Summary
 
-我试试行不行This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
+This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
 
 ```{r echo=FALSE, out.width = "35%", fig.align='center', cache=FALSE}
 knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
@@ -23,25 +23,8 @@ Various errors that may exist in remote sensing images (e.g., due to factors suc
 
 Various correction methods required to preprocess remote sensing data. These include
 
-### **Types of sensors**
-
--   **Active sensors**
-
-    Emit electro-entropic magnetic (EM) waves and receive reflected signals, can pass through clouds and work in the dark, such as X-rays, radar (e.g., synthetic aperture radar (SAR), laser radar (LIDAR)), which are commonly used for topographic mapping and forest altitude measurements.
-
--   **Passive sensors**
-
-    Rely on the energy radiated by the sun or the earth itself and do not emit any signals, but only receive the energy reflected back from the light emitted by the sun, (e.g., the human eye, cameras, and multispectral sensors such as those from the LANDSAT series of satellites), which are commonly used in water resource management, climate change monitoring and disaster response.
 
 ![Diagram of a passive sensor versus an active sensor. Credit: NASA Applied Sciences Remote Sensing Training Program.](images/1.1.2activePassive.png)
-
-### Electromagnetic waves
-
-Electromagnetic waves are the core of remote sensing technology, which obtains information about the characteristics of the Earth's surface by capturing and analysing electromagnetic waves reflected or radiated back from the Earth's surface. Specifically, different substances and surfaces absorb and reflect various bands of electromagnetic waves in different ways, and remote sensing equipment takes advantage of this property to identify and classify surface materials and phenomena by receiving electromagnetic waves in specific bands. The figure below shows the different types of electromagnetic waves, which are arranged from longest to shortest wavelength. The longer the wavelength, the lower the frequency; and vice versa.
-
-![Diagram of the Electromagnetic Spectrum. Credit: NASA Science.](images/1.1.3EMS-Introduction_0.jpg)
-
-In addition, different wavelengths lead to different colour spectra, which is why we can see coloured images. For example, the blue colour of the sky is mainly due to the phenomenon of Rayleigh scattering in the atmosphere, which makes shorter wavelengths of blue light scatter more easily than longer wavelengths of light (e.g., red, orange, yellow).
 
 ### Resolution
 
