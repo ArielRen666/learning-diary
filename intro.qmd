@@ -4,7 +4,7 @@
 
 In my first remote sensing class, I stepped into a world where satellites and sensors act like high-tech scouts, constantly transmitting data about our planet. Seeing how these eyes in the sky capture the world as it is helps us understand everything from urban sprawl to retreating glaciers.
 
-```{r echo=FALSE, out.width = "35%", fig.align='center', cache=FALSE}
+```{r echo=FALSE, out.width = "30%", fig.align='center', cache=FALSE}
 knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
 
 ```
@@ -25,19 +25,19 @@ Gather information about the Earth's surface through sensors mounted on satellit
 
     Rely on the energy radiated by the sun or the earth itself and do not emit any signals, but only receive the energy reflected back from the light emitted by the sun, (e.g., the human eye, cameras, and multispectral sensors such as those from the LANDSAT series of satellites), which are commonly used in water resource management, climate change monitoring and disaster response.
 
-![Diagram of a passive sensor versus an active sensor. Source: [NASA Applied Sciences Fundamentals of Remote Sensing](https://appliedsciences.nasa.gov/sites/default/files/2024-03/McCartney_SXSW_edited_SC.pdf).](images/1.1.2activePassive.png)
+![Diagram of a passive sensor versus an active sensor. Source: [Appliedsciences Nasa](https://appliedsciences.nasa.gov/sites/default/files/2024-03/McCartney_SXSW_edited_SC.pdf).](images/1.1.2activePassive.png){width="75%"}
 
-### Electromagnetic waves
+### Electromagnetic Waves (EW)
 
-Electromagnetic waves are the core of remote sensing technology, which obtains information about the characteristics of the Earth's surface by capturing and analysing electromagnetic waves reflected or radiated back from the Earth's surface. Specifically, different substances and surfaces absorb and reflect various bands of electromagnetic waves in different ways, and remote sensing equipment takes advantage of this property to identify and classify surface materials and phenomena by receiving electromagnetic waves in specific bands. The figure below shows the different types of electromagnetic waves, which are arranged from longest to shortest wavelength. The longer the wavelength, the lower the frequency; and vice versa.
+EW are the core of remote sensing technology, capturing and analyzing energy reflected or emitted by the Earth to discern surface characteristics. This is based on how various materials absorb and reflect different electromagnetic spectrum bands, allowing the identification and classification of surface substances and phenomena through specific bands' reception. The figure below shows the different types of EV, which are arranged from longest to shortest wavelength. The longer the wavelength, the lower the frequency; and vice versa.
 
-![Diagram of the Electromagnetic Spectrum. Source: [NASA Science](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits).](images/1.1.3EMS-Introduction_0.jpg)
+![Diagram of the Electromagnetic Spectrum. Source: [NASA Science](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits).](images/1.1.3EMS-Introduction_0.jpg){width="75%"}
 
-In addition, different wavelengths lead to different colour spectra, which is why we can see coloured images. For example, the blue colour of the sky is mainly due to the phenomenon of Rayleigh scattering in the atmosphere, which makes shorter wavelengths of blue light scatter more easily than longer wavelengths of light (e.g., red, orange, yellow).
+In addition, different wavelengths lead to different colour spectra, which is why we can see coloured images. For example, the blue colour of the sky is mainly due to the phenomenon of Rayleigh scattering in the atmosphere, which makes shorter wavelengths of blue light scatter more easily than longer wavelengths of light.
 
-At sunrise or sunset there is much more atmosphere to pass through so more scattering occurs When the sun's angle changes the blue light scatter doesn't reach our eyes as the distance is increased = so longer wavelengths reach us= reds and oranges.
+At sunrise or sunset there is much more atmosphere to pass through so more scattering occurs When the sun's angle changes the blue light scatter doesn't reach our eyes as the distance is increased. So longer wavelengths (e.g.reds and oranges) reach us.
 
-![Why the sky is blue. Source: [Explaining Science](https://explainingscience.org/2015/09/30/why-is-the-sky-blue/).](images/1.1.3redsunsetdiagram1.png)
+![Why the sky is blue. Source: [Explaining Science](https://explainingscience.org/2015/09/30/why-is-the-sky-blue/).](images/1.1.3redsunsetdiagram1.png){width="80%"}
 
 ### Resolution
 
@@ -48,7 +48,7 @@ Resolution plays an important role in the use of sensor data and will vary depen
 -   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths - the narrower the range of wavelengths are, the finer the spectral resolution
 -   **Temporal Resolution:** the time it takes for the satellite to time it takes to complete an orbit and revisit the same observation area
 
-![The same image at different spatial resolutions: (from left to right) 1 m, 10 m, and 30 m. Source: [Coast Noaa](https://coast.noaa.gov/digitalcoast/data/ccaphighres.html).](images/1.1.4McCartney_SXSW_edited_SC.jpg)
+![The same image at different spatial resolutions: (from left to right) 1 m, 10 m, and 30 m. Source: [Coast Noaa](https://coast.noaa.gov/digitalcoast/data/ccaphighres.html).](images/1.1.4McCartney_SXSW_edited_SC.jpg){width="75%"}
 
 Why not build a sensor that combines high spatial, spectral and temporal resolution? Because it is difficult to combine all of the required functions into a single remote sensor, researchers must make trade-offs, understand the types of data that are more important for the specific field. For example, high temporal resolution is critical when studying weather over time, while higher spectral or spatial resolution is more important when studying seasonal vegetation changes.
 
@@ -60,15 +60,15 @@ After understanding the basic concepts of remote sensing and related terminology
 
 For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
 
-![SAR interferogram processed by TRE ALTAMIRA capturing the deformation occurred in the volcano Piton de la Fournaise (Reunion Island) in May 2015. The complete colour cycles red-blue-yellow (fringes) in the image indicate surface motion. Each fringe represents approximately 3 cm of ground motion gradient. The pattern of deformation in the crater area is clearly observed. Source: [Sentinels Copernicus](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-1-sar/applications/emergency-management).](images/2.1.2-Sentinel-1-Piton-de-la-Fournaise-volcano-full.png)
+![The SAR interferogram displays May 2015 ground motion at Piton de la Fournaise, with each color fringe indicating about 3 cm of movement. Source: [Sentinels Copernicus](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-1-sar/applications/emergency-management).](images/2.1.2-Sentinel-1-Piton-de-la-Fournaise-volcano-full.png){width="75%"}
 
 Another impressive application is disaster management. After an earthquake, it is crucial to assess the damage quickly. Satellites routinely monitoring Earth from space and delivering data to support rapid damage mapping offer a unique tool to aid disaster management. This helps rescuers know where they are most needed, saving precious time and lives.
 
-![Following the devastating earthquake that struck Morocco on 8 September 2023, this is one of the detailed damage assessment maps using data from the French Pléiades high-resolution satellites, which shows damage around the Adassil, Chichaoua Province in the Marrakech-Safi region. Source: [ESA](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Sentinel-1_reveals_shifts_from_Morocco_earthquake).](images/2.1.2Morocco_earthquake_damage_assessment_map_from_the_UNOSAT_team_pillars.jpg)
+![The map, based on data from French Pléiades satellites, details the destruction in Morocco caused by the earthquake on 8 September 2023. Source: [ESA](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Sentinel-1_reveals_shifts_from_Morocco_earthquake).](images/2.1.2Morocco_earthquake_damage_assessment_map_from_the_UNOSAT_team_pillars.jpg){width="75%"}
 
 In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields.
 
-![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant.jpg)
+![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant.jpg){width="77%"}
 
 Remote sensing is truly an indispensable tool in our toolkit for effective management of the planet and its resources. I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
 
