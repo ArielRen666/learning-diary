@@ -68,7 +68,7 @@ Another impressive application is disaster management. After an earthquake, it i
 
 In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields.
 
-![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant.jpg){width="77%"}
+![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant1.jpg){width="77%"}
 
 Remote sensing is truly an indispensable tool in our toolkit for effective management of the planet and its resources. I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
 

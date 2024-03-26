@@ -1,3 +1,7 @@
 # References {.unnumbered}
 
-Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., & Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. *Bulletin of Earthquake Engineering.* (https://doi.org/10.1007/s10518-023-01716-9)
+Chapter 4 - Atmospheric correction of optical imagery. (2020). In Advanced Remote Sensing (Second Edition, pp. 131–156). *Elsevier Inc*. [https://doi.org/10.1016/B978-0-12-815826-5.00004-0](https://doi.org/10.1016/B978-0-12-815826-5.00004-0)
+
+Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., & Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. *Bulletin of Earthquake Engineering.* [https://doi.org/10.1007/s10518-023-01716-9](https://doi.org/10.1007/s10518-023-01716-9)
+
+Li, A., Wang, Q., Bian, J., & Lei, G. (2015). An improved physics-based model for topographic correction of landsat TM images. *Remote Sensing* (Basel, Switzerland), 7(5), 6296–6319. [https://doi.org/10.3390/rs70506296](https://doi.org/10.3390/rs70506296)

@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 # Week 3 - **Corrections**
 
 ## Summary
 
 This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
 
-```{r echo=FALSE, out.width = "35%", fig.align='center', cache=FALSE}
-knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
-
-```
-
 ### Corrections
 
 Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.
 
--   **Geometric correction:** mainly focuses on the coordinate system and distortion of the image
+-   **Geometric correction:** focuses on the coordinate system and distortion of the image
 
 -   **Atmospheric correction:** involves eliminating the effects of atmospheric scattering and absorption
 
@@ -22,9 +16,27 @@ Various errors that may exist in remote sensing images (e.g., due to factors suc
 
 -   **Radiometric correction:** focuses on how to convert the digital value of the image into Spectral radiance with actual physical meaning
 
-Various correction methods required to preprocess remote sensing data. These include
+### Geometric correction
 
-![Diagram of a passive sensor versus an active sensor. Credit: NASA Applied Sciences Remote Sensing Training Program.](images/1.1.2activePassive.png)
+How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth's rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.
+
+![](images/3.1.1GeometricCorrection.gif){width="45%"}
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ ![](images/3.1.1GeometricCorrection2.png){width="45%"}
+
+Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
+
+### Atmospheric correction
+
+Reduces the impact of atmospheric scattering and absorption on image quality through both relative and absolute methods. 
+
+- **Relative correction**, such as DOS and Pseudo-Invariant Features, uses internal image references for correction and is suitable when atmospheric parameters are lacking. 
+
+- **Absolute correction**, applies atmospheric models like MODTRAN for direct correction to obtain the true reflectance of the surface. 
+
+The choice of the appropriate correction method depends on application requirements and data conditions, with the goal of enhancing the accuracy and usability of remote sensing data.
+
+![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](images/3.1.3after atmospheric correction.jpg){width="70%"}
 
 ### Resolution
 
@@ -41,62 +53,6 @@ Why not build a sensor that combines high spatial, spectral and temporal resolut
 
 After understanding the basic concepts of remote sensing and related terminology, I began to delve into its application areas, which help us solve many real-world problems.
 
-![Diagram of the Electromagnetic Spectrum. Credit: NASA Science.](images/1.2application.jpg)For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
+![Diagram of the Electromagnetic Spectrum. Credit: NASA Science.](images/1.2application.jpg)
 
-Another impressive application is disaster management. After an earthquake, it is crucial to assess the damage quickly. The use of remote sensing, particularly object-based image classification and change detection, can speed up this process by providing an accurate damage assessment from above. This helps rescuers know where they are most needed, saving precious time and lives.
-
-In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields. This only scratches the surface. Remote sensing helps monitor the environment and biodiversity, plan urban and rural infrastructure, manage natural resources, and much more. It is truly an indispensable tool in our toolkit for effective management of the planet and its resources.
-
-I have to mention that my teacher mentioned a very interesting case study about illegal deforestation in Brazil, which has piqued my great interest in GEE, which I am really looking forward to.
-=======
-# Week 3 - **Corrections**
-
-## Summary
-
-This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
-
-```{r echo=FALSE, out.width = "35%", fig.align='center', cache=FALSE}
-knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
-
-```
-
-### Corrections
-
-Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.
-
--   **Geometric correction:** mainly focuses on the coordinate system and distortion of the image
-
--   **Atmospheric correction:** involves eliminating the effects of atmospheric scattering and absorption
-
--   **Orthorectification/topographic correction:** removes the deformation caused by terrain
-
--   **Radiometric correction:** focuses on how to convert the digital value of the image into Spectral radiance with actual physical meaning
-
-Various correction methods required to preprocess remote sensing data. These include
-
-
-![Diagram of a passive sensor versus an active sensor. Credit: NASA Applied Sciences Remote Sensing Training Program.](images/1.1.2activePassive.png)
-
-### Resolution
-
-Resolution plays an important role in the use of sensor data and will vary depending on the orbit of the satellite and the design of the sensor. For any data set, there are four types of resolution that need to be considered:
-
--   **Radiometric Resolution:** the amount of information in each pixel; the higher the radiometric resolution, the more values of information are stored
--   **Spatial Resolution:** the size of the smallest recognisable object in the image
--   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths - the narrower the range of wavelengths are, the finer the spectral resolution
--   **Temporal Resolution:** the time it takes for the satellite to time it takes to complete an orbit and revisit the same observation area
-
-Why not build a sensor that combines high spatial, spectral and temporal resolution? Because it is difficult to combine all of the required functions into a single remote sensor, researchers must make trade-offs, understand the types of data that are more important for the specific field. For example, high temporal resolution is critical when studying weather over time, while higher spectral or spatial resolution is more important when studying seasonal vegetation changes.
-
-## Application
-
-After understanding the basic concepts of remote sensing and related terminology, I began to delve into its application areas, which help us solve many real-world problems.
-
-![Diagram of the Electromagnetic Spectrum. Credit: NASA Science.](images/1.2application.jpg)For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
-
-Another impressive application is disaster management. After an earthquake, it is crucial to assess the damage quickly. The use of remote sensing, particularly object-based image classification and change detection, can speed up this process by providing an accurate damage assessment from above. This helps rescuers know where they are most needed, saving precious time and lives.
-
-In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields. This only scratches the surface. Remote sensing helps monitor the environment and biodiversity, plan urban and rural infrastructure, manage natural resources, and much more. It is truly an indispensable tool in our toolkit for effective management of the planet and its resources.
-
-I have to mention that my teacher mentioned a very interesting case study about illegal deforestation in Brazil, which has piqued my great interest in GEE, which I am really looking forward to.
->>>>>>> c7cbe46a7a15f949d1595792616a2ae09174c676
+For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
