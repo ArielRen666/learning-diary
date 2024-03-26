@@ -60,21 +60,17 @@ After understanding the basic concepts of remote sensing and related terminology
 
 For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
 
-```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE}
-knitr::include_graphics('images/2.1.1bezymianny_oli_2022149_lrg.jpg')
-```
-
-![Bezymianny Volcano image, acquired on May 29, 2022, by the Operational Land Imager (OLI) on Landsat 8. Source: [NASA Earth Observatory image by Joshua Stevens](https://earthobservatory.nasa.gov/images/149966/fire-and-ice-in-kamchatkal).](images/2.1.1block.jpg)
+![SAR interferogram processed by TRE ALTAMIRA capturing the deformation occurred in the volcano Piton de la Fournaise (Reunion Island) in May 2015. The complete colour cycles red-blue-yellow (fringes) in the image indicate surface motion. Each fringe represents approximately 3 cm of ground motion gradient. The pattern of deformation in the crater area is clearly observed. Source: [Sentinels Copernicus](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-1-sar/applications/emergency-management).](images/2.1.2-Sentinel-1-Piton-de-la-Fournaise-volcano-full.png)
 
 Another impressive application is disaster management. After an earthquake, it is crucial to assess the damage quickly. The use of remote sensing, particularly object-based image classification and change detection, can speed up this process by providing an accurate damage assessment from above. This helps rescuers know where they are most needed, saving precious time and lives.
 
 ![Classification of building damage, Source: [Giorgia et al.](https://link.springer.com/article/10.1007/s10518-023-01716-9).](images/2.1.3earthquake.png)
 
-In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields. This only scratches the surface. Remote sensing helps monitor the environment and biodiversity, plan urban and rural infrastructure, manage natural resources, and much more. It is truly an indispensable tool in our toolkit for effective management of the planet and its resources.
+In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields. 
 
 ![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant.jpg)
 
-I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
+It is truly an indispensable tool in our toolkit for effective management of the planet and its resources. I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
 
 ## Reflection
 
