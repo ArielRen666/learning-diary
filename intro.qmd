@@ -70,7 +70,7 @@ In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived
 
 ![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant.jpg)
 
-Remotely sensing is truly an indispensable tool in our toolkit for effective management of the planet and its resources. I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
+Remote sensing is truly an indispensable tool in our toolkit for effective management of the planet and its resources. I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
 
 ## Reflection
 
