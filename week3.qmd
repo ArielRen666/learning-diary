@@ -2,7 +2,7 @@
 
 ## Summary
 
-This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
+我试试行不行This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
 
 ```{r echo=FALSE, out.width = "35%", fig.align='center', cache=FALSE}
 knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
