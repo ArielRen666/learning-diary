@@ -7,16 +7,9 @@ This remote sensing lesson covers methods of acquiring and processing remote sen
 ### Corrections
 
 Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.
+Including **Geometric correction** (coordinate system & distortion), **Atmospheric correction** (atmospheric scattering & absorption), **Orthorectification/Topographic correction** (terrain deformation), **Radiometric correction** (convert digital value into spectral radiance).
 
--   **Geometric correction:** focuses on the coordinate system and distortion of the image
-
--   **Atmospheric correction:** involves eliminating the effects of atmospheric scattering and absorption
-
--   **Orthorectification/topographic correction:** removes the deformation caused by terrain
-
--   **Radiometric correction:** focuses on how to convert the digital value of the image into Spectral radiance with actual physical meaning
-
-### Geometric correction
+### Geometric Correction
 
 How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth's rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.
 
@@ -26,7 +19,7 @@ How can image distortions caused by factors such as shooting angle, terrain, win
 
 Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
 
-### Atmospheric correction
+### Atmospheric Correction
 
 Reduces the impact of atmospheric scattering and absorption on image quality through both relative and absolute methods. 
 
@@ -38,16 +31,10 @@ The choice of the appropriate correction method depends on application requireme
 
 ![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](images/3.1.3after atmospheric correction.jpg){width="70%"}
 
-### Resolution
 
-Resolution plays an important role in the use of sensor data and will vary depending on the orbit of the satellite and the design of the sensor. For any data set, there are four types of resolution that need to be considered:
+### Orthorectification/Topographic Correction
 
--   **Radiometric Resolution:** the amount of information in each pixel; the higher the radiometric resolution, the more values of information are stored
--   **Spatial Resolution:** the size of the smallest recognisable object in the image
--   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths - the narrower the range of wavelengths are, the finer the spectral resolution
--   **Temporal Resolution:** the time it takes for the satellite to time it takes to complete an orbit and revisit the same observation area
 
-Why not build a sensor that combines high spatial, spectral and temporal resolution? Because it is difficult to combine all of the required functions into a single remote sensor, researchers must make trade-offs, understand the types of data that are more important for the specific field. For example, high temporal resolution is critical when studying weather over time, while higher spectral or spatial resolution is more important when studying seasonal vegetation changes.
 
 ## Application
 

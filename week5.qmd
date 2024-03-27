@@ -1,0 +1,9 @@
+# Week 2 - **Presentation of Sentinel-1**
+
+```{r echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  url = "https://arielren666.github.io/week2-Sentinel-1/#1", 
+  ratio = "16:9")
+```
+
+To view this presentation in full screen, please [click here](https://arielren666.github.io/week2-Sentinel-1/#1).
