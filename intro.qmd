@@ -42,14 +42,25 @@ At sunrise or sunset there is much more atmosphere to pass through so more scatt
 
 ### Resolution
 
-Resolution plays an important role in the use of sensor data and will vary depending on the orbit of the satellite and the design of the sensor. For any data set, there are four types of resolution that need to be considered:
+Resolution is one of the most important attributes of satellite imagery and will vary depending on the orbit of the satellite and the design of the sensor. For any data set, there are three types of resolution that need to be considered:
 
--   **Radiometric Resolution:** the amount of information in each pixel; the higher the radiometric resolution, the more values of information are stored
--   **Spatial Resolution:** the size of the smallest recognisable object in the image
--   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths - the narrower the range of wavelengths are, the finer the spectral resolution
--   **Temporal Resolution:** the time it takes for the satellite to time it takes to complete an orbit and revisit the same observation area
+-   **Spatial Resolution:** governs how “sharp” an image looks (MAXAR deliver clear, high spatial resolution images, but a limited spectral range)
+-   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths (Landsat and Sentinel-2 may have lower spatial resolution but detect a wider spectrum)
+-   **Temporal Resolution:** the frequency with which we can access new imagery
+
+The Google Maps basemap provides a very high-resolution view of the globe free of charge, but it captures only a single moment in time, lacking a temporal aspect. This means if we're interested in observing changes that occur over time, this basemap won't be very helpful. The term "revisit rate" refers to the frequency at which a satellite returns to observe the same spot on Earth. 
+
+![With its duo of satellites, the Sentinel-2 mission can boast a revisit rate of every 5 days. Source: [ESA](https://www.esa.int/).](images/1608_004_AR_EN.mp4){width="75%"}
+
+For the other two, spatial resolution determines the smallest visible detail size, while spectral resolution refers to the range of detectable spectra or colors by a satellite. For example, using a high-resolution camera allows clear visibility of tiny details, similar to how high spatial resolution satellite images can reveal fine ground features. 
 
 ![The same image at different spatial resolutions: (from left to right) 1 m, 10 m, and 30 m. Source: [Coast Noaa](https://coast.noaa.gov/digitalcoast/data/ccaphighres.html).](images/1.1.4McCartney_SXSW_edited_SC.jpg){width="75%"}
+
+Conversely, imagine having glasses that don't enhance clarity but allow seeing beyond the visible spectrum, like in infrared or ultraviolet. This capability, akin to high spectral resolution satellites, offers insights into unseen aspects such as plant health or material types. 
+
+The image below shows Gilette Stadium near Boston, and if we were to use only the naked eye we would think that all three green areas were grass, and would not be able to distinguish which was real grass and which was artificial plastic grass, but living plants strongly reflect parts of the spectrum of the sun's radiation that we do not see (near-infrared). However, by looking at the NDVI overlay of the Sentinel-2 satellite image, the two patches of real grass in red can be clearly identified.
+
+![VHR image of Gilette Stadium with Sentinel-2 derived NDVI overlay. Source: [Oballinger](https://oballinger.github.io/CASA0025/W06_RS.html).](images/NDVIfrass.jpg){width="75%"}
 
 Why not build a sensor that combines high spatial, spectral and temporal resolution? Because it is difficult to combine all of the required functions into a single remote sensor, researchers must make trade-offs, understand the types of data that are more important for the specific field. For example, high temporal resolution is critical when studying weather over time, while higher spectral or spatial resolution is more important when studying seasonal vegetation changes.
 
