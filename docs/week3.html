@@ -165,6 +165,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a>
   <ul class="collapse">
   <li><a href="#ndvi-normalized-difference-vegetation-index" id="toc-ndvi-normalized-difference-vegetation-index" class="nav-link" data-scroll-target="#ndvi-normalized-difference-vegetation-index"><span class="header-section-number">3.2.1</span> NDVI (Normalized Difference Vegetation Index)</a></li>
+  <li><a href="#pca-principal-component-analysis" id="toc-pca-principal-component-analysis" class="nav-link" data-scroll-target="#pca-principal-component-analysis"><span class="header-section-number">3.2.2</span> PCA (Principal Component Analysis)</a></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
   </ul>
@@ -220,13 +221,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="orthorectificationtopographic-correction" class="level3" data-number="3.1.4">
 <h3 data-number="3.1.4" class="anchored" data-anchor-id="orthorectificationtopographic-correction"><span class="header-section-number">3.1.4</span> Orthorectification/Topographic Correction</h3>
-<p>Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images. This can improve the accuracy of satellite data for various applications such as mapping, land cover analysis and gis.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week3-images/3.1.4remotesensing-07-06296-g002a.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption class="figure-caption">Thematic Mapper scenes before and after topographic correction (composite of band 5, 4 and 3 in red, green and blue). Source: <a href="https://doi.org/10.3390/rs70506296">Li et al., 2015</a></figcaption>
-</figure>
-</div>
+<p>Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images (Li et al., 2015).</p>
 </section>
 <section id="radiometric-correction" class="level3" data-number="3.1.5">
 <h3 data-number="3.1.5" class="anchored" data-anchor-id="radiometric-correction"><span class="header-section-number">3.1.5</span> Radiometric Correction</h3>
@@ -283,10 +278,24 @@ NDVI = \frac{(NIR-Red)}{(NIR+Red)}
 </figure>
 </div>
 </section>
+<section id="pca-principal-component-analysis" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="pca-principal-component-analysis"><span class="header-section-number">3.2.2</span> PCA (Principal Component Analysis)</h3>
+<p>I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.</p>
+<p><strong>How to use PCA in remote sensing?</strong> <br></p>
+<p>Running a principal component analysis on three bands was useful because we found the third component did not add much information.</p>
+<p>What about a 10-band multispectral image? Or even 100 or 200 bands (hyperspectral imagery)? This is where PCA is really useful – multispectral and hyperspectral analysis.</p>
+<p>For example, if most of the variance (eigenvalue) is found in principal components one, two, and three, it’s only necessary to use these three principal components. For land cover classification, it is much easier to use three bands compared to all 100 bands. In summary, PCA identifies duplicate data over multiple channels, reduces redundancy, and speeds up the processing time. This is key for PCA image processing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/da_gislayers.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Information extraction of hypercritical data. Source: <a href="https://www.rsgisworld.com/2018/08/information-extraction-from.html">Rsgisworld</a></figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.</p>
+<p>Reflecting on the week’s lessons in remote sensing, I’ve been struck by the complexity of interpreting Earth via satellite imagery. The focus on corrections and enhancements, like geometric and atmospheric corrections, and the use of NDVI and PCA—has deepened my understanding of the field’s precision and the technological tools at our disposal. This exploration underscored the vital balance between leveraging technology and applying human insight to fully realize the full potential of remote sensing data.</p>
 <p>It may be a bit much to write about these last few weeks because there is a great deal of unfamiliar terms and context to understand for me, who is completely new to the remote sensing journey, and I will try to keep it as concise as possible for the rest of the week!😄 However, I firmly believe in the importance of establishing a strong foundation for my future in-depth practice. I also broadened my horizons by searching for information and communicating with others after class, which is very interesting and rewarding. I really enjoy exploring the unknown and enriching myself with new skills.🥰</p>
 
 
