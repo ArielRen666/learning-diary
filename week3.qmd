@@ -18,25 +18,25 @@ Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/ca
 
 ### Atmospheric Correction
 
-Reduces the impact of atmospheric scattering and absorption on image quality through both relative and absolute methods.
+Focuses on eliminating the effects of the atmosphere on satellite or aerial image data to more accurately reflect the actual reflectivity or brightness value of the surface.
+
+As solar radiation passes through the atmosphere to reach the Earth's surface, and then reflects back to the sensor, it is scattered and absorbed by gases, water droplets, and particulate matter in the atmosphere. This alters the radiation signal that reaches the sensor.
 
 -   **Relative correction**, such as DOS and Pseudo-Invariant Features, uses internal image references for correction and is suitable when atmospheric parameters are lacking.
 
--   **Absolute correction**, applies atmospheric models like MODTRAN for direct correction to obtain the true reflectance of the surface.
-
-The choice of the appropriate correction method depends on application requirements and data conditions, with the goal of enhancing the accuracy and usability of remote sensing data.
+-   **Absolute correction**, applies atmospheric models like MODTRAN for direct correction.
 
 ![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](images/3.1.3after%20atmospheric%20correction.jpg){width="70%"}
 
 ### Orthorectification/Topographic Correction
 
-Correct image distortions caused by terrain undulations. Specifically, the height of mountains, buildings, and other topographic features can cause positional shifts in images, particularly around the edges. Converting remote sensing images from perspective to orthographic projection, using a Digital Elevation Model (DEM), aligns pixels with their true ground positions, essential for map accuracy and terrain analysis.
+Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images. This is a standard practice in remote sensing to improve the accuracy of satellite data for various applications such as mapping, land cover analysis, and geographic information systems (GIS).
 
-![TM scenes before and after topographic correction (composite of band 5, 4 and 3 in red, green and blue). Source: [Li et al., 2015](https://doi.org/10.3390/rs70506296)](week3-images/3.1.4remotesensing-07-06296-g002a.jpg){width="70%"}
+![Thematic Mapper scenes before and after topographic correction (composite of band 5, 4 and 3 in red, green and blue). Source: [Li et al., 2015](https://doi.org/10.3390/rs70506296)](week3-images/3.1.4remotesensing-07-06296-g002a.jpg){width="70%"}
 
 ### Radiometric Correction
 
-Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes, like solar irradiance variations. Ensuring data comparability across different sensors and times is essential for analyses such as vegetation monitoring and land cover classification.
+Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes and solar irradiance variations. For example, slopes facing the sun and those in shadow may reflect sunlight in completely different ways. This difference can cause these areas to appear with varying brightness or colors in images, which may then be mistakenly classified into different categories (Jenerowicz et al., 2023).
 
 ### Data Joining and Image Enhancements
 
@@ -52,10 +52,23 @@ The above image demonstrates a technique for image fusion. On the left, there is
 
 This image shows remote sensing imagery enhanced by false-color compositing, a method to highlight specific land features by assigning different spectral bands to RGB colors. It illustrates three different band combinations emphasizing vegetation (6,5,2), buildings (7,6,4), and a combination for vegetation (5,4,3) and distinguishing land/water (5,6,4). This technique not only improves visual perception but also aids in analyzing and identifying various land cover types.
 
-
 ## Applications
 
-In exploring the practical areas of this section, two major technologies that stood out to me were NDVI and PCA. In terms of NDVI, I had first heard about it and mentioned it in my learning diary in the first week, and as for PCA, I had been exposed to it in my quantitative methods course in the last term. That's why I'm most curious about both.
+In exploring the practical areas of this section, two major enhancement technologies that stood out to me were NDVI and PCA. In terms of NDVI, I had first heard about it and mentioned it in my learning diary in the first week, and as for PCA, I had been exposed to it in my quantitative methods course in the last term. That's why I'm most curious about both.
+
+### NDVI (Normalized Difference Vegetation Index)
+
+Ratio must be mentioned when referring to NDVI.
+
+The ratio calculation involves dividing the pixel values of one band by the corresponding pixel values of another band, which helps reduce the impacts of factors such as changes in illumination, terrain shadows, etc., thus increasing the accuracy of the analysis.The NDVI is a classic example of ratio technique application, utilizing the ratio of the red and near-infrared bands to assess the condition of vegetation growth.
+
+NDVI quantifies vegetation by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs).
+
+$$
+NDVI = \frac{(NIR-Red)}{(NIR+Red)}
+$$
+NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
+
 
 
 
@@ -63,4 +76,4 @@ In exploring the practical areas of this section, two major technologies that st
 
 I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.
 
-It may be a bit much to write about these last few weeks because there is a great deal of unfamiliar terms and context to understand for me, who is completely new to the remote sensing journey, and I will try to keep it as concise as possible for the rest of the week\!😄 However, I firmly believe in the importance of establishing a strong foundation for my future in-depth practice. I also broadened my horizons by searching for information and communicating with others after class, which is very interesting and rewarding. I really enjoy exploring the unknown and enriching myself with new skills.🥰
+It may be a bit much to write about these last few weeks because there is a great deal of unfamiliar terms and context to understand for me, who is completely new to the remote sensing journey, and I will try to keep it as concise as possible for the rest of the week!😄 However, I firmly believe in the importance of establishing a strong foundation for my future in-depth practice. I also broadened my horizons by searching for information and communicating with others after class, which is very interesting and rewarding. I really enjoy exploring the unknown and enriching myself with new skills.🥰

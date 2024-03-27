@@ -4,9 +4,8 @@
 
 In my first remote sensing class, I stepped into a world where satellites and sensors act like high-tech scouts, constantly transmitting data about our planet. Seeing how these eyes in the sky capture the world as it is helps us understand everything from urban sprawl to retreating glaciers.
 
-```{r echo=FALSE, out.width = "30%", fig.align='center', cache=FALSE}
-knitr::include_graphics('images/1.1Air-Quality-Transparent-Blue.gif')
-
+```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE}
+knitr::include_graphics('images/What-Is-Remote-Sensing-2.jpg')
 ```
 
 Here's what I learnt this week:
@@ -19,13 +18,15 @@ Gather information about the Earth's surface through sensors mounted on satellit
 
 -   **Active sensors**
 
-    Emit electro-entropic magnetic (EM) waves and receive reflected signals, can pass through clouds and work in the dark, such as X-rays, radar (e.g., synthetic aperture radar (SAR), laser radar (LIDAR)), which are commonly used for topographic mapping and forest altitude measurements.
+    This type of sensor illuminates its target and then measure the reflected light. Imagine the flash of a camera. It brightens its target. Next, it captures the return light. This is the same principle of how active sensors work. They can pass through clouds and work in the dark, such as X-rays, radar (e.g., synthetic aperture radar (SAR), laser radar (LIDAR)), which are commonly used for topographic mapping and forest altitude measurements.
+
+![Diagram of an active sensor. Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases).](images/Active-Remote-Sensing.png){width="75%"}
 
 -   **Passive sensors**
 
-    Rely on the energy radiated by the sun or the earth itself and do not emit any signals, but only receive the energy reflected back from the light emitted by the sun, (e.g., the human eye, cameras, and multispectral sensors such as those from the LANDSAT series of satellites), which are commonly used in water resource management, climate change monitoring and disaster response.
+    Measure reflected light emitted from the sun. When sunlight reflects off the Earth’s surface, passive sensors capture that light (e.g., the human eye, cameras, and multispectral sensors such as LANDSAT and Sentinel). They capture images by sensing reflected sunlight in the electromagnetic spectrum, which are commonly used in water resource management, climate change monitoring and disaster response.
 
-![Diagram of a passive sensor versus an active sensor. Source: [Appliedsciences Nasa](https://appliedsciences.nasa.gov/sites/default/files/2024-03/McCartney_SXSW_edited_SC.pdf).](images/1.1.2activePassive.png){width="75%"}
+![Diagram of a passive sensor. Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases).](images/Passive-Remote-Sensing.png){width="75%"}
 
 ### Electromagnetic Waves (EW)
 
