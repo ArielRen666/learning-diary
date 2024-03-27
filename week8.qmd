@@ -1,8 +1,8 @@
-# Week 2 - Presentation of Sentinel-1
+# Week 8 - Presentation of Sentinel-1
 
-```{r xaringan_embed, echo=FALSE}
+```{r echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(
-  url = "https://arielren666.github.io/week2-Sentinel-1/#1",
+  url = "https://arielren666.github.io/week2-Sentinel-1/#1", 
   ratio = "4:3")
 ```
 
