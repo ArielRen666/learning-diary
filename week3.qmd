@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Week 3 - Corrections
 
 ## Summary
@@ -45,3 +46,50 @@ After understanding the basic concepts of remote sensing and related terminology
 ![Diagram of the Electromagnetic Spectrum. Credit: NASA Science.](week3-images/3.1.3after atmospheric correction.jpg)
 
 For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
+=======
+# Week 3 - **Corrections**
+
+## Summary
+
+This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
+
+### Corrections
+
+Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.
+Including **Geometric correction** (coordinate system & distortion), **Atmospheric correction** (atmospheric scattering & absorption), **Orthorectification/Topographic correction** (terrain deformation), **Radiometric correction** (convert digital value into spectral radiance).
+
+### Geometric Correction
+
+How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth's rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.
+
+![](images/3.1.1GeometricCorrection.gif){width="45%"}
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ ![](images/3.1.1GeometricCorrection2.png){width="45%"}
+
+Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
+
+### Atmospheric Correction
+
+Reduces the impact of atmospheric scattering and absorption on image quality through both relative and absolute methods. 
+
+- **Relative correction**, such as DOS and Pseudo-Invariant Features, uses internal image references for correction and is suitable when atmospheric parameters are lacking. 
+
+- **Absolute correction**, applies atmospheric models like MODTRAN for direct correction to obtain the true reflectance of the surface. 
+
+The choice of the appropriate correction method depends on application requirements and data conditions, with the goal of enhancing the accuracy and usability of remote sensing data.
+
+![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](images/3.1.3after atmospheric correction.jpg){width="70%"}
+
+
+### Orthorectification/Topographic Correction
+
+
+
+## Application
+
+After understanding the basic concepts of remote sensing and related terminology, I began to delve into its application areas, which help us solve many real-world problems.
+
+![Diagram of the Electromagnetic Spectrum. Credit: NASA Science.](images/1.2application.jpg)
+
+For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
+>>>>>>> 36f383a1119f9d29a0de474c00c1abb2359cb08f
