@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Ariel's RS learning diary"
+  author: "Qianyu Ren"
+  date: "2024/03/18"
+  chapters:
+    - index.qmd
+    - intro.qmd 
+    - week2.qmd
+    - week3.qmd
+    - week5.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
+=======
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Ariel's RS learning diary"
+  author: "Qianyu Ren"
+  date: "2024/03/18"
+  chapters:
+    - index.qmd
+    - intro.qmd 
+    - week2.qmd
+    - week3.qmd
+    - week5.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
+>>>>>>> 36f383a1119f9d29a0de474c00c1abb2359cb08f
