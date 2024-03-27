@@ -1,4 +1,4 @@
-# Week 3 - **Corrections**
+# Week 3 - Corrections
 
 ## Summary
 
@@ -6,15 +6,15 @@ This remote sensing lesson covers methods of acquiring and processing remote sen
 
 ### Corrections
 
-Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques. Including **Geometric correction** (coordinate system & distortion), **Atmospheric correction** (atmospheric scattering & absorption), **Orthorectification/Topographic correction** (terrain deformation), **Radiometric correction** (convert digital value into spectral radiance).
+Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.
 
 ### Geometric Correction
 
 How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth's rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.
 
-![](images/3.1.1GeometricCorrection.gif){width="45%"} 
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-![](images/3.1.1GeometricCorrection2.png){width="45%"}
+![](images/3.1.1GeometricCorrection.gif){width="45%"}
+
+            ![](images/3.1.1GeometricCorrection2.png){width="45%"}
 
 Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
 
@@ -31,6 +31,24 @@ The choice of the appropriate correction method depends on application requireme
 ![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](images/3.1.3after%20atmospheric%20correction.jpg){width="70%"}
 
 ### Orthorectification/Topographic Correction
+
+Correct image distortions caused by terrain undulations. Specifically, the height of mountains, buildings, and other topographic features can cause positional shifts in images, particularly around the edges. Converting remote sensing images from perspective to orthographic projection, using a Digital Elevation Model (DEM), aligns pixels with their true ground positions, essential for map accuracy and terrain analysis.
+
+![TM scenes before and after topographic correction (composite of band 5, 4 and 3 in red, green and blue). Source: [Li et al., 2015](https://doi.org/10.3390/rs70506296)](week3-images/3.1.4remotesensing-07-06296-g002a.jpg){width="70%"}
+
+### Radiometric Correction
+
+Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes, like solar irradiance variations. Ensuring data comparability across different sensors and times is essential for analyses such as vegetation monitoring and land cover classification.
+
+### Data Joining and Enhancement
+
+This part gave me an understanding of how image data from different points in time or from different sensors can be effectively joined, and how image quality and visualisation of information can be improved through image enhancement techniques.
+
+![The input and output of spatiotemporal data fusion. Source: [Zhu et al., 2018](https://www.mdpi.com/2072-4292/10/4/527#)](week3-images/3.2spatiotemporal%20data.png){width="70%"}
+
+The image demonstrates a technique for image fusion. On the left, there is a sequence of dense, coarse images with low resolution but high acquisition frequency. In the middle, there are sparse, fine images with high resolution but lower frequency of acquisition. Through spatiotemporal data fusion, a high-resolution and information-rich fine image is synthesized (on the right), effectively combining the advantages of both image types.
+
+Specifically, image enhancement methods include contrast enhancement, spatial enhancement (such as filtering and edge enhancement), Principal Component Analysis (PCA) for dimension reduction, texture analysis for spatial variation, and image fusion techniques to combine data from multiple sources or sensors (e.g., through feathering edge techniques).
 
 ## Application
 

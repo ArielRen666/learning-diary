@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./week8.html" rel="next">
 <link href="./week2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - **Corrections**</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -114,19 +114,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - <em>Presentation of Sentinel-1</em></span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - <strong>Corrections</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,6 +157,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#geometric-correction" id="toc-geometric-correction" class="nav-link" data-scroll-target="#geometric-correction"><span class="header-section-number">3.1.2</span> Geometric Correction</a></li>
   <li><a href="#atmospheric-correction" id="toc-atmospheric-correction" class="nav-link" data-scroll-target="#atmospheric-correction"><span class="header-section-number">3.1.3</span> Atmospheric Correction</a></li>
   <li><a href="#orthorectificationtopographic-correction" id="toc-orthorectificationtopographic-correction" class="nav-link" data-scroll-target="#orthorectificationtopographic-correction"><span class="header-section-number">3.1.4</span> Orthorectification/Topographic Correction</a></li>
+  <li><a href="#radiometric-correction" id="toc-radiometric-correction" class="nav-link" data-scroll-target="#radiometric-correction"><span class="header-section-number">3.1.5</span> Radiometric Correction</a></li>
+  <li><a href="#data-joining-and-enhancement" id="toc-data-joining-and-enhancement" class="nav-link" data-scroll-target="#data-joining-and-enhancement"><span class="header-section-number">3.1.6</span> Data Joining and Enhancement</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a></li>
   </ul>
@@ -161,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - <strong>Corrections</strong></span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></h1>
 </div>
 
 
@@ -181,12 +189,13 @@ ul.task-list li input[type="checkbox"] {
 <p>This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.</p>
 <section id="corrections" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1.1</span> Corrections</h3>
-<p>Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques. Including <strong>Geometric correction</strong> (coordinate system &amp; distortion), <strong>Atmospheric correction</strong> (atmospheric scattering &amp; absorption), <strong>Orthorectification/Topographic correction</strong> (terrain deformation), <strong>Radiometric correction</strong> (convert digital value into spectral radiance).</p>
+<p>Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.</p>
 </section>
 <section id="geometric-correction" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.2</span> Geometric Correction</h3>
 <p>How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth’s rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.</p>
-<p><img src="images/3.1.1GeometricCorrection.gif" class="img-fluid" style="width:45.0%"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/3.1.1GeometricCorrection2.png" class="img-fluid" style="width:45.0%"></p>
+<p><img src="images/3.1.1GeometricCorrection.gif" class="img-fluid" style="width:45.0%"></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/3.1.1GeometricCorrection2.png" class="img-fluid" style="width:45.0%"></p>
 <p>Geometric correction process. Source: <a href="https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html">Catalyst Earth</a></p>
 </section>
 <section id="atmospheric-correction" class="level3" data-number="3.1.3">
@@ -206,6 +215,29 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="orthorectificationtopographic-correction" class="level3" data-number="3.1.4">
 <h3 data-number="3.1.4" class="anchored" data-anchor-id="orthorectificationtopographic-correction"><span class="header-section-number">3.1.4</span> Orthorectification/Topographic Correction</h3>
+<p>Correct image distortions caused by terrain undulations. Specifically, the height of mountains, buildings, and other topographic features can cause positional shifts in images, particularly around the edges. Converting remote sensing images from perspective to orthographic projection, using a Digital Elevation Model (DEM), aligns pixels with their true ground positions, essential for map accuracy and terrain analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/3.1.4remotesensing-07-06296-g002a.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">TM scenes before and after topographic correction (composite of band 5, 4 and 3 in red, green and blue). Source: <a href="https://doi.org/10.3390/rs70506296">Li et al., 2015</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="radiometric-correction" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="radiometric-correction"><span class="header-section-number">3.1.5</span> Radiometric Correction</h3>
+<p>Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes, like solar irradiance variations. Ensuring data comparability across different sensors and times is essential for analyses such as vegetation monitoring and land cover classification.</p>
+</section>
+<section id="data-joining-and-enhancement" class="level3" data-number="3.1.6">
+<h3 data-number="3.1.6" class="anchored" data-anchor-id="data-joining-and-enhancement"><span class="header-section-number">3.1.6</span> Data Joining and Enhancement</h3>
+<p>This part gave me an understanding of how image data from different points in time or from different sensors can be effectively joined, and how image quality and visualisation of information can be improved through image enhancement techniques.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/3.2spatiotemporal data.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">The input and output of spatiotemporal data fusion. Source: <a href="https://www.mdpi.com/2072-4292/10/4/527#">Zhu et al., 2018</a></figcaption>
+</figure>
+</div>
+<p>The image demonstrates a technique for image fusion. On the left, there is a sequence of dense, coarse images with low resolution but high acquisition frequency. In the middle, there are sparse, fine images with high resolution but lower frequency of acquisition. Through spatiotemporal data fusion, a high-resolution and information-rich fine image is synthesized (on the right), effectively combining the advantages of both image types.</p>
+<p>Specifically, image enhancement methods include contrast enhancement, spatial enhancement (such as filtering and edge enhancement), Principal Component Analysis (PCA) for dimension reduction, texture analysis for spatial variation, and image fusion techniques to combine data from multiple sources or sensors (e.g., through feathering edge techniques).</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="3.2">
@@ -452,12 +484,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - <em>Presentation of Sentinel-1</em></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
