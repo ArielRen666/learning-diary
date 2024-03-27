@@ -12,7 +12,7 @@ Various errors that may exist in remote sensing images (e.g., due to factors suc
 
 How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth's rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.
 
-![](images/3.1.1GeometricCorrection.gif){width="45%"}         ![](images/3.1.1GeometricCorrection2.png){width="45%"}
+![](week3-images/3.1.1GeometricCorrection.gif){width="45%"}         ![](week3-images/3.1.1GeometricCorrection2.png){width="45%"}
 
 Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
 
@@ -26,11 +26,11 @@ As solar radiation passes through the atmosphere to reach the Earth's surface, a
 
 -   **Absolute correction**, applies atmospheric models like MODTRAN for direct correction.
 
-![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](images/3.1.3after%20atmospheric%20correction.jpg){width="70%"}
+![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](week3-images/3.1.3after%20atmospheric%20correction.jpg){width="70%"}
 
 ### Orthorectification/Topographic Correction
 
-Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images. This is a standard practice in remote sensing to improve the accuracy of satellite data for various applications such as mapping, land cover analysis, and geographic information systems (GIS).
+Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images. This can improve the accuracy of satellite data for various applications such as mapping, land cover analysis and gis.
 
 ![Thematic Mapper scenes before and after topographic correction (composite of band 5, 4 and 3 in red, green and blue). Source: [Li et al., 2015](https://doi.org/10.3390/rs70506296)](week3-images/3.1.4remotesensing-07-06296-g002a.jpg){width="70%"}
 
@@ -60,17 +60,34 @@ In exploring the practical areas of this section, two major enhancement technolo
 
 Ratio must be mentioned when referring to NDVI.
 
-The ratio calculation involves dividing the pixel values of one band by the corresponding pixel values of another band, which helps reduce the impacts of factors such as changes in illumination, terrain shadows, etc., thus increasing the accuracy of the analysis.The NDVI is a classic example of ratio technique application, utilizing the ratio of the red and near-infrared bands to assess the condition of vegetation growth.
+Ratio calculation involves dividing the pixel values of one band by the corresponding pixel values of another band, which helps reduce the impacts of factors such as changes in illumination, terrain shadows, etc., thus increasing the accuracy of the analysis. NDVI is a classic example of ratio.
 
-NDVI quantifies vegetation by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs).
+NDVI assess the condition of vegetation growth by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs).
 
 $$
 NDVI = \frac{(NIR-Red)}{(NIR+Red)}
 $$
 NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
 
+![Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php)](week3-images/NDVIwork.jpg){width="40%"}
 
+**How do we use NDVI?**
+</br>
 
+We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index. 
+
+The below graphics shows the Landsat Surface Reflectance (SR) NDVI maps of the San Joaquin Valley region of California on March 10, 2022 and March 13, 2023. The left 2022 map shows the impact on local vegetation after several years of drought. An extremely wet spring in 2023 lead to an early green-up in the valley.
+
+![](week3-images/L8_042035_20220310_SR_NDVI_0.jpg){width="45%"} 
+![](week3-images/L8_042035_20230313_SR_NDVI_0.jpg){width="45%"}
+
+NDVI Maps of the San Joaquin Valley Region, March 2022 and March 2023. Source: [USGS](https://www.usgs.gov/media/before-after/ndvi-maps-san-joaquin-valley-region-march-2022-and-march-2023)
+
+Furthermore, NASA states that NDVI is a good indicator of drought. When water limits vegetation growth, it has a lower relative NDVI and density of vegetation.
+
+The below satellite maps of vegetation show the density of plant growth over the entire globe. Very low values of NDVI (0.1 and below) correspond to barren areas of rock, sand, or snow. Moderate values represent shrub and grassland (0.2 to 0.3), while high values indicate temperate and tropical rainforests (0.6 to 0.8).
+
+![Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/features/MeasuringVegetation)](week3-images/global_ndvi_19990921.jpg){width="70%"}
 
 ## Reflection
 

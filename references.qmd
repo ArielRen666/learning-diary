@@ -4,6 +4,15 @@ Chapter 4 - Atmospheric correction of optical imagery. (2020). In Advanced Remot
 
 Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., & Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. *Bulletin of Earthquake Engineering.* [https://doi.org/10.1007/s10518-023-01716-9](https://doi.org/10.1007/s10518-023-01716-9)
 
+Gisgeographys. “What is Remote Sensing? The Definitive Guide” Accessed 11 March 2024.
+[https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
+
+
+Jenerowicz, A., Wierzbicki, D., & Kedzierski, M. (2023). Radiometric Correction with Topography Influence of Multispectral Imagery Obtained from Unmanned Aerial Vehicles. Remote Sensing (Basel, Switzerland), 15(8), 2059-. [https://doi.org/10.3390/rs15082059](https://doi.org/10.3390/rs15082059)
+
 Li, A., Wang, Q., Bian, J., & Lei, G. (2015). An improved physics-based model for topographic correction of landsat TM images. *Remote Sensing* (Basel, Switzerland), 7(5), 6296–6319. [https://doi.org/10.3390/rs70506296](https://doi.org/10.3390/rs70506296)
 
 Zhu, X., Cai, F., Tian, J., & Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. Remote Sensing (Basel, Switzerland), 10(4), 527-. [https://doi.org/10.3390/rs10040527](https://doi.org/10.3390/rs10040527)
+
+
+
