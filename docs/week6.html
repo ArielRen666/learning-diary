@@ -306,8 +306,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="unsupervised-classification-in-remote-sensing" class="level3" data-number="6.1.4">
 <h3 data-number="6.1.4" class="anchored" data-anchor-id="unsupervised-classification-in-remote-sensing"><span class="header-section-number">6.1.4</span> Unsupervised Classification in Remote Sensing</h3>
-<p>In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, you classify each cluster with a land cover class.</p>
-<p>Overall, unsupervised classification is the most basic technique. Because you don’t need samples for unsupervised classification, it’s an easy way to segment and understand an image.</p>
+<p>In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, classify each cluster with a land cover class. It is the most basic technique.</p>
+<p><img src="week6-images/unsupervised-classification.png" class="img-fluid" style="width:28.0%"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="week6-images/unsupervised-diagram.png" class="img-fluid" style="width:30.0%"></p>
+<p>Source: <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases">Gisgeography</a></p>
 <p>The two basic steps for unsupervised classification are:</p>
 <ol type="1">
 <li><strong>Generate clusters</strong></li>
@@ -318,8 +319,14 @@ ul.task-list li input[type="checkbox"] {
 <li>K-means</li>
 <li>ISODATA</li>
 </ul>
-<p>After picking a clustering algorithm, you identify the number of groups you want to generate. For example, you can create 8, 20, or 42 clusters. Fewer clusters have more resembling pixels within groups. But more clusters increase the variability within groups.</p>
-<p>To be clear, these are unclassified clusters. The next step is to manually assign land cover classes to each cluster. For example, if you want to classify vegetation and non-vegetation, you can select the clusters that represent them best.</p>
+<p>After picking a clustering algorithm, we need to identify the number of groups we want to generate. For example, we can create 6, 22, or 39 clusters. Fewer clusters have more resembling pixels within groups, with more clusters increase the variability within groups.</p>
+<p>To be clear, these are unclassified clusters. The next step is to manually assign land cover classes to each cluster. For example, if we want to classify vegetation and non-vegetation, we can select the clusters that represent them best.</p>
+<p>This video below shows how to perform unsupervised image classification in ArcGIS Pro, uses clustering algorithms to group similar pixels in an image without using any prior training data.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/fZwdsSNr7vk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.2</span> Reflection</h2>
 <ol start="4" type="1">
 <li><strong>Machine Learning in EO Data Analysis</strong>:
 <ul>
@@ -337,14 +344,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Importance of training data in supervised learning and how clustering works in unsupervised learning.</li>
 </ul></li>
 </ol>
-<p>provided a comprehensive overview of using EO data for land cover classification and introduced a variety of classification techniques, emphasizing the importance of machine learning methods in environmental monitoring and analysis.</p>
-<p>This video shows how to perform unsupervised image classification in ArcGIS Pro. Unsupervised image classification in remote sensing uses clustering algorithms to group similar pixels in an image without using any prior training data.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/fZwdsSNr7vk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-</section>
-<section id="reflection" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.2</span> Reflection</h2>
-<p>The lecture concluded with an encouraging note on the future of remote sensing and classification, emphasizing the ever-growing availability of high-resolution satellite imagery and advanced computational resources. This, combined with the development of more sophisticated analysis techniques, promises to further our understanding of the Earth’s surface and the dynamic processes that shape it.</p>
+<p>provided a comprehensive overview of using EO data for land cover classification and introduced a variety of classification techniques, emphasizing the importance of machine learning methods in environmental monitoring and analysis. The lecture concluded with an encouraging note on the future of remote sensing and classification, emphasizing the ever-growing availability of high-resolution satellite imagery and advanced computational resources. This, combined with the development of more sophisticated analysis techniques, promises to further our understanding of the Earth’s surface and the dynamic processes that shape it.</p>
 <p>By providing a comprehensive overview of classification in remote sensing, this lecture equipped us with the knowledge and tools to harness the power of satellite imagery for environmental monitoring, urban planning, and beyond.</p>
 
 

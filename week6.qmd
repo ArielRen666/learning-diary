@@ -60,9 +60,12 @@ As shown in several studies, SVM is one of the best classification algorithms in
 
 ### Unsupervised Classification in Remote Sensing
 
-In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, you classify each cluster with a land cover class.
+In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, classify each cluster with a land cover class. It is the most basic technique.
 
-Overall, unsupervised classification is the most basic technique. Because you don’t need samples for unsupervised classification, it’s an easy way to segment and understand an image.
+![](week6-images/unsupervised-classification.png){width="28%"}                     
+![](week6-images/unsupervised-diagram.png){width="30%"}
+
+Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
 
 The two basic steps for unsupervised classification are:
 
@@ -74,9 +77,15 @@ Using remote sensing software, we first create “clusters”. Some of the commo
 - K-means
 - ISODATA
 
-After picking a clustering algorithm, you identify the number of groups you want to generate. For example, you can create 8, 20, or 42 clusters. Fewer clusters have more resembling pixels within groups. But more clusters increase the variability within groups.
+After picking a clustering algorithm, we need to identify the number of groups we want to generate. For example, we can create 6, 22, or 39 clusters. Fewer clusters have more resembling pixels within groups, with more clusters increase the variability within groups.
 
-To be clear, these are unclassified clusters. The next step is to manually assign land cover classes to each cluster. For example, if you want to classify vegetation and non-vegetation, you can select the clusters that represent them best.
+To be clear, these are unclassified clusters. The next step is to manually assign land cover classes to each cluster. For example, if we want to classify vegetation and non-vegetation, we can select the clusters that represent them best.
+
+This video below shows how to perform unsupervised image classification in ArcGIS Pro, uses clustering algorithms to group similar pixels in an image without using any prior training data.
+
+{{< video https://youtu.be/fZwdsSNr7vk >}}
+
+## Reflection
 
 4.  **Machine Learning in EO Data Analysis**:
     -   Exploration of classification and regression trees (CART) for discrete and continuous data.
@@ -89,13 +98,6 @@ To be clear, these are unclassified clusters. The next step is to manually assig
     -   Importance of training data in supervised learning and how clustering works in unsupervised learning.
     
 provided a comprehensive overview of using EO data for land cover classification and introduced a variety of classification techniques, emphasizing the importance of machine learning methods in environmental monitoring and analysis.
-
-This video shows how to perform unsupervised image classification in ArcGIS Pro. Unsupervised image classification in remote sensing uses clustering algorithms to group similar pixels in an image without using any prior training data.
-
-{{< video https://youtu.be/fZwdsSNr7vk >}}
-
-## Reflection
-
 The lecture concluded with an encouraging note on the future of remote sensing and classification, emphasizing the ever-growing availability of high-resolution satellite imagery and advanced computational resources. This, combined with the development of more sophisticated analysis techniques, promises to further our understanding of the Earth's surface and the dynamic processes that shape it.
 
 By providing a comprehensive overview of classification in remote sensing, this lecture equipped us with the knowledge and tools to harness the power of satellite imagery for environmental monitoring, urban planning, and beyond.
