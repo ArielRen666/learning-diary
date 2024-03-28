@@ -1,0 +1,101 @@
+# Week 6 - Classification I
+
+## Summary
+
+This week's lecture on "Classification I" immersed me into the intricate world of satellite imagery and Earth observation data, unveiling the power of classifying vast datasets to extract useful insights about our planet. Using remote sensing software, we can effectively sort satellite images into categories like water, wetlands, forests, and urban areas. This process not only aids in identifying land cover types but also in tracking environmental changes and predicting future trends with enhanced accuracy.
+
+![Image Classification Diagram. Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)](week6-images/obia-cover-1265x672.gif){width="70%"}
+
+
+### What is Image Classification in Remote Sensing?
+
+The 3 main types of image classification techniques in remote sensing are:
+
+-   Unsupervised image classification
+-   Supervised image classification
+-   Object-based image analysis
+
+Unsupervised and supervised image classification are the two most common approaches, and also they are the focus of this week.
+
+### Supervised Classification vs. Unsupervised Classification
+
+The table below highlights the differences between unsupervised and supervised classification
+
+|       Aspect        |               Supervised Classification                | Unsupervised Classification                            |
+|:----------------:|:---------------------------:|--------------------------|
+|     Definition      |   z Classification guided by known training samples     | Classification without predefined training data        |
+|    Training Data    |     Requires labeled training data for each class      | No labeled training data required                      |
+|       Process       | Involves training the classifier using labeled samples | Involves training the classifier using labeled samples |
+|  User Involvement   |        Requires user to select training samples        | Minimal user intervention during classification        |
+|  Class Information  |     Prior knowledge of class identities is needed      | Classes are discovered from data patterns              |
+| Accuracy Assessment |    Often results in higher accuracy due to training    | May have lower accuracy due to lack of training        |
+|    Applicability    |       Effective for identifying specific classes       | Suitable for exploratory data analysis                 |
+|     Flexibility     |     Less flexible, as predefined classes are used      | More flexible, as classes are generated dynamically    |
+|     Complexity      |    Potentially more complex due to training process    | Generally simpler as it relies on clustering           |
+
+### Supervised Classification in Remote Sensing
+
+In supervised classification, first select representative samples for each land cover class. Then, software uses these “training sites” and applies them to the entire image. The training samples are key because they will determine which class each pixel inherits in the overall image.
+
+![](week6-images/supervised-classification-ikonos.png){width="28%"}                     
+![](week6-images/supervised-diagram.png){width="55%"}
+
+Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
+
+The three basic steps for supervised classification are:
+
+1. **Select training areas**: for example, mark urban areas by marking them in the image. Then, continue adding training sites representative in the entire image.
+
+2. **Generate signature file**: for each land cover class, we continue create training samples until we have representative samples for each class. In turn, this would generate a signature file, which stores all training samples’ spectral information.
+
+3. **Classify**: the last step is to use the signature file to run a classification. From here, we have to pick a classification algorithm such as:
+
+- Maximum likelihood
+- Minimum-distance
+- Principal components
+- Support vector machine (SVM)
+- Iso cluster
+
+As shown in several studies, SVM is one of the best classification algorithms in remote sensing, but each option has its own advantages ([Pal & Mather, 2005](https://doi.org/10.1080/01431160512331314083)). 
+
+### Unsupervised Classification in Remote Sensing
+
+In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, you classify each cluster with a land cover class.
+
+Overall, unsupervised classification is the most basic technique. Because you don’t need samples for unsupervised classification, it’s an easy way to segment and understand an image.
+
+The two basic steps for unsupervised classification are:
+
+1. **Generate clusters**
+2. **Assign classes**
+
+Using remote sensing software, we first create “clusters”. Some of the common image clustering algorithms are:
+
+- K-means
+- ISODATA
+
+After picking a clustering algorithm, you identify the number of groups you want to generate. For example, you can create 8, 20, or 42 clusters. Fewer clusters have more resembling pixels within groups. But more clusters increase the variability within groups.
+
+To be clear, these are unclassified clusters. The next step is to manually assign land cover classes to each cluster. For example, if you want to classify vegetation and non-vegetation, you can select the clusters that represent them best.
+
+4.  **Machine Learning in EO Data Analysis**:
+    -   Exploration of classification and regression trees (CART) for discrete and continuous data.
+    -   The role of parameters like alpha in pruning decision trees to enhance model performance.
+5.  **Random Forests and SVM in Land Cover Classification**:
+    -   Description of random forests for creating numerous decision trees to improve classification accuracy.
+    -   SVM’s application for binary classification and the use of hyperparameters for optimizing model performance.
+6.  **Supervised vs. Unsupervised Classification**:
+    -   Differences between supervised (e.g., maximum likelihood classification, SVM) and unsupervised (e.g., k-means clustering) classification methods.
+    -   Importance of training data in supervised learning and how clustering works in unsupervised learning.
+    
+provided a comprehensive overview of using EO data for land cover classification and introduced a variety of classification techniques, emphasizing the importance of machine learning methods in environmental monitoring and analysis.
+
+This video shows how to perform unsupervised image classification in ArcGIS Pro. Unsupervised image classification in remote sensing uses clustering algorithms to group similar pixels in an image without using any prior training data.
+
+{{< video https://youtu.be/fZwdsSNr7vk >}}
+
+## Reflection
+
+The lecture concluded with an encouraging note on the future of remote sensing and classification, emphasizing the ever-growing availability of high-resolution satellite imagery and advanced computational resources. This, combined with the development of more sophisticated analysis techniques, promises to further our understanding of the Earth's surface and the dynamic processes that shape it.
+
+By providing a comprehensive overview of classification in remote sensing, this lecture equipped us with the knowledge and tools to harness the power of satellite imagery for environmental monitoring, urban planning, and beyond.

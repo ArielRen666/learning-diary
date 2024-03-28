@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ariel’s RS learning diary - References</title>
+<title>Ariel’s RS learning diary - 6&nbsp; Week 6 - Classification I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="prev">
+<link href="./week8.html" rel="next">
+<link href="./week5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -136,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span></a>
   </div>
 </li>
@@ -154,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -164,14 +165,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#what-is-image-classification-in-remote-sensing" id="toc-what-is-image-classification-in-remote-sensing" class="nav-link" data-scroll-target="#what-is-image-classification-in-remote-sensing"><span class="header-section-number">6.1.1</span> What is Image Classification in Remote Sensing?</a></li>
+  <li><a href="#supervised-classification-vs.-unsupervised-classification" id="toc-supervised-classification-vs.-unsupervised-classification" class="nav-link" data-scroll-target="#supervised-classification-vs.-unsupervised-classification"><span class="header-section-number">6.1.2</span> Supervised Classification vs.&nbsp;Unsupervised Classification</a></li>
+  <li><a href="#supervised-classification-in-remote-sensing" id="toc-supervised-classification-in-remote-sensing" class="nav-link" data-scroll-target="#supervised-classification-in-remote-sensing"><span class="header-section-number">6.1.3</span> Supervised Classification in Remote Sensing</a></li>
+  <li><a href="#unsupervised-classification-in-remote-sensing" id="toc-unsupervised-classification-in-remote-sensing" class="nav-link" data-scroll-target="#unsupervised-classification-in-remote-sensing"><span class="header-section-number">6.1.4</span> Unsupervised Classification in Remote Sensing</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.2</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></h1>
 </div>
 
 
@@ -186,27 +200,155 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Chapter 4 - Atmospheric correction of optical imagery. (2020). In Advanced Remote Sensing (Second Edition, pp.&nbsp;131–156). <em>Elsevier Inc</em>. <a href="https://doi.org/10.1016/B978-0-12-815826-5.00004-0">https://doi.org/10.1016/B978-0-12-815826-5.00004-0</a></p>
-<p>Duke University; Spotting air pollution with satellites, better than ever before. (2020). In <em>TB &amp; Outbreaks Weekly</em> (pp.&nbsp;95-). NewsRx.</p>
-<p>Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., &amp; Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. <em>Bulletin of Earthquake Engineering.</em> <a href="https://doi.org/10.1007/s10518-023-01716-9">https://doi.org/10.1007/s10518-023-01716-9</a></p>
-<p>Gisgeography. “What is Remote Sensing? The Definitive Guide” Accessed 11 March 2024. <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases">https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases</a></p>
-<p>Guo, Y., Feng, N., Christopher, S. A., Kang, P., Zhan, F. B., &amp; Hong, S. (2014). Satellite remote sensing of fine particulate matter (PM2.5) air quality over Beijing using MODIS. <em>International Journal of Remote Sensing, 35</em>(17), 6522–6544. <a href="https://doi.org/10.1080/01431161.2014.958245">https://doi.org/10.1080/01431161.2014.958245</a></p>
-<p>Jenerowicz, A., Wierzbicki, D., &amp; Kedzierski, M. (2023). Radiometric Correction with Topography Influence of Multispectral Imagery Obtained from Unmanned Aerial Vehicles. <em>Remote Sensing (Basel, Switzerland)</em>, 15(8), 2059-. <a href="https://doi.org/10.3390/rs15082059">https://doi.org/10.3390/rs15082059</a></p>
-<p>Li, A., Wang, Q., Bian, J., &amp; Lei, G. (2015). An improved physics-based model for topographic correction of landsat TM images. <em>Remote Sensing (Basel, Switzerland)</em>, 7(5), 6296–6319. <a href="https://doi.org/10.3390/rs70506296">https://doi.org/10.3390/rs70506296</a></p>
-<p>Li, W., Shao, L., Wang, W., Li, H., Wang, X., Li, Y., Li, W., Jones, T., &amp; Zhang, D. (2020). Air quality improvement in response to intensified control strategies in Beijing during 2013–2019. <em>The Science of the Total Environment, 744</em>, 140776–140776. <a href="https://doi.org/10.1016/j.scitotenv.2020.140776">https://doi.org/10.1016/j.scitotenv.2020.140776</a></p>
-<p>Liang, F., Xiao, Q., Huang, K., Yang, X., Liu, F., Li, J., Lu, X., Liu, Y., &amp; Gu, D. (2020). The 17-y spatiotemporal trend of PM2.5 and its mortality burden in China. <em>Proceedings of the National Academy of Sciences - PNAS, 117</em>(41), 25601–25608. <a href="https://doi.org/10.1073/pnas.1919641117">https://doi.org/10.1073/pnas.1919641117</a></p>
-<p>Liu, Y., Zhou, Y., &amp; Lu, J. (2020). Exploring the relationship between air pollution and meteorological conditions in China under environmental governance. <em>Scientific Reports, 10</em>(1). <a href="https://doi.org/10.1038/s41598-020-71338-7">https://doi.org/10.1038/s41598-020-71338-7</a></p>
-<p>Lucas, R., Mueller, N., Siggins, A., Owers, C., Clewley, D., Bunting, P., Kooymans, C., Tissott, B., Lewis, B., Lymburner, L., &amp; Metternicht, G. (2019). Land cover mapping using digital earth Australia. <em>Data (Basel), 4</em>(4), 143-. <a href="https://doi.org/10.3390/data4040143">https://doi.org/10.3390/data4040143</a></p>
-<p>Ma, Y., Zhang, W., Chen, X., Zhang, L., &amp; Liu, Q. (2023). High Spatial Resolution Nighttime PM2.5 Datasets in the Beijing–Tianjin–Hebei Region from 2015 to 2021 Using VIIRS/DNB and Deep Learning Model. <em>Remote Sensing (Basel, Switzerland), 15</em>(17), 4271-. <a href="https://doi.org/10.3390/rs15174271">https://doi.org/10.3390/rs15174271</a></p>
-<p>Maji, K. J., Li, V. O., &amp; Lam, J. C. (2020). Effects of China’s current Air Pollution Prevention and Control Action Plan on air pollution patterns, health risks and mortalities in Beijing 2014–2018. <em>Chemosphere (Oxford), 260</em>, 127572–127572. <a href="https://doi.org/10.1016/j.chemosphere.2020.127572">https://doi.org/10.1016/j.chemosphere.2020.127572</a></p>
-<p>Matricardi, E. A. T., Skole, D. L., Costa, O. B., Pedlowski, M. A., Samek, J. H., &amp; Miguel, E. P. (2020). Long-term forest degradation surpasses deforestation in the Brazilian Amazon. <em>Science (American Association for the Advancement of Science), 369</em>(6509), 1378–1382. <a href="https://doi.org/10.1126/SCIENCE.ABB3021">https://doi.org/10.1126/SCIENCE.ABB3021</a></p>
-<p>Pal, M., &amp; Mather, P. M. (2005). Support vector machines for classification in remote sensing. International <em>Journal of Remote Sensing, 26</em>(5), 1007–1011. <a href="https://doi.org/10.1080/01431160512331314083">https://doi.org/10.1080/01431160512331314083</a></p>
-<p>UNOOSA/UN-SPIDER. 2020. United Nations Office for Outer Space Affairs, UN-SPIDER, Knowledge Portal Space-based information for Disaster Management and Emergency Responsa. Accessed 20 March, 2024. <a href="https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping">https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping</a></p>
-<p>Yang, X., Xiao, D., Bai, H., Tang, J., &amp; Wang, W. (2022). Spatiotemporal Distributions of PM2.5 Concentrations in the Beijing–Tianjin–Hebei Region From 2013 to 2020. <em>Frontiers in Environmental Science, 10</em>. <a href="https://doi.org/10.3389/fenvs.2022.842237">https://doi.org/10.3389/fenvs.2022.842237</a></p>
-<p>Zhang, H., Wang, S., Hao, J., Wang, X., Wang, S., Chai, F., &amp; Li, M. (2016). Air pollution and control action in Beijing. <em>Journal of Cleaner Production, 112</em>, 1519–1527. <a href="https://doi.org/10.1016/j.jclepro.2015.04.092">https://doi.org/10.1016/j.jclepro.2015.04.092</a></p>
-<p>Zhu, X., Cai, F., Tian, J., &amp; Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. <em>Remote Sensing (Basel, Switzerland)</em>, 10(4), 527-. <a href="https://doi.org/10.3390/rs10040527">https://doi.org/10.3390/rs10040527</a></p>
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>This week’s lecture on “Classification I” immersed me into the intricate world of satellite imagery and Earth observation data, unveiling the power of classifying vast datasets to extract useful insights about our planet. Using remote sensing software, we can effectively sort satellite images into categories like water, wetlands, forests, and urban areas. This process not only aids in identifying land cover types but also in tracking environmental changes and predicting future trends with enhanced accuracy.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week6-images/obia-cover-1265x672.gif" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Image Classification Diagram. Source: <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases">Gisgeography</a></figcaption>
+</figure>
+</div>
+<section id="what-is-image-classification-in-remote-sensing" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="what-is-image-classification-in-remote-sensing"><span class="header-section-number">6.1.1</span> What is Image Classification in Remote Sensing?</h3>
+<p>The 3 main types of image classification techniques in remote sensing are:</p>
+<ul>
+<li>Unsupervised image classification</li>
+<li>Supervised image classification</li>
+<li>Object-based image analysis</li>
+</ul>
+<p>Unsupervised and supervised image classification are the two most common approaches, and also they are the focus of this week.</p>
+</section>
+<section id="supervised-classification-vs.-unsupervised-classification" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="supervised-classification-vs.-unsupervised-classification"><span class="header-section-number">6.1.2</span> Supervised Classification vs.&nbsp;Unsupervised Classification</h3>
+<p>The table below highlights the differences between unsupervised and supervised classification</p>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 39%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Aspect</th>
+<th style="text-align: center;">Supervised Classification</th>
+<th>Unsupervised Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Definition</td>
+<td style="text-align: center;">z Classification guided by known training samples</td>
+<td>Classification without predefined training data</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Training Data</td>
+<td style="text-align: center;">Requires labeled training data for each class</td>
+<td>No labeled training data required</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Process</td>
+<td style="text-align: center;">Involves training the classifier using labeled samples</td>
+<td>Involves training the classifier using labeled samples</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">User Involvement</td>
+<td style="text-align: center;">Requires user to select training samples</td>
+<td>Minimal user intervention during classification</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Class Information</td>
+<td style="text-align: center;">Prior knowledge of class identities is needed</td>
+<td>Classes are discovered from data patterns</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Accuracy Assessment</td>
+<td style="text-align: center;">Often results in higher accuracy due to training</td>
+<td>May have lower accuracy due to lack of training</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Applicability</td>
+<td style="text-align: center;">Effective for identifying specific classes</td>
+<td>Suitable for exploratory data analysis</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Flexibility</td>
+<td style="text-align: center;">Less flexible, as predefined classes are used</td>
+<td>More flexible, as classes are generated dynamically</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Complexity</td>
+<td style="text-align: center;">Potentially more complex due to training process</td>
+<td>Generally simpler as it relies on clustering</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="supervised-classification-in-remote-sensing" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="supervised-classification-in-remote-sensing"><span class="header-section-number">6.1.3</span> Supervised Classification in Remote Sensing</h3>
+<p>In supervised classification, first select representative samples for each land cover class. Then, software uses these “training sites” and applies them to the entire image. The training samples are key because they will determine which class each pixel inherits in the overall image.</p>
+<p><img src="week6-images/supervised-classification-ikonos.png" class="img-fluid" style="width:28.0%"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="week6-images/supervised-diagram.png" class="img-fluid" style="width:55.0%"></p>
+<p>Source: <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases">Gisgeography</a></p>
+<p>The three basic steps for supervised classification are:</p>
+<ol type="1">
+<li><p><strong>Select training areas</strong>: for example, mark urban areas by marking them in the image. Then, continue adding training sites representative in the entire image.</p></li>
+<li><p><strong>Generate signature file</strong>: for each land cover class, we continue create training samples until we have representative samples for each class. In turn, this would generate a signature file, which stores all training samples’ spectral information.</p></li>
+<li><p><strong>Classify</strong>: the last step is to use the signature file to run a classification. From here, we have to pick a classification algorithm such as:</p></li>
+</ol>
+<ul>
+<li>Maximum likelihood</li>
+<li>Minimum-distance</li>
+<li>Principal components</li>
+<li>Support vector machine (SVM)</li>
+<li>Iso cluster</li>
+</ul>
+<p>As shown in several studies, SVM is one of the best classification algorithms in remote sensing, but each option has its own advantages (<a href="https://doi.org/10.1080/01431160512331314083">Pal &amp; Mather, 2005</a>).</p>
+</section>
+<section id="unsupervised-classification-in-remote-sensing" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="unsupervised-classification-in-remote-sensing"><span class="header-section-number">6.1.4</span> Unsupervised Classification in Remote Sensing</h3>
+<p>In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, you classify each cluster with a land cover class.</p>
+<p>Overall, unsupervised classification is the most basic technique. Because you don’t need samples for unsupervised classification, it’s an easy way to segment and understand an image.</p>
+<p>The two basic steps for unsupervised classification are:</p>
+<ol type="1">
+<li><strong>Generate clusters</strong></li>
+<li><strong>Assign classes</strong></li>
+</ol>
+<p>Using remote sensing software, we first create “clusters”. Some of the common image clustering algorithms are:</p>
+<ul>
+<li>K-means</li>
+<li>ISODATA</li>
+</ul>
+<p>After picking a clustering algorithm, you identify the number of groups you want to generate. For example, you can create 8, 20, or 42 clusters. Fewer clusters have more resembling pixels within groups. But more clusters increase the variability within groups.</p>
+<p>To be clear, these are unclassified clusters. The next step is to manually assign land cover classes to each cluster. For example, if you want to classify vegetation and non-vegetation, you can select the clusters that represent them best.</p>
+<ol start="4" type="1">
+<li><strong>Machine Learning in EO Data Analysis</strong>:
+<ul>
+<li>Exploration of classification and regression trees (CART) for discrete and continuous data.</li>
+<li>The role of parameters like alpha in pruning decision trees to enhance model performance.</li>
+</ul></li>
+<li><strong>Random Forests and SVM in Land Cover Classification</strong>:
+<ul>
+<li>Description of random forests for creating numerous decision trees to improve classification accuracy.</li>
+<li>SVM’s application for binary classification and the use of hyperparameters for optimizing model performance.</li>
+</ul></li>
+<li><strong>Supervised vs.&nbsp;Unsupervised Classification</strong>:
+<ul>
+<li>Differences between supervised (e.g., maximum likelihood classification, SVM) and unsupervised (e.g., k-means clustering) classification methods.</li>
+<li>Importance of training data in supervised learning and how clustering works in unsupervised learning.</li>
+</ul></li>
+</ol>
+<p>provided a comprehensive overview of using EO data for land cover classification and introduced a variety of classification techniques, emphasizing the importance of machine learning methods in environmental monitoring and analysis.</p>
+<p>This video shows how to perform unsupervised image classification in ArcGIS Pro. Unsupervised image classification in remote sensing uses clustering algorithms to group similar pixels in an image without using any prior training data.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/fZwdsSNr7vk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.2</span> Reflection</h2>
+<p>The lecture concluded with an encouraging note on the future of remote sensing and classification, emphasizing the ever-growing availability of high-resolution satellite imagery and advanced computational resources. This, combined with the development of more sophisticated analysis techniques, promises to further our understanding of the Earth’s surface and the dynamic processes that shape it.</p>
+<p>By providing a comprehensive overview of classification in remote sensing, this lecture equipped us with the knowledge and tools to harness the power of satellite imagery for environmental monitoring, urban planning, and beyond.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -444,11 +586,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./summary.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      <a href="./week5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Introduction to GEE</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./week8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Presentation of Sentinel-1</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

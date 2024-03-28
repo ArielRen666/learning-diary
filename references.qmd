@@ -29,6 +29,8 @@ Maji, K. J., Li, V. O., & Lam, J. C. (2020). Effects of China’s current Air Po
 
 Matricardi, E. A. T., Skole, D. L., Costa, O. B., Pedlowski, M. A., Samek, J. H., & Miguel, E. P. (2020). Long-term forest degradation surpasses deforestation in the Brazilian Amazon. *Science (American Association for the Advancement of Science), 369*(6509), 1378–1382. [https://doi.org/10.1126/SCIENCE.ABB3021](https://doi.org/10.1126/SCIENCE.ABB3021)
 
+Pal, M., & Mather, P. M. (2005). Support vector machines for classification in remote sensing. International *Journal of Remote Sensing, 26*(5), 1007–1011. [https://doi.org/10.1080/01431160512331314083](https://doi.org/10.1080/01431160512331314083)
+
 UNOOSA/UN-SPIDER. 2020. United Nations Office for Outer Space Affairs, UN-SPIDER, Knowledge Portal Space-based information for Disaster Management and Emergency Responsa. Accessed 20 March, 2024. [https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping](https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping)
 
 Yang, X., Xiao, D., Bai, H., Tang, J., & Wang, W. (2022). Spatiotemporal Distributions of PM2.5 Concentrations in the Beijing–Tianjin–Hebei Region From 2013 to 2020. *Frontiers in Environmental Science, 10*. [https://doi.org/10.3389/fenvs.2022.842237](https://doi.org/10.3389/fenvs.2022.842237)
