@@ -21,7 +21,7 @@ From land use to weather data, it’s through its vast (and growing) catalog of 
 GEE tackles the challenge of open analysis in remote sensing with a focus on getting results. It’s able to avoid any bottlenecks because it’s able to adjust the size of its clusters based on how much demand there is for a data product.
 
 |                Functionality                |                                                                                               Description                                                                                               |
-|:----------------:|:----------------------------------------------------:|
+|:-----------------:|:---------------------------------------------------:|
 |            Downloading an Image             |                                                                    pick an extent, projection, data type, band, date, and resolution                                                                    |
 |        Performing Library Functions         |                                                           chain algorithms together for further analysis such as a band combination function                                                            |
 |           Filtering a Collection            |                                                       use the metadata to filter everything from the amount of cloud cover to the type of sensor                                                        |
@@ -63,7 +63,6 @@ On GEE's homepage we can see that there are six curated applications, from time-
 
 -   **Global Forest Change**: shows the results of global forest change using Landsat imagery between 2000 and 2016. We can interactively pan and zoom around in app and can symbolize deforestation based on the year of the loss or by the percent of tree cover.
 
-
 ![](week5-images/GEE123.png){width="43%"} ![](week5-images/GEE456.png){width="55%"}
 
 Source:[Google Earth Engine](https://www.earthengine.app/)
@@ -92,19 +91,18 @@ htmltools::tags$iframe(style = "height:550px; width:100%", src = "https://gfw.gl
 
 [The UNI-Spider Knowledge Portal platform](https://www.un-spider.org/advisory-support/recommended-practices) has been using the GEE as a tool to try to analyse and mitigate natural disasters. They use Sentinel-1 SAR data from Google Earth Engine for flood mapping and damage assessment, which is used to provide a comprehensive overview of flooding from small communities to countries ([UNOOSA/UN-SPIDER, 2020](https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping)). In addition to the outline of flood areas, this code produces information about farmland affected to better plan for food security concerns after a disaster and the number of families that have been or could be affected by natural disasters.
 
-![Flood mapping. Source: [Chiefscient](https://www.chiefscientist.qld.gov.au/publications/understanding-floods/chances-of-a-flood)](week5-images/Flood mapping.png){width="45%"}
-
+![Flood mapping. Source: [Chiefscient](https://www.chiefscientist.qld.gov.au/publications/understanding-floods/chances-of-a-flood)](week5-images/Flood%20mapping.png){width="45%"}
 
 ### Building Footprints
 
-I have to mention this because it is closely related to the topic of my dissertation. A building footprint dataset contains the two dimensional outlines of buildings in a given area. Currently, GEE hosts one building footprint dataset which covers all of Africa. In 2022, Microsoft released a free [global building footprint dataset](https://www.microsoft.com/en-us/maps/bing-maps/building-footprints/), though to use it in Earth Engine we have to download it from their [GitHub page](https://github.com/Microsoft/USBuildingFootprints) and upload it manually to GEE. The same goes for OpenStreetMap (OSM), a public database of building footprints, roads, and other features that also contains useful annotations for many buildings indicating their use. The following  great video teaches us how to map anything with freely available location data (OSM data).
+I have to mention this because it is closely related to the topic of my dissertation. A building footprint dataset contains the two dimensional outlines of buildings in a given area. Currently, GEE hosts one building footprint dataset which covers all of Africa. In 2022, Microsoft released a free [global building footprint dataset](https://www.microsoft.com/en-us/maps/bing-maps/building-footprints/), though to use it in Earth Engine we have to download it from their [GitHub page](https://github.com/Microsoft/USBuildingFootprints) and upload it manually to GEE. The same goes for OpenStreetMap (OSM), a public database of building footprints, roads, and other features that also contains useful annotations for many buildings indicating their use. The following great video teaches us how to map anything with freely available location data (OSM data).
 
 {{< video https://youtu.be/bJkV3l5Haq0 >}}
 
 ## Reflection
 
-The rapid advancement of technology is changing our lives and the world at an unprecedented pace, also providing innovative means to solve some long-standing issues. GEE stands out as a pivotal tool for environmental and geospatial analysis, revolutionizing how we address and solve critical environmental issues.
+This week, the introduction to Google Earth Engine (GEE) was a revelation, showcasing the staggering advancement in technology and data analytics is changing our lives and the world, also providing innovative means to solve some long-standing issues.
 
-Reflecting on the week's lessons in remote sensing, GEE combines satellite imagery and geospatial data with powerful computing to help people and organizations understand how the planet is changing, how human activity contributes to those changes and what actions they can take.
+Initially, I, who first came into the coding world last semester and only learned R and Python, was apprehensive about using JavaScript😟. However, thanks to the plethora of tutorials available, now I found the required scripting are manageable. Its user-friendly nature and the direct access to analysis-ready data significantly enhanced my learning experience. Adapting to Earth Engine's quirks—such as the inability to run code blocks independently, necessitating the execution of the entire script each time—was part of the learning curve.
 
-Such technological advancements have piqued my curiosity, making me even more interested in delving into this course. By mastering these technologies, we can not only better protect our environment but also solve seemingly intractable problems in many other fields. What an exciting era this is!
+After this week, I have found it really enjoyable to interact with GEE, its ability and speed to process large amounts of data (compared to what we have previously used with SNAP and R) is amazing and has revolutionised the way we approach and solve critical environmental problems. My current biggest hope is that such cool software will remain free, and I eagerly look forward to exploring the rest of it in depth🤩.
