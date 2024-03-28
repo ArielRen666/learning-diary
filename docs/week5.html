@@ -172,7 +172,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a>
   <ul class="collapse">
   <li><a href="#gee-web-application-examples" id="toc-gee-web-application-examples" class="nav-link" data-scroll-target="#gee-web-application-examples"><span class="header-section-number">5.2.1</span> GEE Web Application Examples</a></li>
-  <li><a href="#monitoring-global-forest-changes" id="toc-monitoring-global-forest-changes" class="nav-link" data-scroll-target="#monitoring-global-forest-changes"><span class="header-section-number">5.2.2</span> Monitoring Global Forest Changes</a></li>
+  <li><a href="#monitor-global-forest-changes" id="toc-monitor-global-forest-changes" class="nav-link" data-scroll-target="#monitor-global-forest-changes"><span class="header-section-number">5.2.2</span> Monitor Global Forest Changes</a></li>
+  <li><a href="#monitor-natural-disaster" id="toc-monitor-natural-disaster" class="nav-link" data-scroll-target="#monitor-natural-disaster"><span class="header-section-number">5.2.3</span> Monitor Natural Disaster</a></li>
+  <li><a href="#building-footprints" id="toc-building-footprints" class="nav-link" data-scroll-target="#building-footprints"><span class="header-section-number">5.2.4</span> Building Footprints</a></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
   </ul>
@@ -281,9 +283,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Global Forest Change</strong>: shows the results of global forest change using Landsat imagery between 2000 and 2016. We can interactively pan and zoom around in app and can symbolize deforestation based on the year of the loss or by the percent of tree cover.</p></li>
 </ul>
 <p><img src="week5-images/GEE123.png" class="img-fluid" style="width:43.0%"> <img src="week5-images/GEE456.png" class="img-fluid" style="width:55.0%"></p>
+<p>Source:<a href="https://www.earthengine.app/">Google Earth Engine</a></p>
 </section>
-<section id="monitoring-global-forest-changes" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="monitoring-global-forest-changes"><span class="header-section-number">5.2.2</span> Monitoring Global Forest Changes</h3>
+<section id="monitor-global-forest-changes" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="monitor-global-forest-changes"><span class="header-section-number">5.2.2</span> Monitor Global Forest Changes</h3>
 <p>The most impressive application of GEE to me is illegal deforestation in Brazil. The teacher mentioned this very interesting case in the first week class, which aroused my great interest in GEE at that time.</p>
 <p>Forests are critical ecosystems for fighting climate change, supporting livelihoods and protecting biodiversity.</p>
 <p>Due to its vast forest resources, Brazil has always been targeted by international and domestic loggers, leading to massive human-induced destruction of the Amazon rainforest. In the past, illegal loggers took advantage of the limitations of technology and monitoring to avoid detection and prosecution. They carefully planned to cut down areas smaller than one square kilometer to escape monitoring at the kilometer resolution.</p>
@@ -302,18 +305,27 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+<section id="monitor-natural-disaster" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="monitor-natural-disaster"><span class="header-section-number">5.2.3</span> Monitor Natural Disaster</h3>
+<p><a href="https://www.un-spider.org/advisory-support/recommended-practices">The UNI-Spider Knowledge Portal platform</a> has been using the GEE as a tool to try to analyse and mitigate natural disasters. They use Sentinel-1 SAR data from Google Earth Engine for flood mapping and damage assessment, which is used to provide a comprehensive overview of flooding from small communities to countries (<a href="https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping">UNOOSA/UN-SPIDER, 2020</a>). In addition to the outline of flood areas, this code produces information about farmland affected to better plan for food security concerns after a disaster and the number of families that have been or could be affected by natural disasters.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week5-images/Flood mapping.png" class="img-fluid figure-img" style="width:45.0%"></p>
+<figcaption class="figure-caption">Flood mapping. Source: <a href="https://www.chiefscientist.qld.gov.au/publications/understanding-floods/chances-of-a-flood">Chiefscient</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="building-footprints" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="building-footprints"><span class="header-section-number">5.2.4</span> Building Footprints</h3>
+<p>I have to mention this because it is closely related to the topic of my dissertation. A building footprint dataset contains the two dimensional outlines of buildings in a given area. Currently, GEE hosts one building footprint dataset which covers all of Africa. In 2022, Microsoft released a free <a href="https://www.microsoft.com/en-us/maps/bing-maps/building-footprints/">global building footprint dataset</a>, though to use it in Earth Engine we have to download it from their <a href="https://github.com/Microsoft/USBuildingFootprints">GitHub page</a> and upload it manually to GEE. The same goes for OpenStreetMap (OSM), a public database of building footprints, roads, and other features that also contains useful annotations for many buildings indicating their use. The following great video teaches us how to map anything with freely available location data (OSM data).</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bJkV3l5Haq0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
 <p>The rapid advancement of technology is changing our lives and the world at an unprecedented pace, also providing innovative means to solve some long-standing issues. GEE stands out as a pivotal tool for environmental and geospatial analysis, revolutionizing how we address and solve critical environmental issues.</p>
 <p>Reflecting on the week’s lessons in remote sensing, GEE combines satellite imagery and geospatial data with powerful computing to help people and organizations understand how the planet is changing, how human activity contributes to those changes and what actions they can take.</p>
 <p>Such technological advancements have piqued my curiosity, making me even more interested in delving into this course. By mastering these technologies, we can not only better protect our environment but also solve seemingly intractable problems in many other fields. What an exciting era this is!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week5-images/Brazil illegal deforestation.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption class="figure-caption">The Global Forest Watch interface showing Amazonian forest losses in 2014. Source: <a href="https://sustainability.google/operating-sustainably/stories/forest-watch/">Sustainability.Google</a></figcaption>
-</figure>
-</div>
 
 
 </section>

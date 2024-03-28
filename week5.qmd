@@ -66,8 +66,9 @@ On GEE's homepage we can see that there are six curated applications, from time-
 
 ![](week5-images/GEE123.png){width="43%"} ![](week5-images/GEE456.png){width="55%"}
 
+Source:[Google Earth Engine](https://www.earthengine.app/)
 
-### Monitoring Global Forest Changes
+### Monitor Global Forest Changes
 
 The most impressive application of GEE to me is illegal deforestation in Brazil. The teacher mentioned this very interesting case in the first week class, which aroused my great interest in GEE at that time.
 
@@ -87,6 +88,19 @@ Now, with the application below, we can easily access the global forest map, mon
 htmltools::tags$iframe(style = "height:550px; width:100%", src = "https://gfw.global/4a74NHM")
 ```
 
+### Monitor Natural Disaster
+
+[The UNI-Spider Knowledge Portal platform](https://www.un-spider.org/advisory-support/recommended-practices) has been using the GEE as a tool to try to analyse and mitigate natural disasters. They use Sentinel-1 SAR data from Google Earth Engine for flood mapping and damage assessment, which is used to provide a comprehensive overview of flooding from small communities to countries ([UNOOSA/UN-SPIDER, 2020](https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping)). In addition to the outline of flood areas, this code produces information about farmland affected to better plan for food security concerns after a disaster and the number of families that have been or could be affected by natural disasters.
+
+![Flood mapping. Source: [Chiefscient](https://www.chiefscientist.qld.gov.au/publications/understanding-floods/chances-of-a-flood)](week5-images/Flood mapping.png){width="45%"}
+
+
+### Building Footprints
+
+I have to mention this because it is closely related to the topic of my dissertation. A building footprint dataset contains the two dimensional outlines of buildings in a given area. Currently, GEE hosts one building footprint dataset which covers all of Africa. In 2022, Microsoft released a free [global building footprint dataset](https://www.microsoft.com/en-us/maps/bing-maps/building-footprints/), though to use it in Earth Engine we have to download it from their [GitHub page](https://github.com/Microsoft/USBuildingFootprints) and upload it manually to GEE. The same goes for OpenStreetMap (OSM), a public database of building footprints, roads, and other features that also contains useful annotations for many buildings indicating their use. The following  great video teaches us how to map anything with freely available location data (OSM data).
+
+{{< video https://youtu.be/bJkV3l5Haq0 >}}
+
 ## Reflection
 
 The rapid advancement of technology is changing our lives and the world at an unprecedented pace, also providing innovative means to solve some long-standing issues. GEE stands out as a pivotal tool for environmental and geospatial analysis, revolutionizing how we address and solve critical environmental issues.
@@ -94,5 +108,3 @@ The rapid advancement of technology is changing our lives and the world at an un
 Reflecting on the week's lessons in remote sensing, GEE combines satellite imagery and geospatial data with powerful computing to help people and organizations understand how the planet is changing, how human activity contributes to those changes and what actions they can take.
 
 Such technological advancements have piqued my curiosity, making me even more interested in delving into this course. By mastering these technologies, we can not only better protect our environment but also solve seemingly intractable problems in many other fields. What an exciting era this is!
-
-![The Global Forest Watch interface showing Amazonian forest losses in 2014. Source: [Sustainability.Google](https://sustainability.google/operating-sustainably/stories/forest-watch/)](week5-images/Brazil%20illegal%20deforestation.jpg){width="70%"}
