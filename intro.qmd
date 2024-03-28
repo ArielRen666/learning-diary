@@ -48,15 +48,15 @@ Resolution is one of the most important attributes of satellite imagery and will
 -   **Spectral Resolution:** the ability of the sensor to recognise finer wavelengths (Landsat and Sentinel-2 may have lower spatial resolution but detect a wider spectrum)
 -   **Temporal Resolution:** the frequency with which we can access new imagery
 
-The Google Maps basemap provides a very high-resolution view of the globe free of charge, but it captures only a single moment in time, lacking a temporal aspect. This means if we're interested in observing changes that occur over time, this basemap won't be very helpful. The term "revisit rate" refers to the frequency at which a satellite returns to observe the same spot on Earth. 
+The Google Maps basemap provides a very high-resolution view of the globe free of charge, but it captures only a single moment in time, lacking a temporal aspect. This means if we're interested in observing changes that occur over time, this basemap won't be very helpful. The term "revisit rate" refers to the frequency at which a satellite returns to observe the same spot on Earth.
 
 ![With its duo of satellites, the Sentinel-2 mission can boast a revisit rate of every 5 days. Source: [ESA](https://www.esa.int/).](images/1608_004_AR_EN.mp4){width="75%"}
 
-For the other two, spatial resolution determines the smallest visible detail size, while spectral resolution refers to the range of detectable spectra or colors by a satellite. For example, using a high-resolution camera allows clear visibility of tiny details, similar to how high spatial resolution satellite images can reveal fine ground features. 
+For the other two, spatial resolution determines the smallest visible detail size, while spectral resolution refers to the range of detectable spectra or colors by a satellite. For example, using a high-resolution camera allows clear visibility of tiny details, similar to how high spatial resolution satellite images can reveal fine ground features.
 
 ![The same image at different spatial resolutions: (from left to right) 1 m, 10 m, and 30 m. Source: [Coast Noaa](https://coast.noaa.gov/digitalcoast/data/ccaphighres.html).](images/1.1.4McCartney_SXSW_edited_SC.jpg){width="75%"}
 
-Conversely, imagine having glasses that don't enhance clarity but allow seeing beyond the visible spectrum, like in infrared or ultraviolet. This capability, akin to high spectral resolution satellites, offers insights into unseen aspects such as plant health or material types. 
+Conversely, imagine having glasses that don't enhance clarity but allow seeing beyond the visible spectrum, like in infrared or ultraviolet. This capability, akin to high spectral resolution satellites, offers insights into unseen aspects such as plant health or material types.
 
 The image below shows Gilette Stadium near Boston, and if we were to use only the naked eye we would think that all three green areas were grass, and would not be able to distinguish which was real grass and which was artificial plastic grass, but living plants strongly reflect parts of the spectrum of the sun's radiation that we do not see (near-infrared). However, by looking at the NDVI overlay of the Sentinel-2 satellite image, the two patches of real grass in red can be clearly identified.
 
@@ -68,9 +68,11 @@ Why not build a sensor that combines high spatial, spectral and temporal resolut
 
 After understanding the basic concepts of remote sensing and related terminology, I began to delve into its application areas, which help us solve many real-world problems.
 
-![Remote sensing application diagram made by myself.](images/1.2application.jpg)
+![Remote sensing application diagram made by myself.](images/1.2application.jpg) For example, in agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields.
 
-For example, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
+![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant1.jpg){width="75%"}
+
+Also, using remote sensing, we can keep a close eye on active volcanoes, looking for any changes in their thermal profiles that might indicate an imminent eruption. This is critical in areas where volcanoes pose a risk to populations and infrastructure and where traditional observation methods are too dangerous.
 
 ![The SAR interferogram displays May 2015 ground motion at Piton de la Fournaise, with each color fringe indicating about 3 cm of movement. Source: [Sentinels Copernicus](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-1-sar/applications/emergency-management).](images/2.1.2-Sentinel-1-Piton-de-la-Fournaise-volcano-full.png){width="75%"}
 
@@ -78,14 +80,10 @@ Another impressive application is disaster management. After an earthquake, it i
 
 ![The map, based on data from French Pléiades satellites, details the destruction in Morocco caused by the earthquake on 8 September 2023. Source: [ESA](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Sentinel-1_reveals_shifts_from_Morocco_earthquake).](images/2.1.2Morocco_earthquake_damage_assessment_map_from_the_UNOSAT_team_pillars.jpg){width="75%"}
 
-In agriculture, NDVI (Normalised Vegetation Index) is a very useful tool derived from remote sensing. It measures the health of vegetation by comparing the reflectance of near-infrared light (reflected by plants) to red light (absorbed by plants). In this way, farmers can track crop health, manage resources more efficiently, and even predict yields.
-
-![The relationship between a plant's health status and the gradual increase in NDVI value. Source: [Cropin](https://www.cropin.com/blogs/ndvi-normalized-difference-vegetation-index).](images/2.1.4plant1.jpg){width="77%"}
-
 Remote sensing is truly an indispensable tool in our toolkit for effective management of the planet and its resources. I have to mention that the teacher mentioned a very interesting case study on illegal deforestation in Brazil, which aroused my great interest in GEE, and I am very much looking forward to it.
 
 ## Reflection
 
-My first remote sensing class took me on an exciting journey as we began to learn how to use technology to view our planet from above, opening a window to a new world perspective, allowing me to see the changes happening around the world without leaving home. The possibilities are endless, from how to track environmental changes, such as the shrinking of glaciers or the growth of cities, and how it can aid in disaster response, giving me a foundational understanding of remote sensing technology.
+My first remote sensing class took me on an exciting journey as we began to learn how to use technology to view our planet from above, allowing me to see the changes happening around the world without leaving home. The possibilities are endless, from how to track environmental changes, such as the shrinking of glaciers or the growth of cities, and how it can aid in disaster response, now I have a foundational understanding of remote sensing technology.
 
-Although the technology of remote sensing is interesting, it is indeed complex. The course was filled with mind-boggling new terms and concepts that piqued my curiosity. I had a lot to learn about what types of data could be captured, how to analyze it, and the different ways to apply it. In an era of increasing climate change, being able to decipher and use this data for urban planning or disaster response is critical. Although the complexity of remote sensing can feel like a mountain to climb, I believe that with time and practical experience, I will no longer be afraid of it and it will prepare me to make a tangible difference in the world.😊
+Although the technology of remote sensing is interesting, it is indeed complex. The course was filled with mind-boggling new terms, I had a lot to learn about what types of data could be captured, how to analyze it, and the different ways to apply it. In an era of increasing climate change, being able to decipher and use this data for urban planning or disaster response is critical. Although the complexity of remote sensing can feel like a mountain to climb, I believe that with time and practical experience, I will no longer be afraid of it and it will prepare me to make a tangible difference in the world.💪
