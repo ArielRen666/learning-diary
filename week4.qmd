@@ -1,0 +1,47 @@
+# Week 4 - Beijing’s air quality improvements are a model for other cities
+
+## Summary
+
+My city of choice is Beijing, the capital of China. Beijing is one of the most polluted cities in the world (Maji & Lam, 2020). 
+
+With rapid urbanization and industrialization over the past thirty years, China has become one of the few countries in the world with the most severe air pollution. According to 2015 Global Burden of Disease study, PM2.5 was globally ranked as the fifth mortality risk factor, responsible for about 4.2 million deaths and 103.1 million years of life lost or lived with disability (Duke University, 2020). The impact of air pollution on atmospheric visibility, human health, and global climate change has garnered widespread public concern.
+
+![Source: [Zhang et al., 2016](https://doi.org/10.1016/j.jclepro.2015.04.092)](week4-images/BEIJing.jpg){width="50%"}
+
+In response to these challenges, the Beijing Municipal Government (BMG) has implemented a series of control policies, laws, and regulations since 1998, with a focus on controlling SO2 and Total Suspended Particulates (TSP). However, severe haze weather still occurs, especially during the heating season (autumn and winter) (Li et al., 2020). Particularly in January 2013, severe haze enveloped Beijing and the North China region, affecting over 800 million people (Liu et al., 2020).
+
+Since then, starting in 2013, China has initiated unprecedented air quality improvement actions nationwide, especially targeting the management of fine particulate matter (PM2.5) pollution. The State Council of China issued the "Air Pollution Prevention and Control Action Plan" (APPCAP) on September 10, 2013, marking the first time China adopted a targeted national strategy aimed at improving air quality and set clear quantitative goals, such as requiring Beijing to control PM2.5 concentration to below 60μg/m³ by 2017. To achieve this goal, the Beijing Municipal Government followed up with the "Beijing 2013-2017 Clean Air Action Plan" (Clean Air Action), implementing a series of stringent control measures. 
+
+![ A bike user braving polluted air in Beijing. Source: [Sustainablemobility](https://sustainablemobility.iclei.org/air-pollution-beijing/)](week4-images/bike.jpg){width="70%"}
+
+However, the winter of 2016 still saw frequent heavy pollution days. To meet the five-year target, the "2017-2018 Autumn and Winter Comprehensive Air Pollution Control Action Plan for the Beijing-Tianjin-Hebei Region" (hereinafter referred to as the "Comprehensive Action") was subsequently implemented in the autumn of 2017. Finally, by the end of 2017, Beijing's annual average PM2.5 concentration successfully dropped to 58μg/m³, achieving the five-year goal of the Clean Air Action. 
+
+The journey towards cleaner air continued with the introduction of the three-year Blue Sky Defense Plan spanning from 2018 to 2020. This subsequent phase of environmental policy and action further accelerated improvements in air quality across Beijing, with PM2.5 annual average concentrations witnessing a steady decline to 42μg/m³ by 2019. Such progress is indicative of Beijing's ongoing commitment to enhancing its air quality, marking significant strides in the city's environmental health landscape as noted by Li et al. (2020).
+
+
+
+![](week3-images/3.1.1GeometricCorrection.gif){width="45%"}         ![](week3-images/3.1.1GeometricCorrection2.png){width="45%"}
+
+Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
+
+
+## Applications
+
+To address the issue of air pollution in Beijing, particularly PM2.5 pollution, several remote sensing datasets and models have been developed to monitor and analyze air quality with high spatial and temporal precision. These efforts aim to provide actionable insights for policy implementation and environmental management.
+
+One notable study utilized the Visible Infrared Imaging Radiometer Suite Day/Night Band (VIIRS/DNB) combined with a deep learning model to estimate nighttime PM2.5 concentrations in the Beijing–Tianjin–Hebei region from 2015 to 2021. This approach enabled the generation of high-resolution PM2.5 concentration maps, offering a detailed view of pollution distribution and trends over time, which could greatly aid in understanding and combating air pollution at a granular level.
+
+Another research effort explored the spatiotemporal distributions of PM2.5 concentrations across the same region from 2013 to 2020. This study employed a two-stage statistical regression model (Linear Mixed Effects + Geographically Weighted Regression), considering various predictors including Aerosol Optical Depth (AOD) data, meteorological conditions, and land use information. The aim was to estimate daily PM2.5 distribution at a 1-km spatial resolution, analyzing long-term characteristics and trends of particulate pollution. This high-resolution data is crucial for identifying small-scale pollution hotspots and understanding the efficacy of pollution control measures over time.
+
+{{< video https://youtu.be/KoafN46G3OQ >}}
+
+These studies exemplify the application of remote sensing and machine learning techniques in enhancing our understanding of air pollution patterns. The ability to monitor PM2.5 with high spatial and temporal resolution is a valuable asset in the fight against air pollution, providing a data-driven basis for policy decisions and interventions aimed at improving air quality in Beijing and similar urban environments.
+
+
+## Reflection
+
+Strategies for combating air pollution in Beijing have been multifaceted, focusing on reducing coal consumption, expanding urban rail networks, and introducing high-density sensor-based PM2.5 monitoring networks. These actions, backed by both municipal and national support, have been crucial in reshaping Beijing's transportation and reducing its environmental footprint. Measures include the establishment of Low Emission Zones (LEZs) and the modernization of the bus fleet. Beijing has become a global leader in electric mobility, boasting a vast number of electric buses, and has made considerable investments in air quality improvement measures.
+
+Beijing's journey to improve air quality has not only achieved substantial reductions in pollutants like PM2.5, sulfur dioxide, and nitrogen oxides but also set a model for other cities worldwide. The collaborative efforts, stringent policies, and significant investments in air quality management have showcased a commendable balance between environmental protection and economic growth.
+
+These efforts reflect an enormous investment of time, resources, and political will, aimed at transforming Beijing into a cleaner, more sustainable city. The progress made by Beijing offers valuable lessons and a roadmap for other cities facing similar challenges with air pollution, demonstrating the potential benefits of comprehensive planning, public engagement, and the adoption of new technologies for environmental improvement.

@@ -2,17 +2,28 @@
 
 Chapter 4 - Atmospheric correction of optical imagery. (2020). In Advanced Remote Sensing (Second Edition, pp. 131–156). *Elsevier Inc*. [https://doi.org/10.1016/B978-0-12-815826-5.00004-0](https://doi.org/10.1016/B978-0-12-815826-5.00004-0)
 
+Duke University; Spotting air pollution with satellites, better than ever before. (2020). In *TB & Outbreaks Weekly* (pp. 95-). NewsRx.
+
 Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., & Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. *Bulletin of Earthquake Engineering.* [https://doi.org/10.1007/s10518-023-01716-9](https://doi.org/10.1007/s10518-023-01716-9)
 
-Gisgeographys. “What is Remote Sensing? The Definitive Guide” Accessed 11 March 2024.
+Gisgeography. “What is Remote Sensing? The Definitive Guide” Accessed 11 March 2024.
 [https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
 
+Guo, Y., Feng, N., Christopher, S. A., Kang, P., Zhan, F. B., & Hong, S. (2014). Satellite remote sensing of fine particulate matter (PM2.5) air quality over Beijing using MODIS. *International Journal of Remote Sensing, 35*(17), 6522–6544. [https://doi.org/10.1080/01431161.2014.958245](https://doi.org/10.1080/01431161.2014.958245)
 
-Jenerowicz, A., Wierzbicki, D., & Kedzierski, M. (2023). Radiometric Correction with Topography Influence of Multispectral Imagery Obtained from Unmanned Aerial Vehicles. Remote Sensing (Basel, Switzerland), 15(8), 2059-. [https://doi.org/10.3390/rs15082059](https://doi.org/10.3390/rs15082059)
+Jenerowicz, A., Wierzbicki, D., & Kedzierski, M. (2023). Radiometric Correction with Topography Influence of Multispectral Imagery Obtained from Unmanned Aerial Vehicles. *Remote Sensing (Basel, Switzerland)*, 15(8), 2059-. [https://doi.org/10.3390/rs15082059](https://doi.org/10.3390/rs15082059)
 
-Li, A., Wang, Q., Bian, J., & Lei, G. (2015). An improved physics-based model for topographic correction of landsat TM images. *Remote Sensing* (Basel, Switzerland), 7(5), 6296–6319. [https://doi.org/10.3390/rs70506296](https://doi.org/10.3390/rs70506296)
+Li, A., Wang, Q., Bian, J., & Lei, G. (2015). An improved physics-based model for topographic correction of landsat TM images. *Remote Sensing (Basel, Switzerland)*, 7(5), 6296–6319. [https://doi.org/10.3390/rs70506296](https://doi.org/10.3390/rs70506296)
 
-Zhu, X., Cai, F., Tian, J., & Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. Remote Sensing (Basel, Switzerland), 10(4), 527-. [https://doi.org/10.3390/rs10040527](https://doi.org/10.3390/rs10040527)
+Li, W., Shao, L., Wang, W., Li, H., Wang, X., Li, Y., Li, W., Jones, T., & Zhang, D. (2020). Air quality improvement in response to intensified control strategies in Beijing during 2013–2019. *The Science of the Total Environment, 744*, 140776–140776. [https://doi.org/10.1016/j.scitotenv.2020.140776](https://doi.org/10.1016/j.scitotenv.2020.140776)
+
+Liu, Y., Zhou, Y., & Lu, J. (2020). Exploring the relationship between air pollution and meteorological conditions in China under environmental governance. *Scientific Reports, 10*(1). [https://doi.org/10.1038/s41598-020-71338-7](https://doi.org/10.1038/s41598-020-71338-7)
+
+Maji, K. J., Li, V. O., & Lam, J. C. (2020). Effects of China’s current Air Pollution Prevention and Control Action Plan on air pollution patterns, health risks and mortalities in Beijing 2014–2018. *Chemosphere (Oxford), 260*, 127572–127572. [https://doi.org/10.1016/j.chemosphere.2020.127572](https://doi.org/10.1016/j.chemosphere.2020.127572)
+
+Zhang, H., Wang, S., Hao, J., Wang, X., Wang, S., Chai, F., & Li, M. (2016). Air pollution and control action in Beijing. *Journal of Cleaner Production, 112*, 1519–1527. [https://doi.org/10.1016/j.jclepro.2015.04.092](https://doi.org/10.1016/j.jclepro.2015.04.092)
+
+Zhu, X., Cai, F., Tian, J., & Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. *Remote Sensing (Basel, Switzerland)*, 10(4), 527-. [https://doi.org/10.3390/rs10040527](https://doi.org/10.3390/rs10040527)
 
 
 
