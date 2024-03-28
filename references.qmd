@@ -21,6 +21,8 @@ Liang, F., Xiao, Q., Huang, K., Yang, X., Liu, F., Li, J., Lu, X., Liu, Y., & Gu
 
 Liu, Y., Zhou, Y., & Lu, J. (2020). Exploring the relationship between air pollution and meteorological conditions in China under environmental governance. *Scientific Reports, 10*(1). [https://doi.org/10.1038/s41598-020-71338-7](https://doi.org/10.1038/s41598-020-71338-7)
 
+Lucas, R., Mueller, N., Siggins, A., Owers, C., Clewley, D., Bunting, P., Kooymans, C., Tissott, B., Lewis, B., Lymburner, L., & Metternicht, G. (2019). Land cover mapping using digital earth Australia. *Data (Basel), 4*(4), 143-. [https://doi.org/10.3390/data4040143](https://doi.org/10.3390/data4040143)
+
 Ma, Y., Zhang, W., Chen, X., Zhang, L., & Liu, Q. (2023). High Spatial Resolution Nighttime PM2.5 Datasets in the Beijing–Tianjin–Hebei Region from 2015 to 2021 Using VIIRS/DNB and Deep Learning Model. *Remote Sensing (Basel, Switzerland), 15*(17), 4271-. [https://doi.org/10.3390/rs15174271](https://doi.org/10.3390/rs15174271)
 
 Maji, K. J., Li, V. O., & Lam, J. C. (2020). Effects of China’s current Air Pollution Prevention and Control Action Plan on air pollution patterns, health risks and mortalities in Beijing 2014–2018. *Chemosphere (Oxford), 260*, 127572–127572. [https://doi.org/10.1016/j.chemosphere.2020.127572](https://doi.org/10.1016/j.chemosphere.2020.127572)

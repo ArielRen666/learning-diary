@@ -1,16 +1,23 @@
-# Week 3 - Corrections and Image Enhancements
+# Week 5 - Introduction to GEE
 
 ## Summary
 
-This remote sensing lesson covers methods of acquiring and processing remote sensing data and how to apply this data to study cities and the environment. It is mainly divided into two parts: (1) corrections (2) data joining and enhancement.
+This week I stepped into a whole new world, GEE (Google Earth Engine), which is a cloud-based platform that delivers a multi-petabyte catalog of satellite imagery for planetary-scale analysis. 
 
-### Corrections
+**It is indeed a great resource for anyone who wants to explore the world through satellite imagery.**
 
-Various errors that may exist in remote sensing images (e.g., due to factors such as sensors, atmosphere, terrain, etc.) and how to correct them through different techniques.
+We can not only gain access to remote sensing data from satellites, airborne, digital elevation models, but also we can turn this geospatial data into actionable insights through the platform’s fast computations and 1000+ types of operators for analysis.
 
-### Geometric Correction
+And the most important is that **it’s completely free**!!!
 
-How can image distortions caused by factors such as shooting angle, terrain, wind speed (if data is obtained from an airplane), and the Earth's rotation be addressed? The purpose of geometric correction is to match images with ground control points or other known reference data to ensure spatial accuracy of the images.
+From land use to weather data, it’s through its vast (and growing) catalog of remote sensing data that we can see the world through a different lens. We can have access to many key datasets on this platform, such as Landsat (30m), Sentinel-2 (10-30m), MODIS (250m daily), Sentinel-1 (Radar), Land cover, Weather and Climate (NOAA) and so on.
+
+### What Can Google Earth Engine Do?
+
+
+
+Earth Engine offers a data catalog, development flexibility, and addresses common business drivers. With over 50 petabytes of analysis-ready data covering the Earth's present, past, and future, the catalog includes climate and weather data, satellite imagery from platforms like Landsat, Sentinel, and MODIS, as well as other geophysical data in raster and vector formats. This extensive time series data, dating back over 40 years in some cases, coupled with real-time datasets, supports a wide range of analytical needs. The continuous launch of satellites equipped with increasingly sophisticated sensors is generating a vast amount of high-frequency Earth observation data, all of which can be efficiently ingested, stored, and processed by Earth Engine.
+
 
 ![](week3-images/3.1.1GeometricCorrection.gif){width="45%"}         ![](week3-images/3.1.1GeometricCorrection2.png){width="45%"}
 
@@ -32,23 +39,7 @@ As solar radiation passes through the atmosphere to reach the Earth's surface, a
 
 Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images (Li et al., 2015).
 
-### Radiometric Correction
 
-Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes and solar irradiance variations. For example, slopes facing the sun and those in shadow may reflect sunlight in completely different ways. This difference can cause these areas to appear with varying brightness or colors in images, which may then be mistakenly classified into different categories (Jenerowicz et al., 2023).
-
-### Data Joining and Image Enhancements
-
-This part gave me an understanding of how image data from different points in time or from different sensors can be effectively joined, and how image quality and visualisation of information can be improved through image enhancement techniques.
-
-Specifically, image enhancement methods include contrast enhancement, spatial enhancement (such as filtering and edge enhancement), Principal Component Analysis (PCA) for dimension reduction, texture analysis for spatial variation, and image fusion techniques to combine data from multiple sources or sensors and so on.
-
-![Input and output of spatiotemporal data fusion. Source: [Zhu et al., 2018](https://www.mdpi.com/2072-4292/10/4/527#)](week3-images/3.2spatiotemporal%20data.png){width="90%"}
-
-The above image demonstrates a technique for image fusion. On the left, there is a sequence of dense, coarse images with low resolution but high acquisition frequency. In the middle, there are sparse, fine images with high resolution but lower frequency of acquisition. Through spatiotemporal data fusion, a high-resolution and information-rich fine image is synthesized (on the right), effectively combining the advantages of both image types.
-
-![Remote sensing image using false color synthesis technique. Source: [Wordpress](https://imgsblog.wordpress.com/2015/10/01/finding-satellite-imagery-for-ireland/)](week3-images/3.band-combinations.png){width="70%"}
-
-This image shows remote sensing imagery enhanced by false-color compositing, a method to highlight specific land features by assigning different spectral bands to RGB colors. It illustrates three different band combinations emphasizing vegetation (6,5,2), buildings (7,6,4), and a combination for vegetation (5,4,3) and distinguishing land/water (5,6,4). This technique not only improves visual perception but also aids in analyzing and identifying various land cover types.
 
 ## Applications
 
@@ -64,20 +55,17 @@ NDVI assess the condition of vegetation growth by measuring the difference betwe
 
 $$
 NDVI = \frac{(NIR-Red)}{(NIR+Red)}
-$$
-NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
+$$ NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
 
 ![Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php)](week3-images/NDVIwork.jpg){width="40%"}
 
-**How do we use NDVI?**
-</br>
+**How do we use NDVI?** </br>
 
-We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index. 
+We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index.
 
 The below graphics shows the Landsat Surface Reflectance (SR) NDVI maps of the San Joaquin Valley region of California on March 10, 2022 and March 13, 2023. The left 2022 map shows the impact on local vegetation after several years of drought. An extremely wet spring in 2023 lead to an early green-up in the valley.
 
-![](week3-images/L8_042035_20220310_SR_NDVI_0.jpg){width="45%"} 
-![](week3-images/L8_042035_20230313_SR_NDVI_0.jpg){width="45%"}
+![](week3-images/L8_042035_20220310_SR_NDVI_0.jpg){width="45%"} ![](week3-images/L8_042035_20230313_SR_NDVI_0.jpg){width="45%"}
 
 NDVI Maps of the San Joaquin Valley Region, March 2022 and March 2023. Source: [USGS](https://www.usgs.gov/media/before-after/ndvi-maps-san-joaquin-valley-region-march-2022-and-march-2023)
 
@@ -91,8 +79,7 @@ The below satellite maps of vegetation show the density of plant growth over the
 
 I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.
 
-**How to use PCA in remote sensing?**
-</br>
+**How to use PCA in remote sensing?** </br>
 
 Running a principal component analysis on three bands was useful because we found the third component did not add much information.
 

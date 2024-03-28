@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ariel’s RS learning diary - 4&nbsp; Week 2 - Presentation of Sentinel-1</title>
+<title>Ariel’s RS learning diary - 5&nbsp; Week 5 - Introduction to GEE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./week3.html" rel="prev">
+<link href="./week8.html" rel="next">
+<link href="./week4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,8 +61,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week5.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Introduction to GEE</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -115,25 +116,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - <strong>Presentation of Sentinel-1</strong></span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections and Image Enhancements</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Air Pollution &amp; Control Action in Beijing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Introduction to GEE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 8 - Presentation of Sentinel-1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,14 +161,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#atmospheric-correction" id="toc-atmospheric-correction" class="nav-link" data-scroll-target="#atmospheric-correction"><span class="header-section-number">5.1.1</span> Atmospheric Correction</a></li>
+  <li><a href="#orthorectificationtopographic-correction" id="toc-orthorectificationtopographic-correction" class="nav-link" data-scroll-target="#orthorectificationtopographic-correction"><span class="header-section-number">5.1.2</span> Orthorectification/Topographic Correction</a></li>
+  <li><a href="#radiometric-correction" id="toc-radiometric-correction" class="nav-link" data-scroll-target="#radiometric-correction"><span class="header-section-number">5.1.3</span> Radiometric Correction</a></li>
+  <li><a href="#data-joining-and-image-enhancements" id="toc-data-joining-and-image-enhancements" class="nav-link" data-scroll-target="#data-joining-and-image-enhancements"><span class="header-section-number">5.1.4</span> Data Joining and Image Enhancements</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#ndvi-normalized-difference-vegetation-index" id="toc-ndvi-normalized-difference-vegetation-index" class="nav-link" data-scroll-target="#ndvi-normalized-difference-vegetation-index"><span class="header-section-number">5.2.1</span> NDVI (Normalized Difference Vegetation Index)</a></li>
+  <li><a href="#pca-principal-component-analysis" id="toc-pca-principal-component-analysis" class="nav-link" data-scroll-target="#pca-principal-component-analysis"><span class="header-section-number">5.2.2</span> PCA (Principal Component Analysis)</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 2 - Presentation of Sentinel-1</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Introduction to GEE</span></h1>
 </div>
 
 
@@ -170,17 +201,112 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="cell">
-<div class="cell-output-display">
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="https://arielren666.github.io/week2-Sentinel-1/#1" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>This week I stepped into a whole new world, GEE (Google Earth Engine), which is a cloud-based platform that delivers a multi-petabyte catalog of satellite imagery for planetary-scale analysis.</p>
+<p><strong>It is indeed a great resource for anyone who wants to explore the world through satellite imagery.</strong></p>
+<p>We can not only gain access to remote sensing data from satellites, airborne, digital elevation models, but also we can turn this geospatial data into actionable insights through the platform’s fast computations and 1000+ types of operators for analysis.</p>
+<p>And the most important is that <strong>it’s completely free</strong>!!!</p>
+<p>From land use to weather data, it’s through its vast (and growing) catalog of remote sensing data that we can see the world through a different lens. We can have access to many key datasets on this platform, such as Landsat (30m), Sentinel-2 (10-30m), MODIS (250m daily), Sentinel-1 (Radar), Land cover, Weather and Climate (NOAA) and so on.</p>
+<p>Earth Engine offers a data catalog, development flexibility, and addresses common business drivers. With over 50 petabytes of analysis-ready data covering the Earth’s present, past, and future, the catalog includes climate and weather data, satellite imagery from platforms like Landsat, Sentinel, and MODIS, as well as other geophysical data in raster and vector formats. This extensive time series data, dating back over 40 years in some cases, coupled with real-time datasets, supports a wide range of analytical needs. The continuous launch of satellites equipped with increasingly sophisticated sensors is generating a vast amount of high-frequency Earth observation data, all of which can be efficiently ingested, stored, and processed by Earth Engine.</p>
+<p><img src="week3-images/3.1.1GeometricCorrection.gif" class="img-fluid" style="width:45.0%"> &nbsp; &nbsp; &nbsp; &nbsp; <img src="week3-images/3.1.1GeometricCorrection2.png" class="img-fluid" style="width:45.0%"></p>
+<p>Geometric correction process. Source: <a href="https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html">Catalyst Earth</a></p>
+<section id="atmospheric-correction" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">5.1.1</span> Atmospheric Correction</h3>
+<p>Focuses on eliminating the effects of the atmosphere on satellite or aerial image data to more accurately reflect the actual reflectivity or brightness value of the surface.</p>
+<p>As solar radiation passes through the atmosphere to reach the Earth’s surface, and then reflects back to the sensor, it is scattered and absorbed by gases, water droplets, and particulate matter in the atmosphere. This alters the radiation signal that reaches the sensor.</p>
+<ul>
+<li><p><strong>Relative correction</strong>, such as DOS and Pseudo-Invariant Features, uses internal image references for correction and is suitable when atmospheric parameters are lacking.</p></li>
+<li><p><strong>Absolute correction</strong>, applies atmospheric models like MODTRAN for direct correction.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/3.1.3after atmospheric correction.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: <a href="https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050">Chapter 4 - Atmospheric correction of optical imagery, 2020</a></figcaption>
+</figure>
 </div>
+</section>
+<section id="orthorectificationtopographic-correction" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="orthorectificationtopographic-correction"><span class="header-section-number">5.1.2</span> Orthorectification/Topographic Correction</h3>
+<p>Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images (Li et al., 2015).</p>
+</section>
+<section id="radiometric-correction" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="radiometric-correction"><span class="header-section-number">5.1.3</span> Radiometric Correction</h3>
+<p>Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes and solar irradiance variations. For example, slopes facing the sun and those in shadow may reflect sunlight in completely different ways. This difference can cause these areas to appear with varying brightness or colors in images, which may then be mistakenly classified into different categories (Jenerowicz et al., 2023).</p>
+</section>
+<section id="data-joining-and-image-enhancements" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="data-joining-and-image-enhancements"><span class="header-section-number">5.1.4</span> Data Joining and Image Enhancements</h3>
+<p>This part gave me an understanding of how image data from different points in time or from different sensors can be effectively joined, and how image quality and visualisation of information can be improved through image enhancement techniques.</p>
+<p>Specifically, image enhancement methods include contrast enhancement, spatial enhancement (such as filtering and edge enhancement), Principal Component Analysis (PCA) for dimension reduction, texture analysis for spatial variation, and image fusion techniques to combine data from multiple sources or sensors and so on.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/3.2spatiotemporal data.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">Input and output of spatiotemporal data fusion. Source: <a href="https://www.mdpi.com/2072-4292/10/4/527#">Zhu et al., 2018</a></figcaption>
+</figure>
 </div>
+<p>The above image demonstrates a technique for image fusion. On the left, there is a sequence of dense, coarse images with low resolution but high acquisition frequency. In the middle, there are sparse, fine images with high resolution but lower frequency of acquisition. Through spatiotemporal data fusion, a high-resolution and information-rich fine image is synthesized (on the right), effectively combining the advantages of both image types.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/3.band-combinations.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Remote sensing image using false color synthesis technique. Source: <a href="https://imgsblog.wordpress.com/2015/10/01/finding-satellite-imagery-for-ireland/">Wordpress</a></figcaption>
+</figure>
 </div>
-<p>To view this presentation in full screen, please <a href="https://arielren666.github.io/week2-Sentinel-1/#1">click here</a>.</p>
+<p>This image shows remote sensing imagery enhanced by false-color compositing, a method to highlight specific land features by assigning different spectral bands to RGB colors. It illustrates three different band combinations emphasizing vegetation (6,5,2), buildings (7,6,4), and a combination for vegetation (5,4,3) and distinguishing land/water (5,6,4). This technique not only improves visual perception but also aids in analyzing and identifying various land cover types.</p>
+</section>
+</section>
+<section id="applications" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
+<p>In exploring the practical areas of this section, two major enhancement technologies that stood out to me were NDVI and PCA. In terms of NDVI, I had first heard about it and mentioned it in my learning diary in the first week, and as for PCA, I had been exposed to it in my quantitative methods course in the last term. That’s why I’m most curious about both.</p>
+<section id="ndvi-normalized-difference-vegetation-index" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="ndvi-normalized-difference-vegetation-index"><span class="header-section-number">5.2.1</span> NDVI (Normalized Difference Vegetation Index)</h3>
+<p>Ratio must be mentioned when referring to NDVI.</p>
+<p>Ratio calculation involves dividing the pixel values of one band by the corresponding pixel values of another band, which helps reduce the impacts of factors such as changes in illumination, terrain shadows, etc., thus increasing the accuracy of the analysis. NDVI is a classic example of ratio.</p>
+<p>NDVI assess the condition of vegetation growth by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs).</p>
+<p><span class="math display">\[
+NDVI = \frac{(NIR-Red)}{(NIR+Red)}
+\]</span> NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/NDVIwork.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption class="figure-caption">Source: <a href="https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php">Earthobservatory.Nasa</a></figcaption>
+</figure>
+</div>
+<p><strong>How do we use NDVI?</strong> <br></p>
+<p>We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index.</p>
+<p>The below graphics shows the Landsat Surface Reflectance (SR) NDVI maps of the San Joaquin Valley region of California on March 10, 2022 and March 13, 2023. The left 2022 map shows the impact on local vegetation after several years of drought. An extremely wet spring in 2023 lead to an early green-up in the valley.</p>
+<p><img src="week3-images/L8_042035_20220310_SR_NDVI_0.jpg" class="img-fluid" style="width:45.0%"> <img src="week3-images/L8_042035_20230313_SR_NDVI_0.jpg" class="img-fluid" style="width:45.0%"></p>
+<p>NDVI Maps of the San Joaquin Valley Region, March 2022 and March 2023. Source: <a href="https://www.usgs.gov/media/before-after/ndvi-maps-san-joaquin-valley-region-march-2022-and-march-2023">USGS</a></p>
+<p>Furthermore, NASA states that NDVI is a good indicator of drought. When water limits vegetation growth, it has a lower relative NDVI and density of vegetation.</p>
+<p>The below satellite maps of vegetation show the density of plant growth over the entire globe. Very low values of NDVI (0.1 and below) correspond to barren areas of rock, sand, or snow. Moderate values represent shrub and grassland (0.2 to 0.3), while high values indicate temperate and tropical rainforests (0.6 to 0.8).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/global_ndvi_19990921.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Source: <a href="https://earthobservatory.nasa.gov/features/MeasuringVegetation">Earthobservatory.Nasa</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="pca-principal-component-analysis" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="pca-principal-component-analysis"><span class="header-section-number">5.2.2</span> PCA (Principal Component Analysis)</h3>
+<p>I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.</p>
+<p><strong>How to use PCA in remote sensing?</strong> <br></p>
+<p>Running a principal component analysis on three bands was useful because we found the third component did not add much information.</p>
+<p>What about a 10-band multispectral image? Or even 100 or 200 bands (hyperspectral imagery)? This is where PCA is really useful – multispectral and hyperspectral analysis.</p>
+<p>For example, if most of the variance (eigenvalue) is found in principal components one, two, and three, it’s only necessary to use these three principal components. For land cover classification, it is much easier to use three bands compared to all 100 bands. In summary, PCA identifies duplicate data over multiple channels, reduces redundancy, and speeds up the processing time. This is key for PCA image processing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3-images/da_gislayers.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Information extraction of hypercritical data. Source: <a href="https://www.rsgisworld.com/2018/08/information-extraction-from.html">Rsgisworld</a></figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>Reflecting on the week’s lessons in remote sensing, I’ve been struck by the complexity of interpreting Earth via satellite imagery. The focus on corrections and enhancements, like geometric and atmospheric corrections, and the use of NDVI and PCA—has deepened my understanding of the field’s precision and the technological tools at our disposal. This exploration underscored the vital balance between leveraging technology and applying human insight to fully realize the full potential of remote sensing data.</p>
+<p>It may be a bit much to write about these last few weeks because there is a great deal of unfamiliar terms and concepts to understand for me, who is completely new to the remote sensing journey, and I will try to keep it as concise as possible for the rest of the week!😄 However, I firmly believe in the importance of establishing a strong foundation for my future in-depth practice. I also broadened my horizons by searching for information and communicating with others after class, which is very interesting and rewarding. I really enjoy exploring the unknown and enriching myself with new skills.🥰</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -418,13 +544,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span>
+      <a href="./week4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Air Pollution &amp; Control Action in Beijing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 8 - Presentation of Sentinel-1</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
