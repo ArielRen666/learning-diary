@@ -27,6 +27,8 @@ Ma, Y., Zhang, W., Chen, X., Zhang, L., & Liu, Q. (2023). High Spatial Resolutio
 
 Maji, K. J., Li, V. O., & Lam, J. C. (2020). Effects of China’s current Air Pollution Prevention and Control Action Plan on air pollution patterns, health risks and mortalities in Beijing 2014–2018. *Chemosphere (Oxford), 260*, 127572–127572. [https://doi.org/10.1016/j.chemosphere.2020.127572](https://doi.org/10.1016/j.chemosphere.2020.127572)
 
+Matricardi, E. A. T., Skole, D. L., Costa, O. B., Pedlowski, M. A., Samek, J. H., & Miguel, E. P. (2020). Long-term forest degradation surpasses deforestation in the Brazilian Amazon. *Science (American Association for the Advancement of Science), 369*(6509), 1378–1382. [https://doi.org/10.1126/SCIENCE.ABB3021](https://doi.org/10.1126/SCIENCE.ABB3021)
+
 Yang, X., Xiao, D., Bai, H., Tang, J., & Wang, W. (2022). Spatiotemporal Distributions of PM2.5 Concentrations in the Beijing–Tianjin–Hebei Region From 2013 to 2020. *Frontiers in Environmental Science, 10*. [https://doi.org/10.3389/fenvs.2022.842237](https://doi.org/10.3389/fenvs.2022.842237)
 
 Zhang, H., Wang, S., Hao, J., Wang, X., Wang, S., Chai, F., & Li, M. (2016). Air pollution and control action in Beijing. *Journal of Cleaner Production, 112*, 1519–1527. [https://doi.org/10.1016/j.jclepro.2015.04.092](https://doi.org/10.1016/j.jclepro.2015.04.092)

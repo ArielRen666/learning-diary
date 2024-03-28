@@ -2,9 +2,9 @@
 
 ## Summary
 
-This week I stepped into a whole new world, GEE (Google Earth Engine), which is a cloud-based platform that delivers a multi-petabyte catalog of satellite imagery for planetary-scale analysis. 
+This week I stepped into a whole new world, GEE (Google Earth Engine), which is a cloud-based platform that delivers a multi-petabyte catalog of satellite imagery for planetary-scale analysis.
 
-**It is indeed a great resource for anyone who wants to explore the world through satellite imagery.**
+**It's an incredible resource for anyone who wants to explore the world through satellite imagery.**
 
 We can not only gain access to remote sensing data from satellites, airborne, digital elevation models, but also we can turn this geospatial data into actionable insights through the platform’s fast computations and 1000+ types of operators for analysis.
 
@@ -12,85 +12,87 @@ And the most important is that **it’s completely free**!!!
 
 From land use to weather data, it’s through its vast (and growing) catalog of remote sensing data that we can see the world through a different lens. We can have access to many key datasets on this platform, such as Landsat (30m), Sentinel-2 (10-30m), MODIS (250m daily), Sentinel-1 (Radar), Land cover, Weather and Climate (NOAA) and so on.
 
+![Surface water change visualization enabled by Google Earth Engine (Aral Sea from 1984-2020). Source: [GOOGLE EARTH](https://blog.google/products/earth/earth-engine-preview-google-cloud/)](week5-images/aral-sea_Hero.gif){width="85%"}
+
+**Let's step into the world of GEE and see how amazing it is!**
+
 ### What Can Google Earth Engine Do?
 
+GEE tackles the challenge of open analysis in remote sensing with a focus on getting results. It’s able to avoid any bottlenecks because it’s able to adjust the size of its clusters based on how much demand there is for a data product.
 
+|                Functionality                |                                                                                               Description                                                                                               |
+|:----------------:|:----------------------------------------------------:|
+|            Downloading an Image             |                                                                    pick an extent, projection, data type, band, date, and resolution                                                                    |
+|        Performing Library Functions         |                                                           chain algorithms together for further analysis such as a band combination function                                                            |
+|           Filtering a Collection            |                                                       use the metadata to filter everything from the amount of cloud cover to the type of sensor                                                        |
+| Mapping an Algorithm to an Image Collection |                                 apply it to a full collection like the entire United States with a batch computation instead of applying an algorithm to a single image                                 |
+|       Computing Aggregate Statistics        |                                                           calculate the amount of area within an extent to check if it meets certain criteria                                                           |
+|          Building Tabular Reports           | create tabular reports to show specific information in a table format such as summarizing a detailed list of data, highlighting specific metrics, or showing comparisons between different sets of data |
 
-Earth Engine offers a data catalog, development flexibility, and addresses common business drivers. With over 50 petabytes of analysis-ready data covering the Earth's present, past, and future, the catalog includes climate and weather data, satellite imagery from platforms like Landsat, Sentinel, and MODIS, as well as other geophysical data in raster and vector formats. This extensive time series data, dating back over 40 years in some cases, coupled with real-time datasets, supports a wide range of analytical needs. The continuous launch of satellites equipped with increasingly sophisticated sensors is generating a vast amount of high-frequency Earth observation data, all of which can be efficiently ingested, stored, and processed by Earth Engine.
+### Geospatial Processing Functions
 
+GEE contains more than 1000 data types and operators to help lay a solid foundation for any type of remote sensing analysis.
 
-![](week3-images/3.1.1GeometricCorrection.gif){width="45%"}         ![](week3-images/3.1.1GeometricCorrection2.png){width="45%"}
+![](week5-images/Geospatial%20Processing%20Functions.png){width="70%"}
 
-Geometric correction process. Source: [Catalyst Earth](https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/Ortho_explainSimpleGeoCorrection.html)
+In addition to these analysis tools, there are other specialty types of algorithms. For instance, cloud and shadow filtering algorithms help remove artifacts so we can focus your analysis on the Earth’s surface.
 
-### Atmospheric Correction
+But one of the most exciting areas of development in GEE is a shift to machine learning algorithms and deep neural networks. For example, (1) **SVM** (2) **Random forests** (3) **K-Means** (4) **CART**
 
-Focuses on eliminating the effects of the atmosphere on satellite or aerial image data to more accurately reflect the actual reflectivity or brightness value of the surface.
+### How to get started?
 
-As solar radiation passes through the atmosphere to reach the Earth's surface, and then reflects back to the sensor, it is scattered and absorbed by gases, water droplets, and particulate matter in the atmosphere. This alters the radiation signal that reaches the sensor.
+Isn't it amazing and powerful! I can't wait to operate it after hearing all this. If you want to learn how to do it, but are a complete beginner like me, I found the video below very helpful.
 
--   **Relative correction**, such as DOS and Pseudo-Invariant Features, uses internal image references for correction and is suitable when atmospheric parameters are lacking.
-
--   **Absolute correction**, applies atmospheric models like MODTRAN for direct correction.
-
-![GF-1 WFV data true color composite map (left: before atmospheric correction; right: after atmospheric correction). Source: [Chapter 4 - Atmospheric correction of optical imagery, 2020](https://www-sciencedirect-com.libproxy.ucl.ac.uk/science/article/pii/B9780128158265000040#f0050)](week3-images/3.1.3after%20atmospheric%20correction.jpg){width="70%"}
-
-### Orthorectification/Topographic Correction
-
-Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images (Li et al., 2015).
-
-
+{{< video https://youtu.be/oAElakLgCdA >}}
 
 ## Applications
 
-In exploring the practical areas of this section, two major enhancement technologies that stood out to me were NDVI and PCA. In terms of NDVI, I had first heard about it and mentioned it in my learning diary in the first week, and as for PCA, I had been exposed to it in my quantitative methods course in the last term. That's why I'm most curious about both.
+### GEE Web Application Examples
 
-### NDVI (Normalized Difference Vegetation Index)
+On GEE's homepage we can see that there are six curated applications, from time-lapse imagery to global forest change web maps. Each one demonstrates its powerful computing and how it can lead to making informed decisions for the environment.
 
-Ratio must be mentioned when referring to NDVI.
+-   **Ocean Timelapse**: one of the most powerful features of GEE is its vast amount of temporal data. With over 35+ years of imagery, it’s like we’re traveling back in time on an interactive map of the ocean.
 
-Ratio calculation involves dividing the pixel values of one band by the corresponding pixel values of another band, which helps reduce the impacts of factors such as changes in illumination, terrain shadows, etc., thus increasing the accuracy of the analysis. NDVI is a classic example of ratio.
+-   **Linked Maps**: shows separate viewports with different band combinations. While the natural color is similar to what the human eye sees, the color-infrared, Land/Water, and Vegetation viewport highlights other land use features.
 
-NDVI assess the condition of vegetation growth by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs).
+-   **Split Panel**: contains a slider with two separate images side-by-side. We can compare two images from different dates beside each other to easily check for the differences between them.
 
-$$
-NDVI = \frac{(NIR-Red)}{(NIR+Red)}
-$$ NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
+-   **Collection Mosaic**: allows us to select from a group of Landsat-8 images, and based on it, the app will generate a mosaic using the median values.
 
-![Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php)](week3-images/NDVIwork.jpg){width="40%"}
+-   **Global Population Explorer**: after selecting a country, it dynamically creates a graph or table with the population density of that country.
 
-**How do we use NDVI?** </br>
+-   **Global Forest Change**: shows the results of global forest change using Landsat imagery between 2000 and 2016. We can interactively pan and zoom around in app and can symbolize deforestation based on the year of the loss or by the percent of tree cover.
 
-We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index.
 
-The below graphics shows the Landsat Surface Reflectance (SR) NDVI maps of the San Joaquin Valley region of California on March 10, 2022 and March 13, 2023. The left 2022 map shows the impact on local vegetation after several years of drought. An extremely wet spring in 2023 lead to an early green-up in the valley.
+![](week5-images/GEE123.png){width="43%"} ![](week5-images/GEE456.png){width="55%"}
 
-![](week3-images/L8_042035_20220310_SR_NDVI_0.jpg){width="45%"} ![](week3-images/L8_042035_20230313_SR_NDVI_0.jpg){width="45%"}
 
-NDVI Maps of the San Joaquin Valley Region, March 2022 and March 2023. Source: [USGS](https://www.usgs.gov/media/before-after/ndvi-maps-san-joaquin-valley-region-march-2022-and-march-2023)
+### Monitoring Global Forest Changes
 
-Furthermore, NASA states that NDVI is a good indicator of drought. When water limits vegetation growth, it has a lower relative NDVI and density of vegetation.
+The most impressive application of GEE to me is illegal deforestation in Brazil. The teacher mentioned this very interesting case in the first week class, which aroused my great interest in GEE at that time.
 
-The below satellite maps of vegetation show the density of plant growth over the entire globe. Very low values of NDVI (0.1 and below) correspond to barren areas of rock, sand, or snow. Moderate values represent shrub and grassland (0.2 to 0.3), while high values indicate temperate and tropical rainforests (0.6 to 0.8).
+Forests are critical ecosystems for fighting climate change, supporting livelihoods and protecting biodiversity.
 
-![Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/features/MeasuringVegetation)](week3-images/global_ndvi_19990921.jpg){width="70%"}
+Due to its vast forest resources, Brazil has always been targeted by international and domestic loggers, leading to massive human-induced destruction of the Amazon rainforest. In the past, illegal loggers took advantage of the limitations of technology and monitoring to avoid detection and prosecution. They carefully planned to cut down areas smaller than one square kilometer to escape monitoring at the kilometer resolution.
 
-### PCA (Principal Component Analysis)
+![Spatial mapping of forest degradation in Brazilian Amazon forest ecosystems. Source: [Matricardi et al., 2020](https://doi.org/10.1126/SCIENCE.ABB3021)](week5-images/BA_f2.jpeg){width="85%"}
 
-I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.
+However, the emergence of GEE changed all. To create the global forest map, GEE used a network of cloud-based servers to process 650,000 images across 10,000 computers working in parallel. It would have taken a solo computer 15 years to do the job.
 
-**How to use PCA in remote sensing?** </br>
+GEE's 30-meter high resolution ensures that even the smallest environmental changes are detectable, greatly increasing the ability to detect illegal logging activities. As a result, about 100 lawsuits due to illegal logging were filed in just one year, compared to almost none in the previous 20 years.
 
-Running a principal component analysis on three bands was useful because we found the third component did not add much information.
+Now, with the application below, we can easily access the global forest map, monitor forest changes in real time, and effectively expose and combat illegal logging activities.
 
-What about a 10-band multispectral image? Or even 100 or 200 bands (hyperspectral imagery)? This is where PCA is really useful – multispectral and hyperspectral analysis.
-
-For example, if most of the variance (eigenvalue) is found in principal components one, two, and three, it’s only necessary to use these three principal components. For land cover classification, it is much easier to use three bands compared to all 100 bands. In summary, PCA identifies duplicate data over multiple channels, reduces redundancy, and speeds up the processing time. This is key for PCA image processing.
-
-![Information extraction of hypercritical data. Source: [Rsgisworld](https://www.rsgisworld.com/2018/08/information-extraction-from.html)](week3-images/da_gislayers.jpg){width="50%"}
+```{r, echo=FALSE}
+htmltools::tags$iframe(style = "height:550px; width:100%", src = "https://gfw.global/4a74NHM")
+```
 
 ## Reflection
 
-Reflecting on the week's lessons in remote sensing, I've been struck by the complexity of interpreting Earth via satellite imagery. The focus on corrections and enhancements, like geometric and atmospheric corrections, and the use of NDVI and PCA—has deepened my understanding of the field's precision and the technological tools at our disposal. This exploration underscored the vital balance between leveraging technology and applying human insight to fully realize the full potential of remote sensing data.
+The rapid advancement of technology is changing our lives and the world at an unprecedented pace, also providing innovative means to solve some long-standing issues. GEE stands out as a pivotal tool for environmental and geospatial analysis, revolutionizing how we address and solve critical environmental issues.
 
-It may be a bit much to write about these last few weeks because there is a great deal of unfamiliar terms and concepts to understand for me, who is completely new to the remote sensing journey, and I will try to keep it as concise as possible for the rest of the week!😄 However, I firmly believe in the importance of establishing a strong foundation for my future in-depth practice. I also broadened my horizons by searching for information and communicating with others after class, which is very interesting and rewarding. I really enjoy exploring the unknown and enriching myself with new skills.🥰
+Reflecting on the week's lessons in remote sensing, GEE combines satellite imagery and geospatial data with powerful computing to help people and organizations understand how the planet is changing, how human activity contributes to those changes and what actions they can take.
+
+Such technological advancements have piqued my curiosity, making me even more interested in delving into this course. By mastering these technologies, we can not only better protect our environment but also solve seemingly intractable problems in many other fields. What an exciting era this is!
+
+![The Global Forest Watch interface showing Amazonian forest losses in 2014. Source: [Sustainability.Google](https://sustainability.google/operating-sustainably/stories/forest-watch/)](week5-images/Brazil%20illegal%20deforestation.jpg){width="70%"}
