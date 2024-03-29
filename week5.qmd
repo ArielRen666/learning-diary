@@ -21,7 +21,7 @@ From land use to weather data, it’s through its vast (and growing) catalog of 
 GEE tackles the challenge of open analysis in remote sensing with a focus on getting results. It’s able to avoid any bottlenecks because it’s able to adjust the size of its clusters based on how much demand there is for a data product.
 
 |                Functionality                |                                                                                               Description                                                                                               |
-|:------------------:|:--------------------------------------------------:|
+|:-------------------:|:-------------------------------------------------:|
 |            Downloading an Image             |                                                                    pick an extent, projection, data type, band, date, and resolution                                                                    |
 |        Performing Library Functions         |                                                           chain algorithms together for further analysis such as a band combination function                                                            |
 |           Filtering a Collection            |                                                       use the metadata to filter everything from the amount of cloud cover to the type of sensor                                                        |

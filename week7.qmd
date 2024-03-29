@@ -100,7 +100,7 @@ I learned a really cool application in class, which is with high-resolution, and
 
 If you are interested in this, you can [click here](https://dynamicworld.app/explore) to experience the Dynamic World by yourself.
 
-![Visual comparison of Dynamic World (DW) to other global and regional LULC datasets. Source: [Brown et al., 2022](https://doi.org/10.1038/s41597-022-01307-4)](week7-images/41597_2022_1307_Fig8.jpg){width="80%"}
+![Visual comparison of Dynamic World (DW) to other global and regional LULC datasets. Source: [Brown et al., 2022](https://doi.org/10.1038/s41597-022-01307-4)](week7-images/41597_2022_1307_Fig8.jpg){width="75%"}
 
 With regard to the application of subpixel, my teacher MacLachlan et al. made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR ([MacLachlan et al., 2017](https://doi.org/10.1080/01431161.2017.1346403)). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.
 

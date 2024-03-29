@@ -21,7 +21,7 @@ Unsupervised and supervised image classification are the two most common approac
 The table below highlights the differences between unsupervised and supervised classification
 
 |       Aspect        |               Supervised Classification                | Unsupervised Classification                            |
-|:----------------:|:--------------------------:|--------------------------|
+|:-------------------:|:------------------------------------------------------:|--------------------------------------------------------|
 |     Definition      |   z Classification guided by known training samples    | Classification without predefined training data        |
 |    Training Data    |     Requires labeled training data for each class      | No labeled training data required                      |
 |       Process       | Involves training the classifier using labeled samples | Involves training the classifier using labeled samples |
