@@ -1,5 +1,7 @@
 # References {.unnumbered}
 
+Cardoso-Fernandes, J., Teodoro, A. C., Lima, A., & Roda-Robles, E. (2020). Semi-automatization of support vector machines to map lithium (Li) bearing pegmatites. *Remote Sensing (Basel, Switzerland), 12*(14), 2319-. [https://doi.org/10.3390/rs12142319](https://doi.org/10.3390/rs12142319)
+
 Chapter 4 - Atmospheric correction of optical imagery. (2020). In Advanced Remote Sensing (Second Edition, pp. 131–156). *Elsevier Inc*. [https://doi.org/10.1016/B978-0-12-815826-5.00004-0](https://doi.org/10.1016/B978-0-12-815826-5.00004-0)
 
 Duke University; Spotting air pollution with satellites, better than ever before. (2020). In *TB & Outbreaks Weekly* (pp. 95-). NewsRx.
@@ -21,6 +23,8 @@ Liang, F., Xiao, Q., Huang, K., Yang, X., Liu, F., Li, J., Lu, X., Liu, Y., & Gu
 
 Liu, Y., Zhou, Y., & Lu, J. (2020). Exploring the relationship between air pollution and meteorological conditions in China under environmental governance. *Scientific Reports, 10*(1). [https://doi.org/10.1038/s41598-020-71338-7](https://doi.org/10.1038/s41598-020-71338-7)
 
+Lu, D., & Weng, Q. (2007). A survey of image classification methods and techniques for improving classification performance. *International Journal of Remote Sensing, 28*(5), 823–870. [https://doi.org/10.1080/01431160600746456](https://doi.org/10.1080/01431160600746456)
+
 Lucas, R., Mueller, N., Siggins, A., Owers, C., Clewley, D., Bunting, P., Kooymans, C., Tissott, B., Lewis, B., Lymburner, L., & Metternicht, G. (2019). Land cover mapping using digital earth Australia. *Data (Basel), 4*(4), 143-. [https://doi.org/10.3390/data4040143](https://doi.org/10.3390/data4040143)
 
 Ma, Y., Zhang, W., Chen, X., Zhang, L., & Liu, Q. (2023). High Spatial Resolution Nighttime PM2.5 Datasets in the Beijing–Tianjin–Hebei Region from 2015 to 2021 Using VIIRS/DNB and Deep Learning Model. *Remote Sensing (Basel, Switzerland), 15*(17), 4271-. [https://doi.org/10.3390/rs15174271](https://doi.org/10.3390/rs15174271)
@@ -33,11 +37,32 @@ Pal, M., & Mather, P. M. (2005). Support vector machines for classification in r
 
 UNOOSA/UN-SPIDER. 2020. United Nations Office for Outer Space Affairs, UN-SPIDER, Knowledge Portal Space-based information for Disaster Management and Emergency Responsa. Accessed 20 March, 2024. [https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping](https://www.un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping)
 
+Xie, Y., Sha, Z., & Yu, M. (2008). Remote sensing imagery in vegetation mapping: a review. *Health Education Research, 1*(1), 9–23. [https://doi.org/10.1093/jpe/rtm005](https://doi.org/10.1093/jpe/rtm005)
+
+Xu, T., Han, B., Li, J., & Du, Y. (2023). Domain-Invariant Feature and Generative Adversarial Network Boundary Enhancement for Multi-Source Unsupervised Hyperspectral Image Classification. *Remote Sensing (Basel, Switzerland), 15*(22), 5306-. [https://doi.org/10.3390/rs15225306](https://doi.org/10.3390/rs15225306)
+
 Yang, X., Xiao, D., Bai, H., Tang, J., & Wang, W. (2022). Spatiotemporal Distributions of PM2.5 Concentrations in the Beijing–Tianjin–Hebei Region From 2013 to 2020. *Frontiers in Environmental Science, 10*. [https://doi.org/10.3389/fenvs.2022.842237](https://doi.org/10.3389/fenvs.2022.842237)
 
 Zhang, H., Wang, S., Hao, J., Wang, X., Wang, S., Chai, F., & Li, M. (2016). Air pollution and control action in Beijing. *Journal of Cleaner Production, 112*, 1519–1527. [https://doi.org/10.1016/j.jclepro.2015.04.092](https://doi.org/10.1016/j.jclepro.2015.04.092)
 
-Zhu, X., Cai, F., Tian, J., & Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. *Remote Sensing (Basel, Switzerland)*, 10(4), 527-. [https://doi.org/10.3390/rs10040527](https://doi.org/10.3390/rs10040527)
+Zhao, Y., Yuan, Y., & Wang, Q. (2019). Fast spectral clustering for unsupervised hyperspectral image classification. *Remote Sensing (Basel, Switzerland), 11*(4), 399-. [https://doi.org/10.3390/rs11040399](https://doi.org/10.3390/rs11040399)
+
+Zhong, L., Hu, L., & Zhou, H. (2019). Deep learning based multi-temporal crop classification. *Remote Sensing of Environment, 221*, 430–443. [https://doi.org/10.1016/j.rse.2018.11.032](https://doi.org/10.1016/j.rse.2018.11.032)
+
+Zhu, X., Cai, F., Tian, J., & Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. *Remote Sensing (Basel, Switzerland), 10*(4), 527-. [https://doi.org/10.3390/rs10040527](https://doi.org/10.3390/rs10040527)
 
 
+
+
+  Mountrakis, G., Im, J., & Ogole, C. (2011). Support vector machines in remote sensing: A review. ISPRS Journal of Photogrammetry and Remote Sensing, 66(3), 247–259. https://doi.org/10.1016/j.isprsjprs.2010.11.001
+
+  
+
+  Piramanayagam, S., Saber, E., Schwartzkopf, W., & Koehler, F. W. (2018). Supervised classification of multisensor remotely sensed images using a deep learning framework. Remote Sensing (Basel, Switzerland), 10(9), 1429-. https://doi.org/10.3390/rs10091429
+
+  Dabija, A., Kluczek, M., Zagajewski, B., Raczko, E., Kycko, M., Al-Sulttani, A. H., Tardà, A., Pineda, L., & Corbera, J. (2021). Comparison of support vector machines and random forests for corine land cover mapping. Remote Sensing (Basel, Switzerland), 13(4), 1–35. https://doi.org/10.3390/rs13040777
+
+
+  
+  
 

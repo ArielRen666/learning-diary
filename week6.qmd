@@ -85,19 +85,65 @@ This video below shows how to perform unsupervised image classification in ArcGI
 
 {{< video https://youtu.be/fZwdsSNr7vk >}}
 
+### Classification and Regression Trees (CART)
+
+A Decision Tree, also known as Classification and Regression Tree (CART), is a supervised learning algorithm.
+
+A CART trains by splitting all available samples into homogeneous sub-groups of high purity based on a most significant feature.
+But one thing at a time…
+
+A decision tree conceptionally consists of three elements:
+
+- **One Root Node**: That is the starting point, which includes all training samples. A first split is done here.
+- **Multiple Decision Nodes**: Those are nodes where further splits are done.
+- **Multiple Leaf (or Terminal) Nodes**: Those are nodes where the assignments to the classes (e.g., urban, water, etc.) happens for classifications tasks (or the mean response of all observation in this node is calculated for regressions).
+
+![The structure and complexity of each DT can vary, depending on the training samples and the features used. This is a very simple DT example. Source: [FU Berlin, RESEDA)](https://blogs.fu-berlin.de/reseda/random-forest)](week6-images/dectree.png){width="55%"}
+
+One of the advantages of CART is its interpretability. The decision tree can be visualized, which aids in understanding and interpreting the model. This is crucial when explaining the model's findings to stakeholders or integrating expert knowledge into the classification process. 
+
+### Random Forest
+
+A random forest consists of a number of categorical decision trees, which can improve predictive performance and robustness. In the case of a Random Forest approach, the tree shown above would continue growing until almost all nodes contain only one class at a time. While that would most likely result in overfitting in a single DT, this effect is relativized by the majority vote in the end when using a RF.
+
+
+### Support Vector Machine (SVM) 
+
+A SVM is a powerful tool for highdimensional, linear and non-linear data science problems. It is always a good choice to consider a SVM for classification and regression tasks due to its high customizability and settings options. However, the search procedure for critical parameter is more complex compared to the RF. 
+
+SVM constructs one or more hyperplanes in high-dimensional or infinite-dimensional space, such as the 11 spectral bands of a Landsat 8 scene, to distinguish between two classes. The goal of maximizing the margin between the hyperplane and the nearest training samples, known as Support Vectors. These vectors are crucial as they precisely define the hyperplane, while samples further away do not influence its position. Thus enhance the accuracy of classification. 
+
+
+![Support Vector Machine Example. Source: [Cardoso-Fernandes et al., 2020](https://doi.org/10.3390/rs12142319)](week6-images/remotesensing-12-02319-g002.jpg){width="40%"}
+
+
+
+![](week6-images/SVM001.png){width="30%"}                                         
+![](week6-images/SVM002.png){width="30%"}
+
+Left: A linear hyperplane separating two classes (blue and green dots) in a two-dimensional feature space, e.g., Landsat bands 3 and 4. Right: Non-linear hyperplane after inverse transformation from higher dimensionality separating two classes. Source: [FU Berlin, RESEDA)](https://blogs.fu-berlin.de/reseda/random-forest)
+
+
+## Applications
+
+In the realm of remote sensing and Earth observation, the journey from theoretical methodologies to real-world applications showcases not only the evolution of technology but also a collaborative dialogue between various studies. 
+
+The comparison of classification algorithms by Pal & Mather (2005), which illustrates the superior accuracy of SVM over Maximum Likelihood and Artificial Neural Network (ANN) classifiers. This study underscores the importance of algorithm choice in achieving high precision in land cover classification, setting the stage for further advancements in the field.
+
+Building on this, Xu et al. (2023) introduce a pioneering approach with their multi-source unsupervised domain adaptive (MUDA) algorithm, addressing the intricacies of edge ambiguity in hyperspectral image classification. This innovative method not only exemplifies the ongoing refinement of classification techniques but also highlights a shift towards handling more complex, multi-source data—a commonality shared with Piramanayagam et al. (2018), who leverage deep learning for multisensor image classification. Both studies emphasize the trend towards integrating diverse data sources, reflecting a broader movement in remote sensing towards more holistic and comprehensive environmental analyses.
+
+I focused on the introduction of Support Vector Machines and Random Forests in the knowledge overview. I found a very interesting article about the comparison between the two in land cover mapping (Dabija et al., 2021). Focusing on Sentinel-2 and Landsat 8 satellite data, the results show that SVM with radial core is superior to RF in classification accuracy. This is consistent with Pal & Mather's (2005) proof that SVM is one of the best classification algorithms in remote sensing.
+
+![](week6-images/remotesensing-13-00777-g001.jpg){width="45%"}      
+![](week6-images/remotesensing-13-00777-g002.jpg){width="45%"}
+
+![Map and outcomes of different classification sets and algorithms. Source: [Dabija et al., 2021](https://doi.org/10.3390/rs13040777)](week6-images/remotesensing-13-00777-g008.jpg){width="50%"}
+
+Zhao et al. (2019)'s development of an improved spectral clustering method for hyperspectral images without requiring prior information mirrors a shared challenge in the field: the need for efficient and effective classification techniques that can adapt to large-scale data without extensive pre-existing datasets. This resonates with the motivations behind the K-means clustering application by Xie & Yu (2008), where the focus on unsupervised classification for ecological zoning also taps into the need for adaptable and accessible remote sensing tools.
+
+Moreover, the successful differentiation of crop species using SVM by Mountrakis & Ogole (2011) and land cover identification through maximum likelihood classification by Lu & Weng (2007) bring to light the practical implications of these technologies. These applications not only demonstrate the versatility of classification techniques across different environmental and agricultural contexts but also underscore a common goal: enhancing the accuracy and efficiency of land cover classification to support sustainable management practices.
+
+
 ## Reflection
 
-4.  **Machine Learning in EO Data Analysis**:
-    -   Exploration of classification and regression trees (CART) for discrete and continuous data.
-    -   The role of parameters like alpha in pruning decision trees to enhance model performance.
-5.  **Random Forests and SVM in Land Cover Classification**:
-    -   Description of random forests for creating numerous decision trees to improve classification accuracy.
-    -   SVM’s application for binary classification and the use of hyperparameters for optimizing model performance.
-6.  **Supervised vs. Unsupervised Classification**:
-    -   Differences between supervised (e.g., maximum likelihood classification, SVM) and unsupervised (e.g., k-means clustering) classification methods.
-    -   Importance of training data in supervised learning and how clustering works in unsupervised learning.
-    
-provided a comprehensive overview of using EO data for land cover classification and introduced a variety of classification techniques, emphasizing the importance of machine learning methods in environmental monitoring and analysis.
-The lecture concluded with an encouraging note on the future of remote sensing and classification, emphasizing the ever-growing availability of high-resolution satellite imagery and advanced computational resources. This, combined with the development of more sophisticated analysis techniques, promises to further our understanding of the Earth's surface and the dynamic processes that shape it.
-
-By providing a comprehensive overview of classification in remote sensing, this lecture equipped us with the knowledge and tools to harness the power of satellite imagery for environmental monitoring, urban planning, and beyond.
+This week's exploration of remote sensing image classification introduced me to the ability of machine learning (ML) to discriminately interpret the Earth's surface from satellite imagery. I learnt about ML techniques such as CART, RF, ML, SVM, and etc. and practised the difference between supervised and unsupervised learning. To be honest, I was initially sceptical about the accuracy of the algorithms in classifying images compared to the human eye, but was later surprised to find out that the algorithms were able to skilfully classify image segments, which piqued my curiosity and I decided to practice to bring the theoretical concepts into reality. The practical exercise with the Random Forest Model and its output provided a clear, insightful glimpse into the complex world of remote sensing data analysis. I continue to marvel at how advances in satellite imagery and computing are revolutionising our understanding of the Earth's surface and am looking forward to learning more advanced classification techniques next week.
