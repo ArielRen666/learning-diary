@@ -6,7 +6,6 @@ Last week, we mentioned that supervised and unsupervised classification is pixel
 
 ![OBIA-classification Diagram. Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)](week7-images/OBIA-classification1-1.png){width="70%"}
 
-
 ### Object-Based Image Analysis (OBIA)
 
 OBIA Groups pixels into representative vector shapes with size and geometry. It doesn’t create single pixels. Instead, it generates objects with different geometries. If you have the right image, objects can be so meaningful that it does the digitizing for you. For example, the segmentation results below highlight buildings.
@@ -17,22 +16,22 @@ Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis
 
 Four steps to perform OBIA classification:
 
-1. Perform multiresolution segmentation
-2. Select training areas
-3. Define statistics
-4. Classify
+1.  Perform multiresolution segmentation
+2.  Select training areas
+3.  Define statistics
+4.  Classify
 
 In OBIA classification, we can use different methods to classify objects. For example,
 
-- **shape**: if we want to classify buildings, we can use a shape statistic such as “rectangular fit”. This tests an object’s geometry to the shape of a rectangle.
+-   **shape**: if we want to classify buildings, we can use a shape statistic such as “rectangular fit”. This tests an object’s geometry to the shape of a rectangle.
 
-- **texture**: homogeneity of an object. For example, water is mostly homogeneous because it’s mostly dark blue. But forests have shadows and are a mix of green and black.
+-   **texture**: homogeneity of an object. For example, water is mostly homogeneous because it’s mostly dark blue. But forests have shadows and are a mix of green and black.
 
-- **spectral**: we can use the mean value of spectral properties such as near-infrared, short-wave infrared, red, green, or blue.
+-   **spectral**: we can use the mean value of spectral properties such as near-infrared, short-wave infrared, red, green, or blue.
 
-- **geographic context**: objects have proximity and distance relationships between neighbors.
+-   **geographic context**: objects have proximity and distance relationships between neighbors.
 
-- **Nearest neighbor (NN) classification**: similar to supervised classification
+-   **Nearest neighbor (NN) classification**: similar to supervised classification
 
 ![Each object in OBIA has statistics associated with it. On the right, is image object information for the selected building regarding its shape, size and spectral characteristics. Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)](week7-images/OBIA-Image-Object-Information-1-1.png){width="77%"}
 
@@ -58,7 +57,7 @@ Sub-pixel means that each pixel will be divided into smaller units to implement 
 
 Sub-pixel mapping, which in most cases can be regarded as a subsequent procedure to spectral unmixing, aims to arrange the spatial location of possible classes inside each mixed pixel given the obtained abundance map.
 
-![An example of sub-pixel analysis, comparing high-resolution imagery with images processed from medium-resolution remote sensing data such as Landsat. Source: [(MacLachlan et al., 2017)](https://doi.org/10.1080/01431161.2017.1346403)](week7-images/Subpixel land-cover classification for improved urban area estimates using Landsat.jpg){width="50%"}
+![An example of sub-pixel analysis, comparing high-resolution imagery with images processed from medium-resolution remote sensing data such as Landsat. Source: [(MacLachlan et al., 2017)](https://doi.org/10.1080/01431161.2017.1346403)](week7-images/Subpixel%20land-cover%20classification%20for%20improved%20urban%20area%20estimates%20using%20Landsat.jpg){width="50%"}
 
 The goal of sub-pixel analysis is to extract more detailed information at the pixel level. For example, even if a pixel is primarily covered by buildings, if it also includes a portion of roads and vegetation, sub-pixel analysis will be able to identify these proportions. This is particularly useful for urban planning and environmental monitoring, as it allows for more precise mapping and monitoring of urban land use and changes.
 
@@ -68,20 +67,20 @@ Confusion Matrix is a fundamental tool for assessing the performance of classifi
 
 The confusion matrix consists of four key elements:
 
-- **True Positives (TP):** Instances correctly predicted as positive (e.g., emails correctly identified as spam).
-- **False Negatives (FN):** Positive instances incorrectly predicted as negative (e.g., spam emails misclassified as non-spam).
-- **False Positives (FP):** Negative instances incorrectly predicted as positive (e.g., non-spam emails misclassified as spam).
-- **True Negatives (TN):** Instances correctly predicted as negative (e.g., non-spam emails correctly identified as non-spam).
+-   **True Positives (TP):** Instances correctly predicted as positive (e.g., emails correctly identified as spam).
+-   **False Negatives (FN):** Positive instances incorrectly predicted as negative (e.g., spam emails misclassified as non-spam).
+-   **False Positives (FP):** Negative instances incorrectly predicted as positive (e.g., non-spam emails misclassified as spam).
+-   **True Negatives (TN):** Instances correctly predicted as negative (e.g., non-spam emails correctly identified as non-spam).
 
 Advanced classification metrics derived from the confusion matrix offer deeper insights into the model's performance, including:
 
 ![Confusion matrix with advanced classification metrics. Source: [Manisha-sirsat](https://manisha-sirsat.blogspot.com/2019/04/confusion-matrix.html)](week7-images/confusionMatrxiUpdated.jpg){width="80%"}
 
-- **Sensitivity (Recall or True Positive Rate):** The proportion of actual positives correctly identified by the model. High sensitivity indicates the model is good at catching positive cases.
-- **Specificity (True Negative Rate):** The proportion of actual negatives correctly identified, showing how well the model identifies negative cases.
-- **Precision:** The proportion of positive identifications that were actually correct, highlighting the model's accuracy in predicting positive classes.
-- **Accuracy:** The overall proportion of correct predictions made out of all predictions, providing a general measure of the model's performance.
-- **F1 Score:** The harmonic mean of precision and recall, offering a balance between them and is particularly useful when the classes are imbalanced.
+-   **Sensitivity (Recall or True Positive Rate):** The proportion of actual positives correctly identified by the model. High sensitivity indicates the model is good at catching positive cases.
+-   **Specificity (True Negative Rate):** The proportion of actual negatives correctly identified, showing how well the model identifies negative cases.
+-   **Precision:** The proportion of positive identifications that were actually correct, highlighting the model's accuracy in predicting positive classes.
+-   **Accuracy:** The overall proportion of correct predictions made out of all predictions, providing a general measure of the model's performance.
+-   **F1 Score:** The harmonic mean of precision and recall, offering a balance between them and is particularly useful when the classes are imbalanced.
 
 **Accuracy Assessment** refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. Except this, it also look at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn't evenly distributed, thus helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.
 
@@ -89,18 +88,21 @@ Advanced classification metrics derived from the confusion matrix offer deeper i
 
 Cross-validation involves splitting the dataset into smaller subsets to repeatedly train and validate the model. The most common method of cross-validation is k-fold cross-validation.
 
-1. **Generalization Ability Assessment**: evaluate the model's predictive ability on unknown data. 
+1.  **Generalization Ability Assessment**: evaluate the model's predictive ability on unknown data.
 
-2. **Avoiding Overfitting**: ensure the effectiveness and robustness of the model in practical applications. 
+2.  **Avoiding Overfitting**: ensure the effectiveness and robustness of the model in practical applications.
 
-3. **Model Selection and Hyperparameter Tuning**: such as the learning rate or the number of layers in deep learning models, to improve the performance of the model.
-
+3.  **Model Selection and Hyperparameter Tuning**: such as the learning rate or the number of layers in deep learning models, to improve the performance of the model.
 
 ## Applications
 
-With regard to the application of subpixel, my teacher MacLachlan et
-al. made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR (MacLachlan et
-al., 2017). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.
+I learned a really cool application in class, which is with high-resolution, and near-Real-Time classification,called [Dynamic World](https://dynamicworld.app/about)!! It leverages deep learning techniques on Sentinel-2 imagery to provide globally consistent, high-resolution (10m per pixel) land use and land cover (LULC) classification in near real-time (NRT). This is a significant advancement over traditional global land cover products, which are typically updated on an annual basis and often have substantial lag times between image acquisition and dataset release.
+
+If you are interested in this, you can [click here](https://dynamicworld.app/explore) to experience the Dynamic World by yourself.
+
+![Visual comparison of Dynamic World (DW) to other global and regional LULC datasets. Source: [Brown et al., 2022](https://doi.org/10.1038/s41597-022-01307-4)](week7-images/41597_2022_1307_Fig8.jpg){width="80%"}
+
+With regard to the application of subpixel, my teacher MacLachlan et al. made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR ([MacLachlan et al., 2017](https://doi.org/10.1080/01431161.2017.1346403)). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.
 
 ## Reflection
 

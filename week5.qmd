@@ -2,7 +2,7 @@
 
 ## Summary
 
-This week I stepped into a whole new world, GEE (Google Earth Engine), which is a cloud-based platform that delivers a multi-petabyte catalog of satellite imagery for planetary-scale analysis.
+This week I stepped into a whole new world, GEE ([Google Earth Engine](https://earthengine.google.com/)), which is a cloud-based platform that delivers a multi-petabyte catalog of satellite imagery for planetary-scale analysis.
 
 **It's an incredible resource for anyone who wants to explore the world through satellite imagery.**
 
@@ -21,7 +21,7 @@ From land use to weather data, it’s through its vast (and growing) catalog of 
 GEE tackles the challenge of open analysis in remote sensing with a focus on getting results. It’s able to avoid any bottlenecks because it’s able to adjust the size of its clusters based on how much demand there is for a data product.
 
 |                Functionality                |                                                                                               Description                                                                                               |
-|:-----------------:|:---------------------------------------------------:|
+|:------------------:|:--------------------------------------------------:|
 |            Downloading an Image             |                                                                    pick an extent, projection, data type, band, date, and resolution                                                                    |
 |        Performing Library Functions         |                                                           chain algorithms together for further analysis such as a band combination function                                                            |
 |           Filtering a Collection            |                                                       use the metadata to filter everything from the amount of cloud cover to the type of sensor                                                        |
@@ -49,7 +49,7 @@ Isn't it amazing and powerful! I can't wait to operate it after hearing all this
 
 ### GEE Web Application Examples
 
-On GEE's homepage we can see that there are six curated applications, from time-lapse imagery to global forest change web maps. Each one demonstrates its powerful computing and how it can lead to making informed decisions for the environment.
+On [GEE's homepage](https://www.earthengine.app/) we can see that there are six curated applications, from time-lapse imagery to global forest change web maps. Each one demonstrates its powerful computing and how it can lead to making informed decisions for the environment.
 
 -   **Ocean Timelapse**: one of the most powerful features of GEE is its vast amount of temporal data. With over 35+ years of imagery, it’s like we’re traveling back in time on an interactive map of the ocean.
 

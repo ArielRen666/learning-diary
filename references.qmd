@@ -1,12 +1,14 @@
 # References {.unnumbered}
 
+Brown, C. F., Brumby, S. P., Guzder-Williams, B., Birch, T., Hyde, S. B., Mazzariello, J., Czerwinski, W., Pasquarella, V. J., Haertel, R., Ilyushchenko, S., Schwehr, K., Weisse, M., Stolle, F., Hanson, C., Guinan, O., Moore, R., & Tait, A. M. (2022). Dynamic World, Near real-time global 10 m land use land cover mapping. *Scientific Data, 9*(1), 251–17. [https://doi.org/10.1038/s41597-022-01307-4](https://doi.org/10.1038/s41597-022-01307-4)
+
 Cardoso-Fernandes, J., Teodoro, A. C., Lima, A., & Roda-Robles, E. (2020). Semi-automatization of support vector machines to map lithium (Li) bearing pegmatites. *Remote Sensing (Basel, Switzerland), 12*(14), 2319-. [https://doi.org/10.3390/rs12142319](https://doi.org/10.3390/rs12142319)
 
 Chapter 4 - Atmospheric correction of optical imagery. (2020). In Advanced Remote Sensing (Second Edition, pp. 131–156). *Elsevier Inc*. [https://doi.org/10.1016/B978-0-12-815826-5.00004-0](https://doi.org/10.1016/B978-0-12-815826-5.00004-0)
 
 Dabija, A., Kluczek, M., Zagajewski, B., Raczko, E., Kycko, M., Al-Sulttani, A. H., Tardà, A., Pineda, L., & Corbera, J. (2021). Comparison of support vector machines and random forests for corine land cover mapping. *Remote Sensing (Basel, Switzerland), 13*(4), 1–35. [https://doi.org/10.3390/rs13040777](https://doi.org/10.3390/rs13040777)
 
-Duke University; Spotting air pollution with satellites, better than ever before. (2020). In *TB & Outbreaks Weekly* (pp. 95-). NewsRx.
+Duke University; Spotting air pollution with satellites, better than ever before. (2020). In *TB & Outbreaks Weekly* (pp. 95-). NewsRx.[https://pratt.duke.edu/news/air-pollution-satellites/](https://pratt.duke.edu/news/air-pollution-satellites/)
 
 Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z., Voelker, B., Milillo, P., Penney, C., Adams, K., & Kijewski-Correa, T. (2023). Combining remote sensing techniques and field surveys for post-earthquake reconnaissance missions. *Bulletin of Earthquake Engineering.* [https://doi.org/10.1007/s10518-023-01716-9](https://doi.org/10.1007/s10518-023-01716-9)
 

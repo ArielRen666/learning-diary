@@ -30,11 +30,11 @@ As solar radiation passes through the atmosphere to reach the Earth's surface, a
 
 ### Orthorectification/Topographic Correction
 
-Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images (Li et al., 2015).
+Correct image distortions caused by terrain undulations. Specifically, we can use a Digital Elevation Model (DEM) to convert remote sensing images from perspective to orthographic projection corrects distortions from terrain variations, such as mountains and buildings. This alignment results in more accurate positioning, clearer textures, and sharper boundaries in images ([Li et al., 2015](https://doi.org/10.3390/rs70506296)).
 
 ### Radiometric Correction
 
-Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes and solar irradiance variations. For example, slopes facing the sun and those in shadow may reflect sunlight in completely different ways. This difference can cause these areas to appear with varying brightness or colors in images, which may then be mistakenly classified into different categories (Jenerowicz et al., 2023).
+Involves converting digital image data captured by sensors into true ground reflectance values. This process corrects for sensor system errors and atmospheric condition changes and solar irradiance variations. For example, slopes facing the sun and those in shadow may reflect sunlight in completely different ways. This difference can cause these areas to appear with varying brightness or colors in images, which may then be mistakenly classified into different categories ([Jenerowicz et al., 2023](https://doi.org/10.3390/rs15082059)).
 
 ### Data Joining and Image Enhancements
 
@@ -64,20 +64,17 @@ NDVI assess the condition of vegetation growth by measuring the difference betwe
 
 $$
 NDVI = \frac{(NIR-Red)}{(NIR+Red)}
-$$
-NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
+$$ NIR represents the reflectance of the Near-Infrared band, and Red represents the reflectance of the Red band. NDVI values range from -1 to 1. High values of NDVI indicate higher levels of live green vegetation.
 
 ![Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php)](week3-images/NDVIwork.jpg){width="40%"}
 
-**How do we use NDVI?**
-</br>
+**How do we use NDVI?** </br>
 
-We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index. 
+We see several sectors using NDVI. For example, in agriculture, farmers use NDVI for precision farming and to measure biomass. Whereas, in forestry, foresters use NDVI to quantify forest supply and leaf area index.
 
 The below graphics shows the Landsat Surface Reflectance (SR) NDVI maps of the San Joaquin Valley region of California on March 10, 2022 and March 13, 2023. The left 2022 map shows the impact on local vegetation after several years of drought. An extremely wet spring in 2023 lead to an early green-up in the valley.
 
-![](week3-images/L8_042035_20220310_SR_NDVI_0.jpg){width="45%"} 
-![](week3-images/L8_042035_20230313_SR_NDVI_0.jpg){width="45%"}
+![](week3-images/L8_042035_20220310_SR_NDVI_0.jpg){width="45%"} ![](week3-images/L8_042035_20230313_SR_NDVI_0.jpg){width="45%"}
 
 NDVI Maps of the San Joaquin Valley Region, March 2022 and March 2023. Source: [USGS](https://www.usgs.gov/media/before-after/ndvi-maps-san-joaquin-valley-region-march-2022-and-march-2023)
 
@@ -91,8 +88,7 @@ The below satellite maps of vegetation show the density of plant growth over the
 
 I was introduced to the concept of PCA for the first time In the quantitative methods course last term. It is used to reduce the dimensionality of datasets with correlated independent variables. The result allowed me to retain most of the information in the dataset with as few principal components as possible, effectively reducing the size of the dataset while also enhancing interpretability.
 
-**How to use PCA in remote sensing?**
-</br>
+**How to use PCA in remote sensing?** </br>
 
 Running a principal component analysis on three bands was useful because we found the third component did not add much information.
 
