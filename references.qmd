@@ -1,5 +1,6 @@
 # References {.unnumbered}
 
+</br>
 Brown, C. F., Brumby, S. P., Guzder-Williams, B., Birch, T., Hyde, S. B., Mazzariello, J., Czerwinski, W., Pasquarella, V. J., Haertel, R., Ilyushchenko, S., Schwehr, K., Weisse, M., Stolle, F., Hanson, C., Guinan, O., Moore, R., & Tait, A. M. (2022). Dynamic World, Near real-time global 10 m land use land cover mapping. *Scientific Data, 9*(1), 251–17. [https://doi.org/10.1038/s41597-022-01307-4](https://doi.org/10.1038/s41597-022-01307-4)
 
 Cardoso-Fernandes, J., Teodoro, A. C., Lima, A., & Roda-Robles, E. (2020). Semi-automatization of support vector machines to map lithium (Li) bearing pegmatites. *Remote Sensing (Basel, Switzerland), 12*(14), 2319-. [https://doi.org/10.3390/rs12142319](https://doi.org/10.3390/rs12142319)
@@ -49,6 +50,8 @@ UNOOSA/UN-SPIDER. 2020. United Nations Office for Outer Space Affairs, UN-SPIDER
 
 Xie, Y., Sha, Z., & Yu, M. (2008). Remote sensing imagery in vegetation mapping: a review. *Health Education Research, 1*(1), 9–23. [https://doi.org/10.1093/jpe/rtm005](https://doi.org/10.1093/jpe/rtm005)
 
+Xiong, J., Thenkabail, P. S., Tilton, J. C., Gumma, M. K., Teluguntla, P., Oliphant, A., Congalton, R. G., Yadav, K., & Gorelick, N. (2017). Nominal 30-M Cropland Extent Map of Continental Africa by Integrating Pixel-Based and Object-Based Algorithms Using Sentinel-2 and Landsat-8 Data on Google Earth Engine. *Remote Sensing (Basel, Switzerland), 9*(10), 1065-. [https://doi.org/10.3390/rs9101065](https://doi.org/10.3390/rs9101065)
+
 Xu, T., Han, B., Li, J., & Du, Y. (2023). Domain-Invariant Feature and Generative Adversarial Network Boundary Enhancement for Multi-Source Unsupervised Hyperspectral Image Classification. *Remote Sensing (Basel, Switzerland), 15*(22), 5306-. [https://doi.org/10.3390/rs15225306](https://doi.org/10.3390/rs15225306)
 
 Yang, X., Xiao, D., Bai, H., Tang, J., & Wang, W. (2022). Spatiotemporal Distributions of PM2.5 Concentrations in the Beijing–Tianjin–Hebei Region From 2013 to 2020. *Frontiers in Environmental Science, 10*. [https://doi.org/10.3389/fenvs.2022.842237](https://doi.org/10.3389/fenvs.2022.842237)
@@ -60,6 +63,7 @@ Zhao, Y., Yuan, Y., & Wang, Q. (2019). Fast spectral clustering for unsupervised
 Zhong, L., Hu, L., & Zhou, H. (2019). Deep learning based multi-temporal crop classification. *Remote Sensing of Environment, 221*, 430–443. [https://doi.org/10.1016/j.rse.2018.11.032](https://doi.org/10.1016/j.rse.2018.11.032)
 
 Zhu, X., Cai, F., Tian, J., & Williams, T. K. A. (2018). Spatiotemporal fusion of multisource remote sensing data: Literature survey, taxonomy, principles, applications, and future directions. *Remote Sensing (Basel, Switzerland), 10*(4), 527-. [https://doi.org/10.3390/rs10040527](https://doi.org/10.3390/rs10040527)
+
 
 
 

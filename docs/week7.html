@@ -310,11 +310,19 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">Visual comparison of Dynamic World (DW) to other global and regional LULC datasets. Source: <a href="https://doi.org/10.1038/s41597-022-01307-4">Brown et al., 2022</a></figcaption>
 </figure>
 </div>
+<p>In terms of OBIA, Xiong et al.&nbsp;developed an innovative approach to creating a high-resolution (30-m) cropland extent map of the African continent by integrating pixel-based and object-based remote sensing classification methods using data from Sentinel-2 and Landsat-8 satellites on the Google Earth Engine (GEE) platform. This segmentation groups neighboring pixels into meaningful objects (or segments) based on their similarity, considering both their spectral characteristics and spatial context, effectively reducing the “salt and pepper” noise typical in pixel-based classifications and improving the overall accuracy of the cropland extent map (<a href="https://doi.org/10.3390/rs9101065">2017</a>). Its rigorous assessment demonstrated the effectiveness of combining pixel-based and object-based approaches, achieving a high overall accuracy and demonstrating the potential of this integrated method for large-scale cropland mapping projects.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7-images/Nominal_30-m_Cropland_Extent_M.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Source: <a href="https://doi.org/10.3390/rs9101065">Xiong et al., 2017</a></figcaption>
+</figure>
+</div>
 <p>With regard to the application of subpixel, my teacher MacLachlan et al.&nbsp;made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR (<a href="https://doi.org/10.1080/01431161.2017.1346403">MacLachlan et al., 2017</a>). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>This week’s exploration of remote sensing image classification introduced me to the ability of machine learning (ML) to discriminately interpret the Earth’s surface from satellite imagery. I learnt about ML techniques such as CART, RF, ML, SVM, and etc. and practised the difference between supervised and unsupervised learning. To be honest, I was initially sceptical about the accuracy of the algorithms in classifying images compared to the human eye, but was later surprised to find out that the algorithms were able to skilfully classify image segments,.</p>
+<p>This week’s exploration move towards more granular and object-oriented analyses represents a significant step forward in our ability to interpret and leverage satellite imagery. OBIA’s method of grouping pixels into meaningful objects rather than treating them as individual units resonates with me, particularly for its potential in high spatial resolution imagery where traditional pixel-based methods can fall short.</p>
+<p>The discussion on sub-pixel analysis was another highlight, revealing a method to extract more detailed information from each pixel by considering its sub-components. The emphasis on accuracy assessment and cross-validation also stood out, reminding me of the importance of rigorously evaluating and validating the classification models we use. These methods ensure the reliability of the results we depend on for critical applications like urban planning and environmental monitoring.</p>
 
 
 </section>
