@@ -171,10 +171,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="header-section-number">8.1.1</span> Object-Based Image Analysis (OBIA)</a></li>
-  <li><a href="#how-to-decide-which-image-classification-technique-to-use" id="toc-how-to-decide-which-image-classification-technique-to-use" class="nav-link" data-scroll-target="#how-to-decide-which-image-classification-technique-to-use"><span class="header-section-number">8.1.2</span> How to decide which image classification technique to use?</a></li>
-  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="header-section-number">8.1.3</span> Sub-pixel Analysis</a></li>
-  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="header-section-number">8.1.4</span> Accuracy Assessment</a></li>
+  <li><a href="#sars-bat-like-capabilities" id="toc-sars-bat-like-capabilities" class="nav-link" data-scroll-target="#sars-bat-like-capabilities"><span class="header-section-number">8.1.1</span> SAR’s Bat-Like Capabilities</a></li>
+  <li><a href="#types-of-radar-scattering" id="toc-types-of-radar-scattering" class="nav-link" data-scroll-target="#types-of-radar-scattering"><span class="header-section-number">8.1.2</span> Types of Radar Scattering</a></li>
+  <li><a href="#sar-image-interpretation" id="toc-sar-image-interpretation" class="nav-link" data-scroll-target="#sar-image-interpretation"><span class="header-section-number">8.1.3</span> SAR Image Interpretation</a></li>
+  <li><a href="#diffuse-scattering" id="toc-diffuse-scattering" class="nav-link" data-scroll-target="#diffuse-scattering"><span class="header-section-number">8.1.4</span> Diffuse Scattering</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a>
   <ul class="collapse">
@@ -209,75 +209,57 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
-<p>Last week, we mentioned that supervised and unsupervised classification is pixel-based. In other words, it creates square pixels and each pixel has a class. Today we dive into higher level image classification techniques- object-based image analysis. In addition, this week also covers sub pixel classification, accuracy assessment and cross-validation.</p>
+<p>The main focus of this week is about Synthetic Aperture Radar (SAR). SAR is an emerging technology in remote sensing. In fact, Sentinel-1 is equipped with this active type of sensor, which I have discussed in <a href="https://arielren666.github.io/learning-diary/week2.html">week2’s learning diary</a>. Likewise, Radarsat and TerraSAR use synthetic aperture radar. The main advantage of this technology is that it can synthetically produce higher-resolution images in any weather condition and even at night.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week7-images/OBIA-classification1-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption class="figure-caption">OBIA-classification Diagram. Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">Gisgeography</a></figcaption>
+<p><img src="week8-images/SAR1.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Synthetic aperture radar (SAR) refers to a technique for producing fine-resolution images from a resolution-limited radar system. Source: <a href="https://nisar.jpl.nasa.gov/mission/get-to-know-sar/overview/">NISAR</a></figcaption>
 </figure>
 </div>
-<section id="object-based-image-analysis-obia" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">8.1.1</span> Object-Based Image Analysis (OBIA)</h3>
-<p>OBIA Groups pixels into representative vector shapes with size and geometry. It doesn’t create single pixels. Instead, it generates objects with different geometries. If you have the right image, objects can be so meaningful that it does the digitizing for you. For example, the segmentation results below highlight buildings.</p>
-<p><img src="week7-images/obia-segmentation-clustering-ml.png" class="img-fluid" style="width:36.0%"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="week7-images/object-based-diagram.png" class="img-fluid" style="width:45.0%"></p>
-<p>Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">Gisgeography</a></p>
-<p>Four steps to perform OBIA classification:</p>
-<ol type="1">
-<li>Perform multiresolution segmentation</li>
-<li>Select training areas</li>
-<li>Define statistics</li>
-<li>Classify</li>
-</ol>
-<p>In OBIA classification, we can use different methods to classify objects. For example,</p>
+<section id="sars-bat-like-capabilities" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="sars-bat-like-capabilities"><span class="header-section-number">8.1.1</span> SAR’s Bat-Like Capabilities</h3>
+<p>It’s said that synthetic aperture radar is similar to how bats use echolocation to navigate in a cave.</p>
+<p>When bats fly in a cave, they use sound to navigate. Generally, they create sound waves from 50 to 120 dB. When this sound bounces off a wall and returns to the bat, it understands distance based on the echo.</p>
+<p>In general, the same principles apply to SAR. The satellite sends microwave pulses to Earth. The pulse returns back to the satellite and the sensor makes an image from the returned echoes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8-images/l-band-radar-africa.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">l band radar Africa. Source: <a href="SAR-Polarization.jpg">Gisgeography</a></figcaption>
+</figure>
+</div>
+<p>Generally, synthetic aperture radar is side-looking. This means they don’t look completely down at Nadir but at an angle. There are advantages to this type of viewing angle which I will mention below.</p>
+<p>As mentioned earlier, microwave radar can be seen at night and through clouds and smoke. At any time of the day or in any type of weather condition, SAR works.</p>
+<p>Actually, longer wavelengths can penetrate clouds better and even the ground. For example, L-band (~24 cm) radar has longer wavelengths than C-band (~6 cm) and X-band (~3cm).</p>
+</section>
+<section id="types-of-radar-scattering" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="types-of-radar-scattering"><span class="header-section-number">8.1.2</span> Types of Radar Scattering</h3>
+<p>Side-looking radar interacts with different types of terrain. The 3 main types of scattering mechanisms are:</p>
 <ul>
-<li><p><strong>shape</strong>: if we want to classify buildings, we can use a shape statistic such as “rectangular fit”. This tests an object’s geometry to the shape of a rectangle.</p></li>
-<li><p><strong>texture</strong>: homogeneity of an object. For example, water is mostly homogeneous because it’s mostly dark blue. But forests have shadows and are a mix of green and black.</p></li>
-<li><p><strong>spectral</strong>: we can use the mean value of spectral properties such as near-infrared, short-wave infrared, red, green, or blue.</p></li>
-<li><p><strong>geographic context</strong>: objects have proximity and distance relationships between neighbors.</p></li>
-<li><p><strong>Nearest neighbor (NN) classification</strong>: similar to supervised classification</p></li>
+<li>Specular</li>
+<li>Diffuse</li>
+<li>Double-bounce</li>
 </ul>
+</section>
+<section id="sar-image-interpretation" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="sar-image-interpretation"><span class="header-section-number">8.1.3</span> SAR Image Interpretation</h3>
+<p>Now that we know the basics of synthetic aperture radar, let’s look at a SAR image with these types of scattering. In this Radarsat-2 example, the image clearly shows all three types of backscatter.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week7-images/OBIA-Image-Object-Information-1-1.png" class="img-fluid figure-img" style="width:77.0%"></p>
-<figcaption class="figure-caption">Each object in OBIA has statistics associated with it. On the right, is image object information for the selected building regarding its shape, size and spectral characteristics. Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">Gisgeography</a></figcaption>
+<p><img src="week8-images/Radarsat2-Example.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Radarsat-2 image: double bounce, specular reflection, and diffuse backscatter. Source: <a href="SAR-Polarization.jpg">Gisgeography</a></figcaption>
 </figure>
 </div>
 </section>
-<section id="how-to-decide-which-image-classification-technique-to-use" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="how-to-decide-which-image-classification-technique-to-use"><span class="header-section-number">8.1.2</span> How to decide which image classification technique to use?</h3>
-<p>Let’s say we want to classify trees in high spatial resolution image.</p>
-<p>We decide to choose all pixels with high NDVI in that image. But this could also misclassify other pixels in the image that aren’t trees. For this reason, pixel-based classification like unsupervised and supervised classification gives a “salt and pepper” look, which means image appears to be speckled with noise or granular variations.</p>
+<section id="diffuse-scattering" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="diffuse-scattering"><span class="header-section-number">8.1.4</span> Diffuse Scattering</h3>
+<p>Finally, the majority of the radar image is rough surface scattering. You have a bit of specular and double-bounce scattering.</p>
+<p>This may be from annual cropland, vegetation, grasses, or other features. It is diffuse scattering because there’s not a high or low amount of backscatter in the image.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week7-images/Unsupervised-Classification-Salt-Pepper.png" class="img-fluid figure-img" style="width:77.0%"></p>
-<figcaption class="figure-caption">Unsupervised classification with unwanted speckle classification. Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">Gisgeography</a></figcaption>
+<p><img src="week8-images/SAR-Polarization.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Source: <a href="SAR-Polarization.jpg">Gisgeography</a></figcaption>
 </figure>
 </div>
-<p>Humans naturally aggregate spatial information into groups. Multiresolution segmentation does this task by grouping homogenous pixels into objects. Water features are easily recognizable after multiresolution segmentation. This is how humans visualize spatial features.</p>
-<p><strong>So, when should we use pixel-based (unsupervised and supervised classification) or object-based classification?</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week7-images/Spatial-Resolution-Comparison.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Source: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">Gisgeography</a></figcaption>
-</figure>
-</div>
-<p>As I illustrated before, spatial resolution is an important factor when selecting image classification techniques. When we have a low spatial resolution image, both traditional pixel-based and object-based image classification techniques perform well. In contrast, when we have a high spatial resolution image, OBIA is superior to traditional pixel-based classification.</p>
-</section>
-<section id="sub-pixel-analysis" class="level3" data-number="8.1.3">
-<h3 data-number="8.1.3" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">8.1.3</span> Sub-pixel Analysis</h3>
-<p>Sub-pixel means that each pixel will be divided into smaller units to implement interpolation algorithms for these smaller units.</p>
-<p>Sub-pixel mapping, which in most cases can be regarded as a subsequent procedure to spectral unmixing, aims to arrange the spatial location of possible classes inside each mixed pixel given the obtained abundance map.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week7-images/Subpixel land-cover classification for improved urban area estimates using Landsat.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">An example of sub-pixel analysis, comparing high-resolution imagery with images processed from medium-resolution remote sensing data such as Landsat. Source: <a href="https://doi.org/10.1080/01431161.2017.1346403">(MacLachlan et al., 2017)</a></figcaption>
-</figure>
-</div>
-<p>The goal of sub-pixel analysis is to extract more detailed information at the pixel level. For example, even if a pixel is primarily covered by buildings, if it also includes a portion of roads and vegetation, sub-pixel analysis will be able to identify these proportions. This is particularly useful for urban planning and environmental monitoring, as it allows for more precise mapping and monitoring of urban land use and changes.</p>
-</section>
-<section id="accuracy-assessment" class="level3" data-number="8.1.4">
-<h3 data-number="8.1.4" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">8.1.4</span> Accuracy Assessment</h3>
-<p>Confusion Matrix is a fundamental tool for assessing the performance of classification models in machine learning and statistics. It provides a visual representation of the actual vs.&nbsp;predicted outcomes for a binary classifier, helping to understand how well the model performs in distinguishing between two classes (e.g., spam vs.&nbsp;non-spam in email filtering).</p>
 </section>
 </section>
 <section id="applications" class="level2" data-number="8.2">
