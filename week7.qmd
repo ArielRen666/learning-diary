@@ -2,11 +2,9 @@
 
 ## Summary
 
-covering sub-pixel classification, accuracy assessment and cross-validation.
+Last week, we mentioned that supervised and unsupervised classification is pixel-based. In other words, it creates square pixels and each pixel has a class. Today we dive into higher level image classification techniques- object-based image analysis. In addition, this week also covers sub pixel classification, accuracy assessment and cross-validation.
 
-Last week, we mentioned that supervised and unsupervised classification is pixel-based. In other words, it creates square pixels and each pixel has a class. Today we dive into higher level image classification techniques- object-based image analysis.
-
-![OBIA-classification Diagram. Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)](week7-images/OBIA-classification1-1.png){width="70%"}
+![OBIA-classification Diagram. Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)](week7-images/OBIA-classification1-1.png){width="70%"}
 
 
 ### Object-Based Image Analysis (OBIA)
@@ -14,6 +12,8 @@ Last week, we mentioned that supervised and unsupervised classification is pixel
 OBIA Groups pixels into representative vector shapes with size and geometry. It doesn’t create single pixels. Instead, it generates objects with different geometries. If you have the right image, objects can be so meaningful that it does the digitizing for you. For example, the segmentation results below highlight buildings.
 
 ![](week7-images/obia-segmentation-clustering-ml.png){width="36%"}                         ![](week7-images/object-based-diagram.png){width="45%"}
+
+Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)
 
 Four steps to perform OBIA classification:
 
@@ -32,31 +32,39 @@ In OBIA classification, we can use different methods to classify objects. For ex
 
 - **geographic context**: objects have proximity and distance relationships between neighbors.
 
-- **Nearest neighbor (NN) classification**: similar to supervised classification. After multi-resolution segmentation, the user identifies sample sites for each land cover class. Next, define statistics to classify image objects. Finally, the nearest neighbor classifies objects based on their resemblance to the training sites and the statistics defined.
+- **Nearest neighbor (NN) classification**: similar to supervised classification
+
+![Each object in OBIA has statistics associated with it. On the right, is image object information for the selected building regarding its shape, size and spectral characteristics. Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)](week7-images/OBIA-Image-Object-Information-1-1.png){width="77%"}
 
 ### How to decide which image classification technique to use?
 
-Let’s say you want to classify water in a high spatial resolution image.
+Let’s say we want to classify trees in high spatial resolution image.
 
-You decide to choose all pixels with low NDVI in that image. But this could also misclassify other pixels in the image that aren’t water. For this reason, pixel-based classification like unsupervised and supervised classification gives a salt and pepper look.
+We decide to choose all pixels with high NDVI in that image. But this could also misclassify other pixels in the image that aren’t trees. For this reason, pixel-based classification like unsupervised and supervised classification gives a "salt and pepper" look, which means image appears to be speckled with noise or granular variations.
+
+![Unsupervised classification with unwanted speckle classification. Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)](week7-images/Unsupervised-Classification-Salt-Pepper.png){width="77%"}
 
 Humans naturally aggregate spatial information into groups. Multiresolution segmentation does this task by grouping homogenous pixels into objects. Water features are easily recognizable after multiresolution segmentation. This is how humans visualize spatial features.
 
-- When should you use pixel-based (unsupervised and supervised classification)?
-- When should you use object-based classification?
+**So, when should we use pixel-based (unsupervised and supervised classification) or object-based classification?**
 
-![Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)](week7-images/Spatial-Resolution-Comparison.png){width="80%"}
+![Source: [Gisgeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/)](week7-images/Spatial-Resolution-Comparison.png){width="80%"}
 
-As illustrated in this article, spatial resolution is an important factor when selecting image classification techniques.
+As I illustrated before, spatial resolution is an important factor when selecting image classification techniques. When we have a low spatial resolution image, both traditional pixel-based and object-based image classification techniques perform well. In contrast, when we have a high spatial resolution image, OBIA is superior to traditional pixel-based classification.
 
-When you have a low spatial resolution image, both traditional pixel-based and object-based image classification techniques perform well.
+### Sub-pixel Analysis
 
-But when you have a high spatial resolution image, OBIA is superior to traditional pixel-based classification.
+Sub-pixel means that each pixel will be divided into smaller units to implement interpolation algorithms for these smaller units.
 
+Sub-pixel mapping, which in most cases can be regarded as a subsequent procedure to spectral unmixing, aims to arrange the spatial location of possible classes inside each mixed pixel given the obtained abundance map.
 
-### Accuracy assessment
+![An example of sub-pixel analysis, comparing high-resolution imagery with images processed from medium-resolution remote sensing data such as Landsat. Source: [(MacLachlan et al., 2017)](https://doi.org/10.1080/01431161.2017.1346403)](week7-images/Subpixel land-cover classification for improved urban area estimates using Landsat.jpg){width="50%"}
 
-A Confusion Matrix is a fundamental tool for assessing the performance of classification models in machine learning and statistics. It provides a visual representation of the actual vs. predicted outcomes for a binary classifier, helping to understand how well the model performs in distinguishing between two classes (e.g., spam vs. non-spam in email filtering).
+The goal of sub-pixel analysis is to extract more detailed information at the pixel level. For example, even if a pixel is primarily covered by buildings, if it also includes a portion of roads and vegetation, sub-pixel analysis will be able to identify these proportions. This is particularly useful for urban planning and environmental monitoring, as it allows for more precise mapping and monitoring of urban land use and changes.
+
+### Accuracy Assessment
+
+Confusion Matrix is a fundamental tool for assessing the performance of classification models in machine learning and statistics. It provides a visual representation of the actual vs. predicted outcomes for a binary classifier, helping to understand how well the model performs in distinguishing between two classes (e.g., spam vs. non-spam in email filtering).
 
 The confusion matrix consists of four key elements:
 
@@ -75,14 +83,25 @@ Advanced classification metrics derived from the confusion matrix offer deeper i
 - **Accuracy:** The overall proportion of correct predictions made out of all predictions, providing a general measure of the model's performance.
 - **F1 Score:** The harmonic mean of precision and recall, offering a balance between them and is particularly useful when the classes are imbalanced.
 
-Accuracy Assessment refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. It looks not just at how many guesses are right (accuracy), but also at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn't evenly distributed. This process helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.
+**Accuracy Assessment** refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. Except this, it also look at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn't evenly distributed, thus helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.
+
+### Cross-validation
+
+Cross-validation involves splitting the dataset into smaller subsets to repeatedly train and validate the model. The most common method of cross-validation is k-fold cross-validation.
+
+1. **Generalization Ability Assessment**: evaluate the model's predictive ability on unknown data. 
+
+2. **Avoiding Overfitting**: ensure the effectiveness and robustness of the model in practical applications. 
+
+3. **Model Selection and Hyperparameter Tuning**: such as the learning rate or the number of layers in deep learning models, to improve the performance of the model.
 
 
+## Applications
 
-{{< video https://youtu.be/fZwdsSNr7vk >}}
-
-
+With regard to the application of subpixel, my teacher MacLachlan et
+al. made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR (MacLachlan et
+al., 2017). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.
 
 ## Reflection
 
-This week's exploration of remote sensing image classification introduced me to the ability of machine learning (ML) to discriminately interpret the Earth's surface from satellite imagery. I learnt about ML techniques such as CART, RF, ML, SVM, and etc. and practised the difference between supervised and unsupervised learning. To be honest, I was initially sceptical about the accuracy of the algorithms in classifying images compared to the human eye, but was later surprised to find out that the algorithms were able to skilfully classify image segments, which piqued my curiosity and I decided to practice to bring the theoretical concepts into reality. The practical exercise with the Random Forest Model and its output provided a clear, insightful glimpse into the complex world of remote sensing data analysis. I continue to marvel at how advances in satellite imagery and computing are revolutionising our understanding of the Earth's surface and am looking forward to learning more advanced classification techniques next week.
+This week's exploration of remote sensing image classification introduced me to the ability of machine learning (ML) to discriminately interpret the Earth's surface from satellite imagery. I learnt about ML techniques such as CART, RF, ML, SVM, and etc. and practised the difference between supervised and unsupervised learning. To be honest, I was initially sceptical about the accuracy of the algorithms in classifying images compared to the human eye, but was later surprised to find out that the algorithms were able to skilfully classify image segments,.

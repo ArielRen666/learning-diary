@@ -6,7 +6,6 @@ This week's lecture on "Classification I" immersed me into the intricate world o
 
 ![Image Classification Diagram. Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)](week6-images/obia-cover-1265x672.gif){width="70%"}
 
-
 ### What is Image Classification in Remote Sensing?
 
 The 3 main types of image classification techniques in remote sensing are:
@@ -22,8 +21,8 @@ Unsupervised and supervised image classification are the two most common approac
 The table below highlights the differences between unsupervised and supervised classification
 
 |       Aspect        |               Supervised Classification                | Unsupervised Classification                            |
-|:----------------:|:---------------------------:|--------------------------|
-|     Definition      |   z Classification guided by known training samples     | Classification without predefined training data        |
+|:----------------:|:--------------------------:|--------------------------|
+|     Definition      |   z Classification guided by known training samples    | Classification without predefined training data        |
 |    Training Data    |     Requires labeled training data for each class      | No labeled training data required                      |
 |       Process       | Involves training the classifier using labeled samples | Involves training the classifier using labeled samples |
 |  User Involvement   |        Requires user to select training samples        | Minimal user intervention during classification        |
@@ -37,45 +36,43 @@ The table below highlights the differences between unsupervised and supervised c
 
 In supervised classification, first select representative samples for each land cover class. Then, software uses these “training sites” and applies them to the entire image. The training samples are key because they will determine which class each pixel inherits in the overall image.
 
-![](week6-images/supervised-classification-ikonos.png){width="28%"}                     
-![](week6-images/supervised-diagram.png){width="55%"}
+![](week6-images/supervised-classification-ikonos.png){width="28%"}                     ![](week6-images/supervised-diagram.png){width="55%"}
 
 Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
 
 The three basic steps for supervised classification are:
 
-1. **Select training areas**: for example, mark urban areas by marking them in the image. Then, continue adding training sites representative in the entire image.
+1.  **Select training areas**: for example, mark urban areas by marking them in the image. Then, continue adding training sites representative in the entire image.
 
-2. **Generate signature file**: for each land cover class, we continue create training samples until we have representative samples for each class. In turn, this would generate a signature file, which stores all training samples’ spectral information.
+2.  **Generate signature file**: for each land cover class, we continue create training samples until we have representative samples for each class. In turn, this would generate a signature file, which stores all training samples’ spectral information.
 
-3. **Classify**: the last step is to use the signature file to run a classification. From here, we have to pick a classification algorithm such as:
+3.  **Classify**: the last step is to use the signature file to run a classification. From here, we have to pick a classification algorithm such as:
 
-- Maximum likelihood
-- Minimum-distance
-- Principal components
-- Support vector machine (SVM)
-- Iso cluster
+-   Maximum likelihood
+-   Minimum-distance
+-   Principal components
+-   Support vector machine (SVM)
+-   Iso cluster
 
-As shown in several studies, SVM is one of the best classification algorithms in remote sensing, but each option has its own advantages ([Pal & Mather, 2005](https://doi.org/10.1080/01431160512331314083)). 
+As shown in several studies, SVM is one of the best classification algorithms in remote sensing, but each option has its own advantages ([Pal & Mather, 2005](https://doi.org/10.1080/01431160512331314083)).
 
 ### Unsupervised Classification in Remote Sensing
 
 In unsupervised classification, it first groups pixels into “clusters” based on their properties. Then, classify each cluster with a land cover class. It is the most basic technique.
 
-![](week6-images/unsupervised-classification.png){width="28%"}                     
-![](week6-images/unsupervised-diagram.png){width="30%"}
+![](week6-images/unsupervised-classification.png){width="28%"}                     ![](week6-images/unsupervised-diagram.png){width="30%"}
 
 Source: [Gisgeography](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
 
 The two basic steps for unsupervised classification are:
 
-1. **Generate clusters**
-2. **Assign classes**
+1.  **Generate clusters**
+2.  **Assign classes**
 
 Using remote sensing software, we first create “clusters”. Some of the common image clustering algorithms are:
 
-- K-means
-- ISODATA
+-   K-means
+-   ISODATA
 
 After picking a clustering algorithm, we need to identify the number of groups we want to generate. For example, we can create 6, 22, or 39 clusters. Fewer clusters have more resembling pixels within groups, with more clusters increase the variability within groups.
 
@@ -89,44 +86,37 @@ This video below shows how to perform unsupervised image classification in ArcGI
 
 A Decision Tree, also known as Classification and Regression Tree (CART), is a supervised learning algorithm.
 
-A CART trains by splitting all available samples into homogeneous sub-groups of high purity based on a most significant feature.
-But one thing at a time…
+A CART trains by splitting all available samples into homogeneous sub-groups of high purity based on a most significant feature. But one thing at a time…
 
 A decision tree conceptionally consists of three elements:
 
-- **One Root Node**: That is the starting point, which includes all training samples. A first split is done here.
-- **Multiple Decision Nodes**: Those are nodes where further splits are done.
-- **Multiple Leaf (or Terminal) Nodes**: Those are nodes where the assignments to the classes (e.g., urban, water, etc.) happens for classifications tasks (or the mean response of all observation in this node is calculated for regressions).
+-   **One Root Node**: That is the starting point, which includes all training samples. A first split is done here.
+-   **Multiple Decision Nodes**: Those are nodes where further splits are done.
+-   **Multiple Leaf (or Terminal) Nodes**: Those are nodes where the assignments to the classes (e.g., urban, water, etc.) happens for classifications tasks (or the mean response of all observation in this node is calculated for regressions).
 
-![The structure and complexity of each DT can vary, depending on the training samples and the features used. This is a very simple DT example. Source: [FU Berlin, RESEDA)](https://blogs.fu-berlin.de/reseda/random-forest)](week6-images/dectree.png){width="55%"}
+![The structure and complexity of each DT can vary, depending on the training samples and the features used. This is a very simple DT example. Source: [FU Berlin, RESEDA](https://blogs.fu-berlin.de/reseda/random-forest)](week6-images/dectree.png){width="55%"}
 
-One of the advantages of CART is its interpretability. The decision tree can be visualized, which aids in understanding and interpreting the model. This is crucial when explaining the model's findings to stakeholders or integrating expert knowledge into the classification process. 
+One of the advantages of CART is its interpretability. The decision tree can be visualized, which aids in understanding and interpreting the model. This is crucial when explaining the model's findings to stakeholders or integrating expert knowledge into the classification process.
 
 ### Random Forest
 
 A random forest consists of a number of categorical decision trees, which can improve predictive performance and robustness. In the case of a Random Forest approach, the tree shown above would continue growing until almost all nodes contain only one class at a time. While that would most likely result in overfitting in a single DT, this effect is relativized by the majority vote in the end when using a RF.
 
+### Support Vector Machine (SVM)
 
-### Support Vector Machine (SVM) 
+A SVM is a powerful tool for highdimensional, linear and non-linear data science problems. It is always a good choice to consider a SVM for classification and regression tasks due to its high customizability and settings options. However, the search procedure for critical parameter is more complex compared to the RF.
 
-A SVM is a powerful tool for highdimensional, linear and non-linear data science problems. It is always a good choice to consider a SVM for classification and regression tasks due to its high customizability and settings options. However, the search procedure for critical parameter is more complex compared to the RF. 
-
-SVM constructs one or more hyperplanes in high-dimensional or infinite-dimensional space, such as the 11 spectral bands of a Landsat 8 scene, to distinguish between two classes. The goal of maximizing the margin between the hyperplane and the nearest training samples, known as Support Vectors. These vectors are crucial as they precisely define the hyperplane, while samples further away do not influence its position. Thus enhance the accuracy of classification. 
-
+SVM constructs one or more hyperplanes in high-dimensional or infinite-dimensional space, such as the 11 spectral bands of a Landsat 8 scene, to distinguish between two classes. The goal of maximizing the margin between the hyperplane and the nearest training samples, known as Support Vectors. These vectors are crucial as they precisely define the hyperplane, while samples further away do not influence its position. Thus enhance the accuracy of classification.
 
 ![Support Vector Machine Example. Source: [Cardoso-Fernandes et al., 2020](https://doi.org/10.3390/rs12142319)](week6-images/remotesensing-12-02319-g002.jpg){width="40%"}
 
+![](week6-images/SVM001.png){width="30%"}                                         ![](week6-images/SVM002.png){width="30%"}
 
-
-![](week6-images/SVM001.png){width="30%"}                                         
-![](week6-images/SVM002.png){width="30%"}
-
-Left: A linear hyperplane separating two classes (blue and green dots) in a two-dimensional feature space, e.g., Landsat bands 3 and 4. Right: Non-linear hyperplane after inverse transformation from higher dimensionality separating two classes. Source: [FU Berlin, RESEDA)](https://blogs.fu-berlin.de/reseda/random-forest)
-
+Left: A linear hyperplane separating two classes (blue and green dots) in a two-dimensional feature space, e.g., Landsat bands 3 and 4. Right: Non-linear hyperplane after inverse transformation from higher dimensionality separating two classes. Source: [FU Berlin, RESEDA](https://blogs.fu-berlin.de/reseda/random-forest)
 
 ## Applications
 
-In the realm of remote sensing and Earth observation, the journey from theoretical methodologies to real-world applications showcases not only the evolution of technology but also a collaborative dialogue between various studies. 
+In the realm of remote sensing and Earth observation, the journey from theoretical methodologies to real-world applications showcases not only the evolution of technology but also a collaborative dialogue between various studies.
 
 The comparison of classification algorithms by Pal & Mather (2005), which illustrates the superior accuracy of SVM over Maximum Likelihood and Artificial Neural Network (ANN) classifiers. This study underscores the importance of algorithm choice in achieving high precision in land cover classification, setting the stage for further advancements in the field.
 
@@ -134,15 +124,13 @@ Building on this, Xu et al. (2023) introduce a pioneering approach with their mu
 
 I focused on the introduction of Support Vector Machines and Random Forests in the knowledge overview. I found a very interesting article about the comparison between the two in land cover mapping (Dabija et al., 2021). Focusing on Sentinel-2 and Landsat 8 satellite data, the results show that SVM with radial core is superior to RF in classification accuracy. This is consistent with Pal & Mather's (2005) proof that SVM is one of the best classification algorithms in remote sensing.
 
-![](week6-images/remotesensing-13-00777-g001.jpg){width="45%"}      
-![](week6-images/remotesensing-13-00777-g002.jpg){width="45%"}
+![](week6-images/remotesensing-13-00777-g001.jpg){width="45%"}       ![](week6-images/remotesensing-13-00777-g002.jpg){width="45%"}
 
 ![Map and outcomes of different classification sets and algorithms. Source: [Dabija et al., 2021](https://doi.org/10.3390/rs13040777)](week6-images/remotesensing-13-00777-g008.jpg){width="50%"}
 
 Zhao et al. (2019)'s development of an improved spectral clustering method for hyperspectral images without requiring prior information mirrors a shared challenge in the field: the need for efficient and effective classification techniques that can adapt to large-scale data without extensive pre-existing datasets. This resonates with the motivations behind the K-means clustering application by Xie & Yu (2008), where the focus on unsupervised classification for ecological zoning also taps into the need for adaptable and accessible remote sensing tools.
 
 Moreover, the successful differentiation of crop species using SVM by Mountrakis & Ogole (2011) and land cover identification through maximum likelihood classification by Lu & Weng (2007) bring to light the practical implications of these technologies. These applications not only demonstrate the versatility of classification techniques across different environmental and agricultural contexts but also underscore a common goal: enhancing the accuracy and efficiency of land cover classification to support sustainable management practices.
-
 
 ## Reflection
 

@@ -31,6 +31,8 @@ Lucas, R., Mueller, N., Siggins, A., Owers, C., Clewley, D., Bunting, P., Kooyma
 
 Ma, Y., Zhang, W., Chen, X., Zhang, L., & Liu, Q. (2023). High Spatial Resolution Nighttime PM2.5 Datasets in the Beijing–Tianjin–Hebei Region from 2015 to 2021 Using VIIRS/DNB and Deep Learning Model. *Remote Sensing (Basel, Switzerland), 15*(17), 4271-. [https://doi.org/10.3390/rs15174271](https://doi.org/10.3390/rs15174271)
 
+MacLachlan, A., Roberts, G., Biggs, E., & Boruff, B. (2017). Subpixel land-cover classification for improved urban area estimates using Landsat. *International Journal of Remote Sensing, 38*(20), 5763–5792. [https://doi.org/10.1080/01431161.2017.1346403](https://doi.org/10.1080/01431161.2017.1346403)
+
 Maji, K. J., Li, V. O., & Lam, J. C. (2020). Effects of China’s current Air Pollution Prevention and Control Action Plan on air pollution patterns, health risks and mortalities in Beijing 2014–2018. *Chemosphere (Oxford), 260*, 127572–127572. [https://doi.org/10.1016/j.chemosphere.2020.127572](https://doi.org/10.1016/j.chemosphere.2020.127572)
 
 Matricardi, E. A. T., Skole, D. L., Costa, O. B., Pedlowski, M. A., Samek, J. H., & Miguel, E. P. (2020). Long-term forest degradation surpasses deforestation in the Brazilian Amazon. *Science (American Association for the Advancement of Science), 369*(6509), 1378–1382. [https://doi.org/10.1126/SCIENCE.ABB3021](https://doi.org/10.1126/SCIENCE.ABB3021)
