@@ -16,6 +16,8 @@ Giardina, G., Macchiarulo, V., Foroughnia, F., Jones, J. N., Whitworth, M. R. Z.
 Gisgeography. “What is Remote Sensing? The Definitive Guide” Accessed 11 March 2024.
 [https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases](https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases)
 
+Guo, L., Xi, X., Yang, W., & Liang, L. (2021). Monitoring land use/cover change using remotely sensed data in guangzhou of china. *Sustainability (Basel, Switzerland), 13*(5), 1–14. [https://doi.org/10.3390/su13052944](https://doi.org/10.3390/su13052944)
+
 Guo, Y., Feng, N., Christopher, S. A., Kang, P., Zhan, F. B., & Hong, S. (2014). Satellite remote sensing of fine particulate matter (PM2.5) air quality over Beijing using MODIS. *International Journal of Remote Sensing, 35*(17), 6522–6544. [https://doi.org/10.1080/01431161.2014.958245](https://doi.org/10.1080/01431161.2014.958245)
 
 Jenerowicz, A., Wierzbicki, D., & Kedzierski, M. (2023). Radiometric Correction with Topography Influence of Multispectral Imagery Obtained from Unmanned Aerial Vehicles. *Remote Sensing (Basel, Switzerland)*, 15(8), 2059-. [https://doi.org/10.3390/rs15082059](https://doi.org/10.3390/rs15082059)

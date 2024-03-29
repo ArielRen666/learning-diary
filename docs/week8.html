@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ariel’s RS learning diary - 8&nbsp; Week 8 - Classification II</title>
+<title>Ariel’s RS learning diary - 8&nbsp; Week 8 - SAR</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - Classification II</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - SAR</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -175,9 +175,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-decide-which-image-classification-technique-to-use" id="toc-how-to-decide-which-image-classification-technique-to-use" class="nav-link" data-scroll-target="#how-to-decide-which-image-classification-technique-to-use"><span class="header-section-number">8.1.2</span> How to decide which image classification technique to use?</a></li>
   <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="header-section-number">8.1.3</span> Sub-pixel Analysis</a></li>
   <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="header-section-number">8.1.4</span> Accuracy Assessment</a></li>
-  <li><a href="#cross-validation" id="toc-cross-validation" class="nav-link" data-scroll-target="#cross-validation"><span class="header-section-number">8.1.5</span> Cross-validation</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#disaster-assessment" id="toc-disaster-assessment" class="nav-link" data-scroll-target="#disaster-assessment"><span class="header-section-number">8.2.1</span> Disaster Assessment</a></li>
+  <li><a href="#urban-expansion-monitoring" id="toc-urban-expansion-monitoring" class="nav-link" data-scroll-target="#urban-expansion-monitoring"><span class="header-section-number">8.2.2</span> Urban Expansion Monitoring</a></li>
+  <li><a href="#agricultural-development" id="toc-agricultural-development" class="nav-link" data-scroll-target="#agricultural-development"><span class="header-section-number">8.2.3</span> Agricultural Development</a></li>
+  <li><a href="#environmental-change-monitoring" id="toc-environmental-change-monitoring" class="nav-link" data-scroll-target="#environmental-change-monitoring"><span class="header-section-number">8.2.4</span> Environmental Change Monitoring</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul>
 </nav>
@@ -187,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - Classification II</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - SAR</span></h1>
 </div>
 
 
@@ -273,57 +278,51 @@ ul.task-list li input[type="checkbox"] {
 <section id="accuracy-assessment" class="level3" data-number="8.1.4">
 <h3 data-number="8.1.4" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">8.1.4</span> Accuracy Assessment</h3>
 <p>Confusion Matrix is a fundamental tool for assessing the performance of classification models in machine learning and statistics. It provides a visual representation of the actual vs.&nbsp;predicted outcomes for a binary classifier, helping to understand how well the model performs in distinguishing between two classes (e.g., spam vs.&nbsp;non-spam in email filtering).</p>
-<p>The confusion matrix consists of four key elements:</p>
-<ul>
-<li><strong>True Positives (TP):</strong> Instances correctly predicted as positive (e.g., emails correctly identified as spam).</li>
-<li><strong>False Negatives (FN):</strong> Positive instances incorrectly predicted as negative (e.g., spam emails misclassified as non-spam).</li>
-<li><strong>False Positives (FP):</strong> Negative instances incorrectly predicted as positive (e.g., non-spam emails misclassified as spam).</li>
-<li><strong>True Negatives (TN):</strong> Instances correctly predicted as negative (e.g., non-spam emails correctly identified as non-spam).</li>
-</ul>
-<p>Advanced classification metrics derived from the confusion matrix offer deeper insights into the model’s performance, including:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week7-images/confusionMatrxiUpdated.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Confusion matrix with advanced classification metrics. Source: <a href="https://manisha-sirsat.blogspot.com/2019/04/confusion-matrix.html">Manisha-sirsat</a></figcaption>
-</figure>
-</div>
-<ul>
-<li><strong>Sensitivity (Recall or True Positive Rate):</strong> The proportion of actual positives correctly identified by the model. High sensitivity indicates the model is good at catching positive cases.</li>
-<li><strong>Specificity (True Negative Rate):</strong> The proportion of actual negatives correctly identified, showing how well the model identifies negative cases.</li>
-<li><strong>Precision:</strong> The proportion of positive identifications that were actually correct, highlighting the model’s accuracy in predicting positive classes.</li>
-<li><strong>Accuracy:</strong> The overall proportion of correct predictions made out of all predictions, providing a general measure of the model’s performance.</li>
-<li><strong>F1 Score:</strong> The harmonic mean of precision and recall, offering a balance between them and is particularly useful when the classes are imbalanced.</li>
-</ul>
-<p><strong>Accuracy Assessment</strong> refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. Except this, it also look at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn’t evenly distributed, thus helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.</p>
-</section>
-<section id="cross-validation" class="level3" data-number="8.1.5">
-<h3 data-number="8.1.5" class="anchored" data-anchor-id="cross-validation"><span class="header-section-number">8.1.5</span> Cross-validation</h3>
-<p>Cross-validation involves splitting the dataset into smaller subsets to repeatedly train and validate the model. The most common method of cross-validation is k-fold cross-validation.</p>
-<ol type="1">
-<li><p><strong>Generalization Ability Assessment</strong>: evaluate the model’s predictive ability on unknown data.</p></li>
-<li><p><strong>Avoiding Overfitting</strong>: ensure the effectiveness and robustness of the model in practical applications.</p></li>
-<li><p><strong>Model Selection and Hyperparameter Tuning</strong>: such as the learning rate or the number of layers in deep learning models, to improve the performance of the model.</p></li>
-</ol>
 </section>
 </section>
 <section id="applications" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
-<p>I learned a really cool application in class, which is with high-resolution, and near-Real-Time classification,called <a href="https://dynamicworld.app/about">Dynamic World</a>!! It leverages deep learning techniques on Sentinel-2 imagery to provide globally consistent, high-resolution (10m per pixel) land use and land cover (LULC) classification in near real-time (NRT). This is a significant advancement over traditional global land cover products, which are typically updated on an annual basis and often have substantial lag times between image acquisition and dataset release.</p>
-<p>If you are interested in this, you can <a href="https://dynamicworld.app/explore">click here</a> to experience the Dynamic World by yourself.</p>
+<p>Synthetic Aperture Radar (SAR) technology is widely applied in change detection in real-world scenarios, including disaster assessment, urban development planning, agricultural development, environmental monitoring and other fields.</p>
+<section id="disaster-assessment" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="disaster-assessment"><span class="header-section-number">8.2.1</span> Disaster Assessment</h3>
+<p>After the devastating explosion in Beirut’s port area on August 4, 2020, SAR (Synthetic Aperture Radar) technology played a crucial role in assessing the extent of the damage. Scientists utilized satellite radar imagery to create damage proxy maps, which helped identify areas needing immediate assistance. The dark red pixels on these maps indicated the most severe damage, while orange and yellow areas represented moderately or partially damaged zones. This mapping was crucial for guiding emergency response and relief efforts, illustrating the power of SAR technology in disaster situations.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week7-images/41597_2022_1307_Fig8.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption class="figure-caption">Visual comparison of Dynamic World (DW) to other global and regional LULC datasets. Source: <a href="https://doi.org/10.1038/s41597-022-01307-4">Brown et al., 2022</a></figcaption>
+<p><img src="week8-images/beirut_aria_2020218.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">July 29 - August 5, 2020 Scientists Map Beirut Blast Damage. Source: <a href="https://earthobservatory.nasa.gov/images/147098/scientists-map-beirut-blast-damage">Earthobservatory.Nasa</a></figcaption>
 </figure>
 </div>
-<p>In terms of OBIA, Xiong et al.&nbsp;developed an innovative approach to creating a high-resolution (30-m) cropland extent map of the African continent by integrating pixel-based and object-based remote sensing classification methods using data from Sentinel-2 and Landsat-8 satellites on the Google Earth Engine (GEE) platform. This segmentation groups neighboring pixels into meaningful objects (or segments) based on their similarity, considering both their spectral characteristics and spatial context, effectively reducing the “salt and pepper” noise typical in pixel-based classifications and improving the overall accuracy of the cropland extent map (<a href="https://doi.org/10.3390/rs9101065">2017</a>). Its rigorous assessment demonstrated the effectiveness of combining pixel-based and object-based approaches, achieving a high overall accuracy and demonstrating the potential of this integrated method for large-scale cropland mapping projects.</p>
+</section>
+<section id="urban-expansion-monitoring" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="urban-expansion-monitoring"><span class="header-section-number">8.2.2</span> Urban Expansion Monitoring</h3>
+<p>As the pace of global urbanization accelerates, SAR (Synthetic Aperture Radar) data plays a crucial role in monitoring and planning urban development. By analyzing a series of continuous SAR images, it is possible to track the expansion of urban boundaries, growth of buildings, and changes in urban green spaces. In a 2020 study, researchers utilized multi-temporal SAR data to analyze the urban expansion of Guangzhou, China. This study demonstrated the efficiency and accuracy of SAR technology in monitoring the process of urbanization (<a href="https://doi.org/10.3390/su13052944">Guo et al., 2021</a>).</p>
+</section>
+<section id="agricultural-development" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="agricultural-development"><span class="header-section-number">8.2.3</span> Agricultural Development</h3>
+<p>The application of SAR (Synthetic Aperture Radar) technology in agricultural monitoring encompasses multiple aspects, including estimation of crop planting area, monitoring of crop growth, and measurement of soil moisture. For instance, in some regions of Africa, SAR is used to monitor crop conditions and estimate yields, especially during the rainy season when cloud cover renders traditional optical satellite data inaccessible. This information is crucial for food security assessments and optimizing irrigation management plans. By analyzing SAR data, it was possible to successfully predict the wheat yield in Australia, providing a new monitoring tool for global agricultural production.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week7-images/Nominal_30-m_Cropland_Extent_M.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption class="figure-caption">Source: <a href="https://doi.org/10.3390/rs9101065">Xiong et al., 2017</a></figcaption>
+<p><img src="week8-images/63848a9230aa4b79c195040e_das-croppinghub2.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Source: <a href="https://carto.com/blog/agritech-spatial-data-predicting-crop-yield-in-rural-australia">Carto</a></figcaption>
 </figure>
 </div>
-<p>With regard to the application of subpixel, my teacher MacLachlan et al.&nbsp;made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR (<a href="https://doi.org/10.1080/01431161.2017.1346403">MacLachlan et al., 2017</a>). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.</p>
+</section>
+<section id="environmental-change-monitoring" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="environmental-change-monitoring"><span class="header-section-number">8.2.4</span> Environmental Change Monitoring</h3>
+<p>SAR data is highly effective for monitoring environmental changes, such as deforestation, wetland changes, and glacier retreat. SAR images provide continuous data on surface coverage and terrain changes, which is crucial for assessing the impacts of climate change. For example, a recent study used SAR technology to monitor changes in the Amazon rainforest in South America. By comparing SAR images from different times, researchers were able to accurately quantify the extent of deforestation and degradation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="week8-images/forestlossanimation_oli_2000_2018.mp4" class="img-fluid" style="width:80.0%" controls=""><a href="week8-images/forestlossanimation_oli_2000_2018.mp4">Video</a></video></p>
+<figcaption class="figure-caption">Tracking Amazon Deforestation from Above-1. Source: <a href="https://earthobservatory.nasa.gov/images/145988/tracking-amazon-deforestation-from-above">Earthobservatory.Nasa</a></figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week8-images/yurimaguas_oli_2019191.gif" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Tracking Amazon Deforestation from Above-2. Source: <a href="https://earthobservatory.nasa.gov/images/145988/tracking-amazon-deforestation-from-above">Earthobservatory.Nasa</a></figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>

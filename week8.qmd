@@ -1,4 +1,4 @@
-# Week 8 - Classification II
+# Week 8 - SAR
 
 ## Summary
 
@@ -65,48 +65,38 @@ The goal of sub-pixel analysis is to extract more detailed information at the pi
 
 Confusion Matrix is a fundamental tool for assessing the performance of classification models in machine learning and statistics. It provides a visual representation of the actual vs. predicted outcomes for a binary classifier, helping to understand how well the model performs in distinguishing between two classes (e.g., spam vs. non-spam in email filtering).
 
-The confusion matrix consists of four key elements:
 
--   **True Positives (TP):** Instances correctly predicted as positive (e.g., emails correctly identified as spam).
--   **False Negatives (FN):** Positive instances incorrectly predicted as negative (e.g., spam emails misclassified as non-spam).
--   **False Positives (FP):** Negative instances incorrectly predicted as positive (e.g., non-spam emails misclassified as spam).
--   **True Negatives (TN):** Instances correctly predicted as negative (e.g., non-spam emails correctly identified as non-spam).
 
-Advanced classification metrics derived from the confusion matrix offer deeper insights into the model's performance, including:
 
-![Confusion matrix with advanced classification metrics. Source: [Manisha-sirsat](https://manisha-sirsat.blogspot.com/2019/04/confusion-matrix.html)](week7-images/confusionMatrxiUpdated.jpg){width="80%"}
-
--   **Sensitivity (Recall or True Positive Rate):** The proportion of actual positives correctly identified by the model. High sensitivity indicates the model is good at catching positive cases.
--   **Specificity (True Negative Rate):** The proportion of actual negatives correctly identified, showing how well the model identifies negative cases.
--   **Precision:** The proportion of positive identifications that were actually correct, highlighting the model's accuracy in predicting positive classes.
--   **Accuracy:** The overall proportion of correct predictions made out of all predictions, providing a general measure of the model's performance.
--   **F1 Score:** The harmonic mean of precision and recall, offering a balance between them and is particularly useful when the classes are imbalanced.
-
-**Accuracy Assessment** refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. Except this, it also look at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn't evenly distributed, thus helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.
-
-### Cross-validation
-
-Cross-validation involves splitting the dataset into smaller subsets to repeatedly train and validate the model. The most common method of cross-validation is k-fold cross-validation.
-
-1.  **Generalization Ability Assessment**: evaluate the model's predictive ability on unknown data.
-
-2.  **Avoiding Overfitting**: ensure the effectiveness and robustness of the model in practical applications.
-
-3.  **Model Selection and Hyperparameter Tuning**: such as the learning rate or the number of layers in deep learning models, to improve the performance of the model.
 
 ## Applications
 
-I learned a really cool application in class, which is with high-resolution, and near-Real-Time classification,called [Dynamic World](https://dynamicworld.app/about)!! It leverages deep learning techniques on Sentinel-2 imagery to provide globally consistent, high-resolution (10m per pixel) land use and land cover (LULC) classification in near real-time (NRT). This is a significant advancement over traditional global land cover products, which are typically updated on an annual basis and often have substantial lag times between image acquisition and dataset release.
+Synthetic Aperture Radar (SAR) technology is widely applied in change detection in real-world scenarios, including disaster assessment, urban development planning, agricultural development, environmental monitoring and other fields.
 
-If you are interested in this, you can [click here](https://dynamicworld.app/explore) to experience the Dynamic World by yourself.
+### Disaster Assessment
 
-![Visual comparison of Dynamic World (DW) to other global and regional LULC datasets. Source: [Brown et al., 2022](https://doi.org/10.1038/s41597-022-01307-4)](week7-images/41597_2022_1307_Fig8.jpg){width="75%"}
+After the devastating explosion in Beirut's port area on August 4, 2020, SAR (Synthetic Aperture Radar) technology played a crucial role in assessing the extent of the damage. Scientists utilized satellite radar imagery to create damage proxy maps, which helped identify areas needing immediate assistance. The dark red pixels on these maps indicated the most severe damage, while orange and yellow areas represented moderately or partially damaged zones. This mapping was crucial for guiding emergency response and relief efforts, illustrating the power of SAR technology in disaster situations.
 
-In terms of OBIA, Xiong et al. developed an innovative approach to creating a high-resolution (30-m) cropland extent map of the African continent by integrating pixel-based and object-based remote sensing classification methods using data from Sentinel-2 and Landsat-8 satellites on the Google Earth Engine (GEE) platform. This segmentation groups neighboring pixels into meaningful objects (or segments) based on their similarity, considering both their spectral characteristics and spatial context, effectively reducing the "salt and pepper" noise typical in pixel-based classifications and improving the overall accuracy of the cropland extent map ([2017](https://doi.org/10.3390/rs9101065)). Its rigorous assessment demonstrated the effectiveness of combining pixel-based and object-based approaches, achieving a high overall accuracy and demonstrating the potential of this integrated method for large-scale cropland mapping projects.
+![July 29 - August 5, 2020 Scientists Map Beirut Blast Damage. Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/images/147098/scientists-map-beirut-blast-damage)](week8-images/beirut_aria_2020218.jpg){width="80%"}
 
-![Source: [Xiong et al., 2017](https://doi.org/10.3390/rs9101065)](week7-images/Nominal_30-m_Cropland_Extent_M.jpg){width="75%"}
+### Urban Expansion Monitoring
 
-With regard to the application of subpixel, my teacher MacLachlan et al. made a lot of contributions and progress. They explored subpixel land cover classification to enhance urban area estimation, leveraging high spatial resolution orthophotos and Landsat imagery for the Perth Metropolitan Region (PMR), Western Australia. The research demonstrated that correcting Landsat-derived subpixel estimates with values from a detailed comparison to high-resolution data significantly reduced estimation errors by about 55.08% for the PMR ([MacLachlan et al., 2017](https://doi.org/10.1080/01431161.2017.1346403)). This methodology, adaptable globally with readily available or inexpensive high-resolution imagery such as Google Earth, offers a promising approach to improving urban growth monitoring and sustainability efforts.
+As the pace of global urbanization accelerates, SAR (Synthetic Aperture Radar) data plays a crucial role in monitoring and planning urban development. By analyzing a series of continuous SAR images, it is possible to track the expansion of urban boundaries, growth of buildings, and changes in urban green spaces. In a 2020 study, researchers utilized multi-temporal SAR data to analyze the urban expansion of Guangzhou, China. This study demonstrated the efficiency and accuracy of SAR technology in monitoring the process of urbanization ([Guo et al., 2021](https://doi.org/10.3390/su13052944)).
+
+### Agricultural Development
+
+The application of SAR (Synthetic Aperture Radar) technology in agricultural monitoring encompasses multiple aspects, including estimation of crop planting area, monitoring of crop growth, and measurement of soil moisture. For instance, in some regions of Africa, SAR is used to monitor crop conditions and estimate yields, especially during the rainy season when cloud cover renders traditional optical satellite data inaccessible. This information is crucial for food security assessments and optimizing irrigation management plans. By analyzing SAR data, it was possible to successfully predict the wheat yield in Australia, providing a new monitoring tool for global agricultural production.
+
+![Source: [Carto](https://carto.com/blog/agritech-spatial-data-predicting-crop-yield-in-rural-australia)](week8-images/63848a9230aa4b79c195040e_das-croppinghub2.png){width="80%"}
+
+
+### Environmental Change Monitoring
+
+SAR data is highly effective for monitoring environmental changes, such as deforestation, wetland changes, and glacier retreat. SAR images provide continuous data on surface coverage and terrain changes, which is crucial for assessing the impacts of climate change. For example, a recent study used SAR technology to monitor changes in the Amazon rainforest in South America. By comparing SAR images from different times, researchers were able to accurately quantify the extent of deforestation and degradation.
+
+![Tracking Amazon Deforestation from Above-1. Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/images/145988/tracking-amazon-deforestation-from-above)](week8-images/forestlossanimation_oli_2000_2018.mp4){width="80%"}
+
+![Tracking Amazon Deforestation from Above-2. Source: [Earthobservatory.Nasa](https://earthobservatory.nasa.gov/images/145988/tracking-amazon-deforestation-from-above)](week8-images/yurimaguas_oli_2019191.gif){width="80%"}
 
 ## Reflection
 
