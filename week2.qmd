@@ -1,10 +1,7 @@
 # Week 2 - Presentation of Sentinel-1
 
-## Summary
+```{r echo=FALSE}
 
-This week's lecture on "Classification I" immersed me into the intricate world of satellite imagery and Earth observation data, unveiling the power of classifying vast datasets to extract useful 
-
-```{r xaringan_embed, echo=FALSE}
 xaringanExtra::embed_xaringan(
   
   url = "https://arielren666.github.io/week2-Sentinel-1/#1",
@@ -12,4 +9,4 @@ xaringanExtra::embed_xaringan(
 
 ```
 
-
+To view this presentation in full screen, please [click here](https://arielren666.github.io/week2-Sentinel-1/#1).
