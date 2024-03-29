@@ -165,13 +165,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="header-section-number">7.1.1</span> Accuracy assessment</a></li>
-  <li><a href="#classification-and-regression-trees-cart" id="toc-classification-and-regression-trees-cart" class="nav-link" data-scroll-target="#classification-and-regression-trees-cart"><span class="header-section-number">7.1.2</span> Classification and Regression Trees (CART)</a></li>
-  <li><a href="#random-forest" id="toc-random-forest" class="nav-link" data-scroll-target="#random-forest"><span class="header-section-number">7.1.3</span> Random Forest</a></li>
-  <li><a href="#support-vector-machine-svm" id="toc-support-vector-machine-svm" class="nav-link" data-scroll-target="#support-vector-machine-svm"><span class="header-section-number">7.1.4</span> Support Vector Machine (SVM)</a></li>
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="header-section-number">7.1.1</span> Object-Based Image Analysis (OBIA)</a></li>
+  <li><a href="#how-to-decide-which-image-classification-technique-to-use" id="toc-how-to-decide-which-image-classification-technique-to-use" class="nav-link" data-scroll-target="#how-to-decide-which-image-classification-technique-to-use"><span class="header-section-number">7.1.2</span> How to decide which image classification technique to use?</a></li>
+  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="header-section-number">7.1.3</span> Accuracy assessment</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.2</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -198,8 +196,54 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
 <p>covering sub-pixel classification, accuracy assessment and cross-validation.</p>
-<section id="accuracy-assessment" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.1</span> Accuracy assessment</h3>
+<p>Last week, we mentioned that supervised and unsupervised classification is pixel-based. In other words, it creates square pixels and each pixel has a class. Today we dive into higher level image classification techniques- object-based image analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7-images/OBIA-classification1-1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">OBIA-classification Diagram. Source: <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases">Gisgeography</a></figcaption>
+</figure>
+</div>
+<section id="object-based-image-analysis-obia" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">7.1.1</span> Object-Based Image Analysis (OBIA)</h3>
+<p>OBIA Groups pixels into representative vector shapes with size and geometry. It doesn’t create single pixels. Instead, it generates objects with different geometries. If you have the right image, objects can be so meaningful that it does the digitizing for you. For example, the segmentation results below highlight buildings.</p>
+<p><img src="week7-images/obia-segmentation-clustering-ml.png" class="img-fluid" style="width:36.0%"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="week7-images/object-based-diagram.png" class="img-fluid" style="width:45.0%"></p>
+<p>Four steps to perform OBIA classification:</p>
+<ol type="1">
+<li>Perform multiresolution segmentation</li>
+<li>Select training areas</li>
+<li>Define statistics</li>
+<li>Classify</li>
+</ol>
+<p>In OBIA classification, we can use different methods to classify objects. For example,</p>
+<ul>
+<li><p><strong>shape</strong>: if we want to classify buildings, we can use a shape statistic such as “rectangular fit”. This tests an object’s geometry to the shape of a rectangle.</p></li>
+<li><p><strong>texture</strong>: homogeneity of an object. For example, water is mostly homogeneous because it’s mostly dark blue. But forests have shadows and are a mix of green and black.</p></li>
+<li><p><strong>spectral</strong>: we can use the mean value of spectral properties such as near-infrared, short-wave infrared, red, green, or blue.</p></li>
+<li><p><strong>geographic context</strong>: objects have proximity and distance relationships between neighbors.</p></li>
+<li><p><strong>Nearest neighbor (NN) classification</strong>: similar to supervised classification. After multi-resolution segmentation, the user identifies sample sites for each land cover class. Next, define statistics to classify image objects. Finally, the nearest neighbor classifies objects based on their resemblance to the training sites and the statistics defined.</p></li>
+</ul>
+</section>
+<section id="how-to-decide-which-image-classification-technique-to-use" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="how-to-decide-which-image-classification-technique-to-use"><span class="header-section-number">7.1.2</span> How to decide which image classification technique to use?</h3>
+<p>Let’s say you want to classify water in a high spatial resolution image.</p>
+<p>You decide to choose all pixels with low NDVI in that image. But this could also misclassify other pixels in the image that aren’t water. For this reason, pixel-based classification like unsupervised and supervised classification gives a salt and pepper look.</p>
+<p>Humans naturally aggregate spatial information into groups. Multiresolution segmentation does this task by grouping homogenous pixels into objects. Water features are easily recognizable after multiresolution segmentation. This is how humans visualize spatial features.</p>
+<ul>
+<li>When should you use pixel-based (unsupervised and supervised classification)?</li>
+<li>When should you use object-based classification?</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week7-images/Spatial-Resolution-Comparison.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Source: <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/#UseCases">Gisgeography</a></figcaption>
+</figure>
+</div>
+<p>As illustrated in this article, spatial resolution is an important factor when selecting image classification techniques.</p>
+<p>When you have a low spatial resolution image, both traditional pixel-based and object-based image classification techniques perform well.</p>
+<p>But when you have a high spatial resolution image, OBIA is superior to traditional pixel-based classification.</p>
+</section>
+<section id="accuracy-assessment" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.3</span> Accuracy assessment</h3>
 <p>A Confusion Matrix is a fundamental tool for assessing the performance of classification models in machine learning and statistics. It provides a visual representation of the actual vs.&nbsp;predicted outcomes for a binary classifier, helping to understand how well the model performs in distinguishing between two classes (e.g., spam vs.&nbsp;non-spam in email filtering).</p>
 <p>The confusion matrix consists of four key elements:</p>
 <ul>
@@ -211,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Advanced classification metrics derived from the confusion matrix offer deeper insights into the model’s performance, including:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week7-images/confusionMatrxiUpdated.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="week7-images/confusionMatrxiUpdated.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption class="figure-caption">Confusion matrix with advanced classification metrics. Source: <a href="https://manisha-sirsat.blogspot.com/2019/04/confusion-matrix.html">Manisha-sirsat</a></figcaption>
 </figure>
 </div>
@@ -222,63 +266,12 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Accuracy:</strong> The overall proportion of correct predictions made out of all predictions, providing a general measure of the model’s performance.</li>
 <li><strong>F1 Score:</strong> The harmonic mean of precision and recall, offering a balance between them and is particularly useful when the classes are imbalanced.</li>
 </ul>
-<p>Accuracy Assessment refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. In other words, checking how well a model can guess outcomes correctly among all its guesses. It looks not just at how many guesses are right (accuracy), but also at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn’t evenly distributed or when making different mistakes costs differently. This process helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.</p>
+<p>Accuracy Assessment refers to evaluating how accurately a model predicts outcomes across its entire set of predictions. It looks not just at how many guesses are right (accuracy), but also at how the model balances detecting true positives versus true negatives, its precision, and more. These details are especially important when the data isn’t evenly distributed. This process helps in identifying the strengths and weaknesses of a model, guiding improvements and adjustments to enhance its predictive capabilities.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/fZwdsSNr7vk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="classification-and-regression-trees-cart" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="classification-and-regression-trees-cart"><span class="header-section-number">7.1.2</span> Classification and Regression Trees (CART)</h3>
-<p>A Decision Tree, also known as Classification and Regression Tree (CART), is a supervised learning algorithm.</p>
-<p>A CART trains by splitting all available samples into homogeneous sub-groups of high purity based on a most significant feature. But one thing at a time…</p>
-<p>A decision tree conceptionally consists of three elements:</p>
-<ul>
-<li><strong>One Root Node</strong>: That is the starting point, which includes all training samples. A first split is done here.</li>
-<li><strong>Multiple Decision Nodes</strong>: Those are nodes where further splits are done.</li>
-<li><strong>Multiple Leaf (or Terminal) Nodes</strong>: Those are nodes where the assignments to the classes (e.g., urban, water, etc.) happens for classifications tasks (or the mean response of all observation in this node is calculated for regressions).</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week6-images/dectree.png" class="img-fluid figure-img" style="width:55.0%"></p>
-<figcaption class="figure-caption">The structure and complexity of each DT can vary, depending on the training samples and the features used. This is a very simple DT example. Source: <a href="https://blogs.fu-berlin.de/reseda/random-forest">FU Berlin, RESEDA)</a></figcaption>
-</figure>
-</div>
-<p>One of the advantages of CART is its interpretability. The decision tree can be visualized, which aids in understanding and interpreting the model. This is crucial when explaining the model’s findings to stakeholders or integrating expert knowledge into the classification process.</p>
 </section>
-<section id="random-forest" class="level3" data-number="7.1.3">
-<h3 data-number="7.1.3" class="anchored" data-anchor-id="random-forest"><span class="header-section-number">7.1.3</span> Random Forest</h3>
-<p>A random forest consists of a number of categorical decision trees, which can improve predictive performance and robustness. In the case of a Random Forest approach, the tree shown above would continue growing until almost all nodes contain only one class at a time. While that would most likely result in overfitting in a single DT, this effect is relativized by the majority vote in the end when using a RF.</p>
-</section>
-<section id="support-vector-machine-svm" class="level3" data-number="7.1.4">
-<h3 data-number="7.1.4" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">7.1.4</span> Support Vector Machine (SVM)</h3>
-<p>A SVM is a powerful tool for highdimensional, linear and non-linear data science problems. It is always a good choice to consider a SVM for classification and regression tasks due to its high customizability and settings options. However, the search procedure for critical parameter is more complex compared to the RF.</p>
-<p>SVM constructs one or more hyperplanes in high-dimensional or infinite-dimensional space, such as the 11 spectral bands of a Landsat 8 scene, to distinguish between two classes. The goal of maximizing the margin between the hyperplane and the nearest training samples, known as Support Vectors. These vectors are crucial as they precisely define the hyperplane, while samples further away do not influence its position. Thus enhance the accuracy of classification.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week6-images/remotesensing-12-02319-g002.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
-<figcaption class="figure-caption">Support Vector Machine Example. Source: <a href="https://doi.org/10.3390/rs12142319">Cardoso-Fernandes et al., 2020</a></figcaption>
-</figure>
-</div>
-<p><img src="week6-images/SVM001.png" class="img-fluid" style="width:30.0%"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="week6-images/SVM002.png" class="img-fluid" style="width:30.0%"></p>
-<p>Left: A linear hyperplane separating two classes (blue and green dots) in a two-dimensional feature space, e.g., Landsat bands 3 and 4. Right: Non-linear hyperplane after inverse transformation from higher dimensionality separating two classes. Source: <a href="https://blogs.fu-berlin.de/reseda/random-forest">FU Berlin, RESEDA)</a></p>
-</section>
-</section>
-<section id="applications" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
-<p>In the realm of remote sensing and Earth observation, the journey from theoretical methodologies to real-world applications showcases not only the evolution of technology but also a collaborative dialogue between various studies.</p>
-<p>The comparison of classification algorithms by Pal &amp; Mather (2005), which illustrates the superior accuracy of SVM over Maximum Likelihood and Artificial Neural Network (ANN) classifiers. This study underscores the importance of algorithm choice in achieving high precision in land cover classification, setting the stage for further advancements in the field.</p>
-<p>Building on this, Xu et al.&nbsp;(2023) introduce a pioneering approach with their multi-source unsupervised domain adaptive (MUDA) algorithm, addressing the intricacies of edge ambiguity in hyperspectral image classification. This innovative method not only exemplifies the ongoing refinement of classification techniques but also highlights a shift towards handling more complex, multi-source data—a commonality shared with Piramanayagam et al.&nbsp;(2018), who leverage deep learning for multisensor image classification. Both studies emphasize the trend towards integrating diverse data sources, reflecting a broader movement in remote sensing towards more holistic and comprehensive environmental analyses.</p>
-<p>I focused on the introduction of Support Vector Machines and Random Forests in the knowledge overview. I found a very interesting article about the comparison between the two in land cover mapping (Dabija et al., 2021). Focusing on Sentinel-2 and Landsat 8 satellite data, the results show that SVM with radial core is superior to RF in classification accuracy. This is consistent with Pal &amp; Mather’s (2005) proof that SVM is one of the best classification algorithms in remote sensing.</p>
-<p><img src="week6-images/remotesensing-13-00777-g001.jpg" class="img-fluid" style="width:45.0%"> &nbsp; &nbsp; &nbsp; <img src="week6-images/remotesensing-13-00777-g002.jpg" class="img-fluid" style="width:45.0%"></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="week6-images/remotesensing-13-00777-g008.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Map and outcomes of different classification sets and algorithms. Source: <a href="https://doi.org/10.3390/rs13040777">Dabija et al., 2021</a></figcaption>
-</figure>
-</div>
-<p>Zhao et al.&nbsp;(2019)’s development of an improved spectral clustering method for hyperspectral images without requiring prior information mirrors a shared challenge in the field: the need for efficient and effective classification techniques that can adapt to large-scale data without extensive pre-existing datasets. This resonates with the motivations behind the K-means clustering application by Xie &amp; Yu (2008), where the focus on unsupervised classification for ecological zoning also taps into the need for adaptable and accessible remote sensing tools.</p>
-<p>Moreover, the successful differentiation of crop species using SVM by Mountrakis &amp; Ogole (2011) and land cover identification through maximum likelihood classification by Lu &amp; Weng (2007) bring to light the practical implications of these technologies. These applications not only demonstrate the versatility of classification techniques across different environmental and agricultural contexts but also underscore a common goal: enhancing the accuracy and efficiency of land cover classification to support sustainable management practices.</p>
-</section>
-<section id="reflection" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.2</span> Reflection</h2>
 <p>This week’s exploration of remote sensing image classification introduced me to the ability of machine learning (ML) to discriminately interpret the Earth’s surface from satellite imagery. I learnt about ML techniques such as CART, RF, ML, SVM, and etc. and practised the difference between supervised and unsupervised learning. To be honest, I was initially sceptical about the accuracy of the algorithms in classifying images compared to the human eye, but was later surprised to find out that the algorithms were able to skilfully classify image segments, which piqued my curiosity and I decided to practice to bring the theoretical concepts into reality. The practical exercise with the Random Forest Model and its output provided a clear, insightful glimpse into the complex world of remote sensing data analysis. I continue to marvel at how advances in satellite imagery and computing are revolutionising our understanding of the Earth’s surface and am looking forward to learning more advanced classification techniques next week.</p>
 
 
